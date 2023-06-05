@@ -6,8 +6,8 @@ class CreateItineraries < ActiveRecord::Migration[7.0]
       t.date :start_date
       t.date :end_date
       t.string :title
-      t.boolean :visibility
-      t.boolean :status
+      t.boolean :visibility, default: false
+      t.boolean :status, default: false
 
       t.timestamps
     end
