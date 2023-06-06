@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rating"
     t.index ["city_id"], name: "index_activities_on_city_id"
     t.index ["itinerary_id"], name: "index_activities_on_itinerary_id"
   end
@@ -59,10 +60,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
     t.date "start_date"
     t.date "end_date"
     t.string "title"
-    t.boolean "visibility"
-    t.boolean "status"
+    t.boolean "visibility", default: false
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "review"
     t.index ["city_id"], name: "index_itineraries_on_city_id"
     t.index ["user_id"], name: "index_itineraries_on_user_id"
   end
