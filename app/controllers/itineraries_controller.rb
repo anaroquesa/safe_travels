@@ -1,19 +1,20 @@
 class ItinerariesController < ApplicationController
-
-  # before_action :set_itinerary
-
+  before_action :set_city, only: %i[new create edit update destroy]
+  before_action :set_itinerary, only: [:update]
 
   def index
+    @itineraries = Itinerary.all
   end
 
   def show
+    @itinerary = Itinerary.find(params[:id])
   end
 
   def new
-   @itinerary = Itinerary.new
+    @itinerary = Itinerary.new
   end
-  
-    def create
+
+  def create
     @itinerary = Itinerary.new(itinerary_params)
     @itinerary.user = current_user
     raise
@@ -22,10 +23,7 @@ class ItinerariesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
   end
-
-  
 
   def edit
     @itinerary = Itinerary.find(params[:id])
@@ -43,17 +41,20 @@ class ItinerariesController < ApplicationController
   end
 
   def destroy
+    @itinerary = Itinerary.find(params[:id])
+    @itinerary.destroy!
+    redirect_to city_path(@city)
   end
 
   private
 
+  def set_itinerary
+    @itinerary = Itinerary.find(params[:id])
+  end
+
   def set_city
     @city = City.find(params[:city_id])
   end
-
-  def set_itinerary
-    @itinerary = Itinerary.find(params[:id]
-   end
 
   def itinerary_params
     params.require(:itinerary).permit(:start_date, :end_date, :title)
