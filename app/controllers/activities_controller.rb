@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    @city = City.find(params[:city_id])
     @activity = Activity.find(params[:id])
   end
 
@@ -15,9 +16,8 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     @city = City.find(params[:city_id])
     @activity.city = @city
-    
 
-  if @activity.save!
+    if @activity.save!
       redirect_to itinerary_path alert: "Your activity has been saved."
     else
       render :new, status: :unprocessable_entity
