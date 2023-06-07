@@ -1,0 +1,12 @@
+ <h2>Update My Activities</h2>
+  <div class="row col-12 justify-content-center center-form">
+    <div>
+      <%= simple_form_for @activity do |f| %>
+        <%= f.input :title %>
+        <%= f.input :category %>
+        <%= f.input :address %>
+        <%= f.submit class: "btn btn-primary", label: "Updated" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<h2>All your activities</h2>
+
+ <% @activities.each do |activity| %>
+    <%= activity.title %>
+    <%= activity.category %>
+    <%= activity.address %>
+    <% end %>
