@@ -1,5 +1,5 @@
 class ItinerariesController < ApplicationController
-  before_action :set_city, only: %i[new create edit update destroy]
+  before_action :set_city, only: %i[edit update destroy]
   before_action :set_itinerary, only: [:update]
 
   def index
