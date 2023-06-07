@@ -1,32 +1,34 @@
 class ItActivitiesController < ApplicationController
-  def show
+  def new
+    @itinerary = Itinerary.find(params[:itinerary_id])
     @itactivity = ItActivity(params[:id])
   end
 
   def index
-    @activities = Activity.all
-    @itinerary = Itinerary.find(params[:itinerary_id])
-    @itactivities = @activities.where(city_id: @itinerary.city_id)
-  end
-
-  def new
-    @itactivity = ItActivity.new
-    @itineraries = Itinerary.all
-    @activities = Activity.all
+    @itactivities = ItActviity.all
   end
 
   def create
-    @itactivity = ItActivity.new(params[:id, :itinerary_id, :activity_id])
+    @itinerary = Itinerary.find(params[:itinerary_id])
+    @itactivity = ItActivity.new(itactivity_params)
+    @itactivity.itinerary = @itinerary
     if @itactivity.save!
-      redirect_to itinerary_path(@itactivity.itinerary_id), notice: 'New activity was added.'
+      redirect_to itinerary_path(@itinerary), notice: 'New activity was added to your itinerary.'
     else
       render :new
     end
   end
 
   def destroy
-    @itinerary_activity = ItineraryActivity.find(params[:id])
-    @itinerary_activity.destroy!
-    redirect_to itinerary_path(@itinerary_activity.itinerary_id)
+    @itinerary = Itinerary.find(params[:itinerary_id])
+    @itactivity = Itactivity.find(params[:id])
+    @itactivity.destroy!
+    redirect_to itinerary_path(@itinerary)
+  end
+
+  private
+
+  def itactivity_params
+    params.require(:itactivity).permit(:activity_id, :itinerary_id)
   end
 end

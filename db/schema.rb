@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_07_154619) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
     t.string "image_url_three"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "it_activities", force: :cascade do |t|
+    t.bigint "activity_id", null: false
+    t.bigint "itinerary_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_it_activities_on_activity_id"
+    t.index ["itinerary_id"], name: "index_it_activities_on_itinerary_id"
   end
 
   create_table "itineraries", force: :cascade do |t|
@@ -103,6 +112,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
   add_foreign_key "activity_ratings", "users"
   add_foreign_key "chatrooms", "users", column: "user1"
   add_foreign_key "chatrooms", "users", column: "user2"
+  add_foreign_key "it_activities", "activities"
+  add_foreign_key "it_activities", "itineraries"
   add_foreign_key "itineraries", "cities"
   add_foreign_key "itineraries", "users"
   add_foreign_key "messages", "chatrooms"
