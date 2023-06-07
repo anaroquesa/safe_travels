@@ -1,10 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+User.create(first_name: "Agustin", last_name: "Rivas", email: "Agustin@email.com", password: "123456")
+User.create(first_name: "Ana", last_name: "Sa", email: "Ana@email.com", password: "123456")
+User.create(first_name: "Esther", last_name: "Mueni", email: "Esther@email.com", password: "123456")
+User.create(first_name: "Dabin", last_name: "Im", email: "Dabin@email.com", password: "123456")
+User.create(first_name: "Emily", last_name: "Yetsko", email: "Emily@email.com", password: "123456")
+
 City.create!(name: "Berlin", country: "Germany", image_url_one: "https://cdn.getyourguide.com/img/location/e7cd5b184985f010.jpeg/75.jpg", image_url_two: "https://www.nationsonline.org/gallery/Germany/Berlin-Goldener-Baer-Quadriga.jpg", image_url_three: "https://theplanetd.com/images/places-to-visit-in-berlin-germany.jpg" )
 City.create!(name: "New York City", country: "US", image_url_one: "https://www.travelandleisure.com/thmb/91pb8LbDAUwUN_11wATYjx5oF8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg", image_url_two: "https://www.frommers.com/system/media_items/attachments/000/868/461/s980/Frommers-New-York-City-Getting-Around-1190x768.jpg?1647177178", image_url_three: "https://media.cnn.com/api/v1/images/stellar/prod/230602102516-new-york-city-aerial-file-restricted.jpg?c=original" )
 City.create!(name: "Mexico City", country: "Mexico", image_url_one: "https://i.natgeofe.com/n/6c02ad5a-977b-4f12-b9c0-02ffb0736e07/metropolitan-cathedral-zocalo-mexico-city.JPG", image_url_two: "https://www.fodors.com/wp-content/uploads/2021/05/UltimateMexicoCity__HERO_shutterstock_1058054480.jpg", image_url_three: "https://cdn.portico.travel/i/v1.204605.jpg" )
