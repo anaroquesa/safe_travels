@@ -1,6 +1,11 @@
 <h2>All your activities</h2>
 
-<%= @activities %>
+
 <% @activities.each do |activity| %>
-<%= activity.title %>
+<div><%= activity.title %></div>
+<div><%= activity.category %></div>
+<div><%= activity.address %></div>
+<div><img src="<%= activity.image_url %>" alt=""></div>
 <% end %>
+
+
