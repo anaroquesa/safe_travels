@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :reviews
   end
   resources :cities do
-    resources :activities
+    resources :activities, only: %i[edit new]
   end
 end

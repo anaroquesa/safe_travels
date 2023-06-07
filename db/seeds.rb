@@ -17,6 +17,7 @@ City.create!(name: "Nakuru", country: "Kenya", image_url_one: "https://youimg1.t
 City.create!(name: "Amarante", country: "Portugal", image_url_one: "https://image.geo.de/30144918/t/6L/v3/w1440/r0/-/amarante-230304909-f-jpg--82499-.jpg", image_url_two: "https://img.mairdumont.de/x1fYV1PM2bu62POfBmn9DyyKnYo=/fit-in/1024x1024/filters:no_upscale()/44837293.jpg", image_url_three: "https://www.civitatis.com/f/portugal/amarante/galeria/amarante-dia-vista.jpg" )
 
 
+
 Activity.create!(city_id: "1", title: "Brandenburg Gate", category: "Culture", address: "Brandenburger Tor, 10117 Berlin", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/1200px-Brandenburger_Tor_abends.jpg")
 Activity.create!(city_id: "1", title: "Reichstag Building", category: "Culture", address: "Reichstag Building, Platz der Republik 1, 11011 Berlin", image_url: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Reichstag_Dome_2019.jpg")
 Activity.create!(city_id: "1", title: "East Side Gallery", category: "Art", address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin", image_url: "https://images.musement.com/cover/0002/65/east-side-gallery-berlin_header-164457.jpeg")
