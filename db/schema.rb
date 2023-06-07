@@ -15,7 +15,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.bigint "itinerary_id", null: false
     t.bigint "city_id", null: false
     t.string "title"
     t.string "category"
@@ -27,7 +26,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_activities_on_city_id"
-    t.index ["itinerary_id"], name: "index_activities_on_itinerary_id"
   end
 
   create_table "activity_ratings", force: :cascade do |t|
@@ -99,7 +97,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
   end
 
   add_foreign_key "activities", "cities"
-  add_foreign_key "activities", "itineraries"
   add_foreign_key "activity_ratings", "activities"
   add_foreign_key "activity_ratings", "users"
   add_foreign_key "chatrooms", "users", column: "user1"
