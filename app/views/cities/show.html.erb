@@ -1,6 +1,11 @@
-<div><%= @city.name %></div>
-<div><%= @city.country %></div>
-<div><img src="<%= @city.image_url %>" alt=""></div>
-
-
-
+<div>
+  <div><%= @city.name %></div>
+  <div><%= @city.country %></div>
+  <div><img src="<%= @city.image_url %>" alt=""></div>
+  <% @activities.each do |activity| %>
+    <div><%= activity.title %></div>
+    <div><%= activity.category %></div>
+    <div><%= activity.address %></div>
+    <div><img src="<%= activity.image_url %>" alt=""></div>
+  <% end %>
+</div>
