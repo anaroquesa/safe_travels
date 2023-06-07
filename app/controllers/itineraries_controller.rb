@@ -1,9 +1,11 @@
 class ItinerariesController < ApplicationController
-  before_action :set_city, only: %i[edit update destroy]
+  before_action :set_city, only: %i[edit update]
   before_action :set_itinerary, only: [:update]
 
   def index
     @itineraries = Itinerary.all
+    @ongoing_itineraries = current_user.itineraries.where("start_date <= ? AND end_date >= ?", Date.today, Date.today)
+    @past_itineraries = current_user.itineraries.where("end_date < ?", Date.today)
   end
 
   def show
@@ -12,16 +14,16 @@ class ItinerariesController < ApplicationController
 
   def new
     @itinerary = Itinerary.new
+    @cities = City.all
   end
 
   def create
     @itinerary = Itinerary.new(itinerary_params)
     @itinerary.user = current_user
-    raise
-    if @itinerary.save!
-      redirect_to profile_path, alert: "Your request has been sent."
+    if @itinerary.save
+      redirect_to city_path(@itinerary.city_id), notice: 'Itinerary was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
@@ -42,9 +44,10 @@ class ItinerariesController < ApplicationController
 
   def destroy
     @itinerary = Itinerary.find(params[:id])
-    @itinerary.destroy!
-    redirect_to city_path(@city)
+    @itinerary.destroy
+    redirect_to itineraries_url, notice: 'Itinerary was successfully deleted.'
   end
+
 
   private
 
@@ -57,6 +60,6 @@ class ItinerariesController < ApplicationController
   end
 
   def itinerary_params
-    params.require(:itinerary).permit(:start_date, :end_date, :title)
+    params.require(:itinerary).permit(:user_id, :city_id, :start_date, :end_date, :title, :review, :visibility, :status)
   end
 end
