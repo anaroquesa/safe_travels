@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :activities
     resources :reviews
   end
+  resources :cities, only: [:index, :show]
 end
