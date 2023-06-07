@@ -13,9 +13,11 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = Activity.new(activity_params)
-    @activity.itinerary = @itinerary
+    @city = City.find(params[:city_id])
+    @activity.city = @city
+    
 
-    if @activity.save
+  if @activity.save!
       redirect_to itinerary_path alert: "Your activity has been saved."
     else
       render :new, status: :unprocessable_entity
@@ -41,6 +43,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:title, :category, :address)
+    params.require(:activity).permit(:title, :category, :address, :city_id)
   end
 end
