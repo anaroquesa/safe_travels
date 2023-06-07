@@ -3,6 +3,12 @@ class PagesController < ApplicationController
 
   def home
     @user = current_user
+    if params[:query].present?
+      sql_query = "name ILIKE :query"
+      @cities = City.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @cities = City.all
+    end
   end
 
   def cities

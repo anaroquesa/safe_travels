@@ -1,26 +1,25 @@
 <% @cities.each do |city| %>
 <div class="card-trip">
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="<%= city.image_url %>" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="<%= city.image_url %>" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="<%= city.image_url %>" class="d-block w-100" alt="...">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<%= city.image_url_two %>" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<%= city.image_url_three %>" class="d-block w-100" alt="...">
+      </div>
     </div>
   </div>
-</div>
   <div class="card-trip-infos">
     <div>
-      <h2><%= city.name %></h2>
-      <p><%= city.country %></p>
+      <h2><%= city.name %>, <%= city.country %></h2>
+
     </div>
-
-
   </div>
 </div>
 <% end %>
+
+

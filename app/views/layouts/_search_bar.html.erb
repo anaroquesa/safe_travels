@@ -1,0 +1,11 @@
+
+<div class="search">
+  <%= form_with url: cities_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control ps-4",
+      style: "border-radius: 20px; width: 1250px;",
+      placeholder: "Browse cities..."
+    %>
+  <% end %>
+</div>

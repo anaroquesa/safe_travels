@@ -1,1 +1,32 @@
-// Specific CSS for your home-page
+.home img{
+  width:100vw;
+  height:200px;
+}
+.centered{
+  color: white;
+  position: absolute;
+  top: 12%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.secondary{
+  color: white;
+  position: absolute;
+  top: 15%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+}
+.small{
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+}
+.search{
+  color: white;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
