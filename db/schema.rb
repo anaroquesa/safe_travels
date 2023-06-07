@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,13 +19,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
     t.bigint "city_id", null: false
     t.string "title"
     t.string "category"
+    t.string "image_url"
     t.string "address"
     t.decimal "latitude"
     t.decimal "longitude"
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "rating"
     t.index ["city_id"], name: "index_activities_on_city_id"
     t.index ["itinerary_id"], name: "index_activities_on_itinerary_id"
   end
@@ -41,15 +41,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
   end
 
   create_table "chatrooms", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.integer "user1"
+    t.integer "user2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_chatrooms_on_user_id"
   end
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "country"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -60,11 +61,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
     t.date "start_date"
     t.date "end_date"
     t.string "title"
+    t.text "review"
     t.boolean "visibility", default: false
     t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "review"
     t.index ["city_id"], name: "index_itineraries_on_city_id"
     t.index ["user_id"], name: "index_itineraries_on_user_id"
   end
@@ -77,16 +78,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "itinerary_id", null: false
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["itinerary_id"], name: "index_reviews_on_itinerary_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -111,11 +102,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123915) do
   add_foreign_key "activities", "itineraries"
   add_foreign_key "activity_ratings", "activities"
   add_foreign_key "activity_ratings", "users"
-  add_foreign_key "chatrooms", "users"
+  add_foreign_key "chatrooms", "users", column: "user1"
+  add_foreign_key "chatrooms", "users", column: "user2"
   add_foreign_key "itineraries", "cities"
   add_foreign_key "itineraries", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "reviews", "itineraries"
-  add_foreign_key "reviews", "users"
 end
