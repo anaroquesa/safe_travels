@@ -7,6 +7,13 @@
       <%= f.input :start_date %>
       <%= f.input :end_date %>
       <%= f.input :visibility %>
-      <%= f.submit class: "btn btn-warning" %>
+      <%= f.submit class: "btn btn-success" %>
     <% end %>
   </div>
+
+<h3>Add activities</h3>
+
+
+<% @activities.each do |activity| %>
+<button><%= activity.title %></button>
+<% end %>

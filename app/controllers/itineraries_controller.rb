@@ -1,9 +1,10 @@
 class ItinerariesController < ApplicationController
-  before_action :set_city, only: %i[edit update destroy]
-  before_action :set_itinerary, only: [:update]
+  before_action :set_itinerary, only: %i[update]
+  before_action :set_city, only: %i[update destroy]
 
   def index
     @itineraries = Itinerary.all
+    @itinerary_activities = Activity.all
   end
 
   def show
@@ -12,27 +13,28 @@ class ItinerariesController < ApplicationController
 
   def new
     @itinerary = Itinerary.new
+    @cities = City.all
   end
 
   def create
     @itinerary = Itinerary.new(itinerary_params)
     @itinerary.user = current_user
-    raise
-    if @itinerary.save!
-      redirect_to profile_path, alert: "Your request has been sent."
+    if @itinerary.save
+      redirect_to city_path(@itinerary.city_id), notice: 'Itinerary was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
   def edit
     @itinerary = Itinerary.find(params[:id])
-    @itinerary.city = @city
-    @itinerary.user = current_user
+    @city = @itinerary.city_id
+    @activities = Activity.where(city: @city)
   end
 
   def update
     @itinerary = Itinerary.find(params[:id])
+    @activities = @city.activities
     if @itinerary.update(itinerary_params)
       redirect_to itinerary_path(@itinerary)
     else
@@ -57,6 +59,6 @@ class ItinerariesController < ApplicationController
   end
 
   def itinerary_params
-    params.require(:itinerary).permit(:start_date, :end_date, :title)
+    params.require(:itinerary).permit(:user_id, :city_id, :start_date, :end_date, :title, :review, :visibility, :status)
   end
 end

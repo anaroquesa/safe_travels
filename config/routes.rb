@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :itineraries do
+    resources :itinerary_activities
     resources :reviews
   end
   resources :cities do
