@@ -5,6 +5,7 @@ class CreateActivities < ActiveRecord::Migration[7.0]
       t.references :city, null: false, foreign_key: true
       t.string :title
       t.string :category
+      t.string :image_url
       t.string :address
       t.decimal :latitude
       t.decimal :longitude

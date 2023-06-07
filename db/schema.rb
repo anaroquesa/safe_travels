@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
     t.bigint "city_id", null: false
     t.string "title"
     t.string "category"
+    t.string "image_url"
     t.string "address"
     t.decimal "latitude"
     t.decimal "longitude"
@@ -49,6 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_123913) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "country"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
