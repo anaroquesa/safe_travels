@@ -1,0 +1,10 @@
+<h1>Edit Profile</h1>
+
+ <div class="row col-10 justify-content-center newpage">
+ <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+  <%= f.label :name %>
+  <%= f.label :photo %>
+  <%= f.label :email %>
+  <%= f.submit "Update Profile" %>
+<% end %>
+</div>
