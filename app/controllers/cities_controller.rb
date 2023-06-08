@@ -10,6 +10,9 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
-    @activities = Activity.where(city: @city)
+    @culture_activities = Activity.where(category: "Culture", city: @city)
+    @art_activities = Activity.where(category: "Art", city: @city)
+    @nature_activities = Activity.where(category: "Nature", city: @city)
+    @food_activities = Activity.where(category: "Food", city: @city)
   end
 end

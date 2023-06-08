@@ -1,10 +1,44 @@
-<% @activities.each do |activity| %>
-<div class="category">
-  <strong><%= activity.category %></strong>
-    <div class="scroll-container">
-      <img src= "<%= activity.image_url %>" alt="">
+<div class="category"></div>
+<strong>Culture</strong>
+<div class="scroll-container">
+  <% @culture_activities.each do |activity| %>
+    <div class="activity-image-container">
+      <img src="<%= activity.image_url %>" alt="">
       <i class="fa-regular fa-heart"></i>
       <i class="fa-solid fa-star"> 5</i>
     </div>
+  <% end %>
 </div>
-<% end %>
+<div class="category"></div>
+<strong>Nature</strong>
+<div class="scroll-container">
+  <% @nature_activities.each do |activity| %>
+    <div class="activity-image-container">
+      <img src="<%= activity.image_url %>" alt="">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-star"> 5</i>
+    </div>
+  <% end %>
+</div>
+<div class="category"></div>
+<strong>Art</strong>
+<div class="scroll-container">
+  <% @art_activities.each do |activity| %>
+    <div class="activity-image-container">
+      <img src="<%= activity.image_url %>" alt="">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-star"> 5</i>
+    </div>
+  <% end %>
+</div>
+<div class="category"></div>
+<strong>Food</strong>
+<div class="scroll-container">
+  <% @food_activities.each do |activity| %>
+    <div class="activity-image-container">
+      <img src="<%= activity.image_url %>" alt="">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-star"> 5</i>
+    </div>
+  <% end %>
+</div>
