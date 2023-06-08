@@ -15,7 +15,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     @city = City.find(params[:city_id])
     @activity.city = @city
-
+    @itinerary = Itinerary.find(params[:id])
     if @activity.save!
       redirect_to itinerary_path alert: "Your activity has been saved."
     else
@@ -40,6 +40,10 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
+  def itinerary_params
+    params.require(:itinerary).permit(:user_id, :city_id, :start_date, :end_date, :title, :visibility, :status, :review)
+  end
 
   def activity_params
     params.require(:activity).permit(:title, :category, :address, :city_id)
