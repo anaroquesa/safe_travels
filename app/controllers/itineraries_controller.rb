@@ -1,6 +1,6 @@
 class ItinerariesController < ApplicationController
-  before_action :set_city, only: %i[edit update]
-  before_action :set_itinerary, only: [:update]
+  # before_action :set_city, only: %i[update]
+  before_action :set_itinerary, only: [:edit, :update, :show]
 
   def index
     @itineraries = Itinerary.all
@@ -9,7 +9,6 @@ class ItinerariesController < ApplicationController
   end
 
   def show
-    @itinerary = Itinerary.find(params[:id])
     @activities = Activity.where(city_id: @itinerary.city_id)
     @itactivities = ItActivity.all
   end
@@ -30,15 +29,13 @@ class ItinerariesController < ApplicationController
   end
 
   def edit
-    @itinerary = Itinerary.find(params[:id])
-    @itinerary.city = @city
+    @city = @itinerary.city
     @itinerary.user = current_user
   end
 
   def update
-    @itinerary = Itinerary.find(params[:id])
     if @itinerary.update(itinerary_params)
-      redirect_to itinerary_path(@itinerary)
+      redirect_to itinerary_path(@itinerary), notice: "Itinerary updated successfully."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -62,6 +59,7 @@ class ItinerariesController < ApplicationController
   end
 
   def itinerary_params
-    params.require(:itinerary).permit(:user_id, :city_id, :start_date, :end_date, :title, :review, :visibility, :status)
+    params.require(:itinerary).permit(:user_id, :city_id, :start_date, :end_date, :title, :visibility, :status, :review)
   end
+
 end
