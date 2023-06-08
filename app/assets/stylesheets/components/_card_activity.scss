@@ -1,15 +1,22 @@
-
 div.scroll-container {
-  overflow: auto;
+  overflow-x: auto;
   white-space: nowrap;
   padding: 10px;
   position: relative;
 }
+
+div.scroll-container .activity-image-container {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+div.scroll-container .activity-image-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
 .scroll-container{
-img {
-  width:150px;
-  height:150px;
-  border-radius:20px;}
   .fa-heart{
     color: white;
     position: absolute;

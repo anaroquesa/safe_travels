@@ -15,11 +15,9 @@
   </div>
   <div class="card-trip-infos">
     <div>
-      <h2><%= city.name %>, <%= city.country %></h2>
-
+      <h2> <%= link_to city.name, city_path(city.id) %></h2>
+      <span><%= city.country %></span>
     </div>
   </div>
 </div>
 <% end %>
-
-
