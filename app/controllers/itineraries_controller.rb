@@ -10,6 +10,8 @@ class ItinerariesController < ApplicationController
 
   def show
     @itinerary = Itinerary.find(params[:id])
+    @activities = Activity.where(city_id: @itinerary.city_id)
+    @itactivities = ItActivity.all
   end
 
   def new

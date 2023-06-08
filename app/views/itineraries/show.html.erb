@@ -1,0 +1,15 @@
+<h1> <%= @itinerary.title %> </h1>
+<h3>YOUR ACTIVITIES</h3>
+  <% @itactivities.each do |activity| %>
+  <%= activity.id %>
+  <% end %>
+
+<% render 'it_activities/index' %>
+
+<h3>ACTIVITY SUGGESTIONS</h3>
+
+<ul>
+      <% @activities.each do |activity| %>
+  <li><%= activity.title %> <%= link_to 'ADD',  new_itinerary_itactivity_path(@itinerary, @activity) %></li>
+      <% end %>
+</ul>
