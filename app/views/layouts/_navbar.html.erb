@@ -48,16 +48,14 @@
       </div>
 
     <div class="icon-text-container">
-      <a href="<%= user_path(current_user) %>">
+       <%= link_to user_path(@current_user) do %>
         <div class="icon">
           <i class="fa-regular fa-user"></i>
         </div>
         <div class="text">
           Profile
         </div>
-      </a>
-      </div>
-
+       <% end %>
+    </div>
 </div>
-
 </nav>
