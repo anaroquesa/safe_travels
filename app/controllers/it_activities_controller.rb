@@ -10,8 +10,7 @@ class ItActivitiesController < ApplicationController
 
   def create
     @itinerary = Itinerary.find(params[:itinerary_id])
-    @itactivity = ItActivity.new(itactivity_params)
-    @itactivity.itinerary = @itinerary
+    @itactivity = ItActivity.new(itinerary_id: params[:itinerary_id], activity_id: params[:it_activity][:activity_id])
     if @itactivity.save!
       redirect_to itinerary_path(@itinerary), notice: 'New activity was added to your itinerary.'
     else
@@ -21,7 +20,7 @@ class ItActivitiesController < ApplicationController
 
   def destroy
     @itinerary = Itinerary.find(params[:itinerary_id])
-    @itactivity = Itactivity.find(params[:id])
+    @itactivity = ItActivity.find(itactivity_params)
     @itactivity.destroy!
     redirect_to itinerary_path(@itinerary)
   end
