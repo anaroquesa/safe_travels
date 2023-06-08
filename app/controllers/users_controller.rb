@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if @user.update(profile_params)
       redirect_to profile_path, alert: "Profile updated successfully."
     else
-      render :profile_edit
+      render :show, status: :unprocessable_entity
     end
   end
 
