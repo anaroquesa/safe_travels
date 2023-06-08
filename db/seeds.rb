@@ -1,3 +1,5 @@
+
+
 User.create(first_name: "Agustin", last_name: "Rivas", email: "Agustin@email.com", password: "123456")
 User.create(first_name: "Ana", last_name: "Sa", email: "Ana@email.com", password: "123456")
 User.create(first_name: "Esther", last_name: "Mueni", email: "Esther@email.com", password: "123456")
@@ -15,11 +17,10 @@ City.create!(name: "Florence", country: "Italy", image_url_one: "https://tourism
 City.create!(name: "Nakuru", country: "Kenya", image_url_one: "https://youimg1.tripcdn.com/target/10011f000001h357u3395.jpg?proc=source%2Ftrip", image_url_two: "https://media.istockphoto.com/id/603153650/photo/lake-nakuru-in-kenya.jpg?s=612x612&w=0&k=20&c=ch8i8nLse7Ejqlib74WrEwAo017oZlLJVrr1OeFBqLk=", image_url_three: "https://media-cdn.tripadvisor.com/media/photo-s/1a/bf/51/8f/lake-nakuru-lodge.jpg" )
 City.create!(name: "Amarante", country: "Portugal", image_url_one: "https://image.geo.de/30144918/t/6L/v3/w1440/r0/-/amarante-230304909-f-jpg--82499-.jpg", image_url_two: "https://img.mairdumont.de/x1fYV1PM2bu62POfBmn9DyyKnYo=/fit-in/1024x1024/filters:no_upscale()/44837293.jpg", image_url_three: "https://www.civitatis.com/f/portugal/amarante/galeria/amarante-dia-vista.jpg" )
 
-
-
 Activity.create!(city_id: "1", title: "Brandenburg Gate", category: "Culture", address: "Brandenburger Tor, 10117 Berlin", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/1200px-Brandenburger_Tor_abends.jpg")
 Activity.create!(city_id: "1", title: "Reichstag Building", category: "Culture", address: "Reichstag Building, Platz der Republik 1, 11011 Berlin", image_url: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Reichstag_Dome_2019.jpg")
 Activity.create!(city_id: "1", title: "East Side Gallery", category: "Art", address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin", image_url: "https://images.musement.com/cover/0002/65/east-side-gallery-berlin_header-164457.jpeg")
 Activity.create!(city_id: "2", title: "Empire State Building", category: "Culture", address: "Empire State Building, 20 W 34th St., New York, NY 10001, United States", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Empire_State_Building_from_the_Top_of_the_Rock.jpg/640px-Empire_State_Building_from_the_Top_of_the_Rock.jpg")
-Activity.create!(city_id: "2", title: "American Museum of Natural History", category: "Museum", address: "American Museum of Natural History, 200 Central Park West, New York, NY 10024, United States", image_url: "https://image.newyorkcity.de/wp-content/uploads/2021/01/American-Museum-of-Natural-History-in-New-York-T-Rex.jpg.webp")
+Activity.create!(city_id: "2", title: "American Museum of Natural History", category: "Culture", address: "American Museum of Natural History, 200 Central Park West, New York, NY 10024, United States", image_url: "https://image.newyorkcity.de/wp-content/uploads/2021/01/American-Museum-of-Natural-History-in-New-York-T-Rex.jpg.webp")
 Activity.create!(city_id: "2", title: "Central Park", category: "Nature", address: "Central Park West, New York, NY, USA", image_url: "https://img.freepik.com/fotos-kostenlos/central-park-in-manhattan-new-york-ein-riesiger-schoener-park-umgeben-von-wolkenkratzern-mit-teich_181624-50335.jpg")
+Activity.create!(city_id: "1", title: "Berlin Cathedral", category: "Culture", address: "Am Lustgarten, 10178 Berlin", image_url: "https://mywowo.net/media/images/cache/berlino_museuminsel_08_berliner_dom_jpg_1200_630_cover_85.jpg")

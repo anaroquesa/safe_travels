@@ -1,0 +1,10 @@
+<% @activities.each do |activity| %>
+<div class="category">
+  <strong><%= activity.category %></strong>
+    <div class="scroll-container">
+      <img src= "<%= activity.image_url %>" alt="">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-star"> 5</i>
+    </div>
+</div>
+<% end %>
