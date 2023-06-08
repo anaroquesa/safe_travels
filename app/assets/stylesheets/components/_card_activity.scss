@@ -1,0 +1,32 @@
+
+div.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  position: relative;
+}
+.scroll-container{
+img {
+  width:150px;
+  height:150px;
+  border-radius:20px;}
+  .fa-heart{
+    color: white;
+    position: absolute;
+    top: 12%;
+    left: 38%;
+  }
+  .fa-star{
+    border: 1px solid white;
+    background-color: white;
+    position: absolute;
+    top: 73%;
+    left: 8%;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+.category {
+  margin-top: 20px;
+}

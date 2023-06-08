@@ -1,15 +1,27 @@
 
-
-
-
-<div>
-  <div><%= @city.name %></div>
-  <div><%= @city.country %></div>
-  <div><img src="<%= @city.image_url_one %>" alt=""></div>
-  <% @activities.each do |activity| %>
-    <div><%= activity.title %></div>
-    <div><%= activity.category %></div>
-    <div><%= activity.address %></div>
-    <div><img src="<%= activity.image_url %>" alt=""></div>
-  <% end %>
+<div class="container" style="width:360px; margin-bottom:10px;">
+<div class="search-index"><%= render "layouts/search_bar_index" %></div>
+<div class="card-trip">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<%= @city.image_url_one %>" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<%= @city.image_url_two %>" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<%= @city.image_url_three %>" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @city.name %>, <%= @city.country %></h2>
+    </div>
+  </div>
 </div>
+
+<%= render "layouts/card_activity" %>
+</div>
+
