@@ -1,7 +1,7 @@
 class ItActivitiesController < ApplicationController
   def new
     @itinerary = Itinerary.find(params[:itinerary_id])
-    @itactivity = ItActivity(params[:id])
+    @itactivity = ItActivity.find(params[:id])
   end
 
   def index
@@ -20,17 +20,10 @@ class ItActivitiesController < ApplicationController
 
   def destroy
     @itinerary = Itinerary.find(params[:itinerary_id])
-    raise
-    @itactivity = ItActivity.find(itactivity_params)
+    @itactivity = ItActivity.find(params[:id])
     @itactivity.destroy!
     redirect_to itinerary_path(@itinerary)
   end
-
-  # def destroy
-  #   @itinerary = Itinerary.find(params[:id])
-  #   @itinerary.destroy
-  #   redirect_to itineraries_url, notice: 'Itinerary was successfully deleted.'
-  # end
 
   private
 
