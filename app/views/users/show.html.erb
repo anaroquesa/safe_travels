@@ -1,1 +1,8 @@
 <h1>Profile</h1>
+<p>Hello implement user_signed_in</p>
+
+<% if user_signed_in? && current_user == @user %>
+ <div class="edit-profile-link">
+  <%= link_to "Edit", edit_user_url, class: "underline-link" %>
+  </div>
+<% end %>
