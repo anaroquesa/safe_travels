@@ -1,5 +1,12 @@
 .search-index{
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 300px;
+  width: 340px;
+  position: relative;
+
+i {
+  position:absolute;
+  top: 26%;
+  left: 4%;
+}
 }
