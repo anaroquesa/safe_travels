@@ -1,3 +1,5 @@
+<%= link_to '<', itineraries_path %>
+
 <h1><%= @itinerary.title %></h1>
 <h3>YOUR ACTIVITIES</h3>
 
@@ -46,8 +48,8 @@
   <% end %>
 <% end %>
 
-<div style="width: 100%; height: 200px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
-</div>
+  <div style="width: 100%; height: 200px;"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
+  </div>
