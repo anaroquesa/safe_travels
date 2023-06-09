@@ -15,6 +15,6 @@ export default class extends Controller {
     setTimeout(() => {
         this.logoTarget.classList.add("d-none")
 
-    }, 5000);
+    }, 1000);
   }
 }

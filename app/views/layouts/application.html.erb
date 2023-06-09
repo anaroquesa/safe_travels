@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>SafeTravels</title>
+    <%= favicon_link_tag "favicon.png", rel: "icon", type: "image/png" %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,12 +11,20 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-controller="home" data-home-target="body">
-    <div data-home-target="logo" class="homewrapper">
-      <div class="logoholder"></div>
-    </div>
-    <%= render "shared/flashes" %>
-    <%= yield %>
-    <%= render "layouts/navbar" %>
-  </body>
+<% if current_page?(controller: 'pages', action: 'home') %>
+    <body data-controller="home" data-home-target="body">
+      <div data-home-target="logo" class="homewrapper">
+        <div class="logoholder"></div>
+      </div>
+      <%= render "shared/flashes" %>
+      <%= yield %>
+      <%= render "layouts/navbar" %>
+    </body>
+  <% else %>
+    <body>
+      <%= render "shared/flashes" %>
+      <%= yield %>
+      <%= render "layouts/navbar" %>
+    </body>
+  <% end %>
 </html>
