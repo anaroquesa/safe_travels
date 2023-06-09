@@ -6,6 +6,7 @@
 // External libraries
 @import "bootstrap";
 @import "font-awesome";
+@import 'animate';
 
 // Your CSS partials
 @import "components/index";
@@ -15,3 +16,30 @@
 @import "components/search_bar_index";
 @import "components/card_activity";
 
+.body {
+  margin-bottom: 100px;
+}
+
+.homewrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  position: absolute;
+  z-index: 100000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-items: center;
+  overflow-x: hidden;
+
+  .logoholder{
+    background-image: url(logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50%;
+    width: 50%;
+  }
+}
