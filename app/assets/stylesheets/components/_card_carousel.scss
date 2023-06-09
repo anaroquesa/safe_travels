@@ -6,7 +6,7 @@
   border-radius: 10px;
 }
 
-.card-trip > img {
+.card-trip > a {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -18,17 +18,32 @@
   margin: 0;
 }
 
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+
+.city-image
+{
+  position: relative;
+img{
+  height: 200px;
+  width: 340px;
+  border-radius: 10px;
+   background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    )
+}
+.city-title{
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top:50%;
+  left: 15%;
+}
 }
