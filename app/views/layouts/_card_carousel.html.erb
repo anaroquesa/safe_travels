@@ -3,19 +3,25 @@
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
+      <a href="<%= city_path(city.id) %>">
         <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
+        </a>
       </div>
       <div class="carousel-item">
+      <a href="<%= city_path(city.id) %>">
         <img src="<%= city.image_url_two %>" class="d-block w-100" alt="...">
+      </a>
       </div>
       <div class="carousel-item">
+      <a href="<%= city_path(city.id) %>">
         <img src="<%= city.image_url_three %>" class="d-block w-100" alt="...">
+        </a>
       </div>
     </div>
   </div>
   <div class="card-trip-infos">
     <div>
-      <h2> <%= link_to city.name, city_path(city.id) %></h2>
+      <h2> <%= city.name %></h2>
       <span><%= city.country %></span>
     </div>
   </div>
