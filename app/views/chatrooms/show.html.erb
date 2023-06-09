@@ -1,0 +1,15 @@
+<h1>Chat with <%= @chatroom.user2.first_name %> <%= @chatroom.user2.last_name %></h1>
+
+<div id="messages">
+  <% @chatroom.messages.each do |message| %>
+    <p>
+      <strong><%= message.user.first_name %>:</strong>
+      <%= message.content %>
+    </p>
+  <% end %>
+</div>
+
+<%= form_with(model: @message, url: chatroom_messages_path(@chatroom), local: true) do |form| %>
+  <%= form.text_field :content, placeholder: 'Type your message...' %>
+  <%= form.submit 'Send' %>
+<% end %>

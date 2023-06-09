@@ -1,9 +1,10 @@
-<h2>Create Activity page</h2>
+<h2>Create Custom Activity</h2>
 
 <%= simple_form_for @activity do |f| %>
-<%= f.input :title %>
-<%= f.input :category %>
-<%= f.input :address %>
-<%= f.input :date %>
-<%= f.submit "Create Activity" %>
+  <%= f.input :title, label: 'Title' %>
+  <%= f.input :address, label: 'Address' %>
+  <%= f.input :date, label: 'Date', as: :date, start_year: Date.current.year %>
+  <%= f.input :custom, as: :hidden, input_html: { value: true } %>
+  <%= f.hidden_field :city_id, value: @activity.city_id %>
+  <%= f.button :submit, 'Create Custom Activity' %>
 <% end %>
