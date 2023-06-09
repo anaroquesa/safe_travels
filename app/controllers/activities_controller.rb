@@ -8,18 +8,16 @@ class ActivitiesController < ApplicationController
   end
 
   def new
-    @activity = Activity.new
+    @city = City.find(params[:city_id])
+    @activity = @city.activities.new
   end
 
   def create
     @activity = Activity.new(activity_params)
-    @city = City.find(params[:city_id])
-    @activity.city = @city
-    @itinerary = Itinerary.find(params[:id])
-    if @activity.save!
-      redirect_to itinerary_path alert: "Your activity has been saved."
+    if @activity.save
+      redirect_to @activity.city, notice: 'Activity was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
@@ -46,6 +44,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:title, :category, :address, :city_id)
+    params.require(:activity).permit(:city_id, :title, :address, :custom, :date)
   end
 end

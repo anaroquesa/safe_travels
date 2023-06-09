@@ -1,0 +1,5 @@
+<%= form_with(model: @chatroom, url: chatrooms_path, local: true) do |form| %>
+  <%= form.label :user2_id, 'Chat with' %>
+  <%= form.select :user2_id, options_for_select(users_for_chat(current_user), selected: params[:user2_id]), prompt: 'Select a user' %>
+  <%= form.submit 'Start Chat' %>
+<% end %>

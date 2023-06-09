@@ -1,30 +1,43 @@
-<h1> <%= @itinerary.title %> </h1>
+<h1><%= @itinerary.title %></h1>
 <h3>YOUR ACTIVITIES</h3>
 
-<%= link_to 'ADD ACTIVITY', new_city_activity_path(@itinerary.city_id) %>
+<%= link_to 'ADD ACTIVITY', city_path(@itinerary.city) %>
+<%= link_to 'ADD CUSTOM ACTIVITY', new_city_activity_path(@itinerary.city_id, @itinerary, custom: true) %>
+
+
 <ul>
-<% if !@itactivities.empty? %>
-  <% @itactivities.each do |activity| %>
-    <% if @itinerary.id == activity.itinerary_id %>
-     <li><%= activity.activity_id %> <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %></li>
+  <% if !@itactivities.empty? %>
+    <% @itactivities.each do |activity| %>
+      <% if @itinerary.id == activity.itinerary_id %>
+        <% if activity.activity.custom %>
+          <li><%= activity.activity.title %> (Custom) <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %></li>
+        <% else %>
+          <li><%= activity.activity.title %> <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %></li>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
 </ul>
-<% render 'it_activities/index' %>
+<%# <%= render 'it_activities/index' %>
 
 <% if !@itinerary.end_date.past? %>
-
   <h3>ACTIVITY SUGGESTIONS</h3>
-
   <ul>
-      <% @activities.each do |activity| %>
-    <li><%= activity.title %><%= simple_form_for([@itinerary, @itactivity]) do |f| %>
-        <%= f.input :activity_id, as: :hidden, input_html: {value: activity.id} %>
-        <%= f.input :itinerary_id, as: :hidden, input_html: {value: @itinerary.id} %>
-        <%= f.button :submit, "ADD" %>
+    <% @activities.each do |activity| %>
+      <% if activity.custom %>
+        <li><%= activity.title %> (Custom)<%= simple_form_for([@itinerary, @itactivity]) do |f| %>
+          <%= f.input :activity_id, as: :hidden, input_html: {value: activity.id} %>
+          <%= f.input :itinerary_id, as: :hidden, input_html: {value: @itinerary.id} %>
+          <%= f.button :submit, "ADD" %>
+        <% end %></li>
+      <% else %>
+        <li><%= activity.title %><%= simple_form_for([@itinerary, @itactivity]) do |f| %>
+          <%= f.input :activity_id, as: :hidden, input_html: {value: activity.id} %>
+          <%= f.input :itinerary_id, as: :hidden, input_html: {value: @itinerary.id} %>
+          <%= f.button :submit, "ADD" %>
         <% end %></li>
       <% end %>
+    <% end %>
   </ul>
 <% else %>
   <% if @itinerary.review? %>
@@ -32,5 +45,3 @@
     <%= @itinerary.review %>
   <% end %>
 <% end %>
-
-<%= link_to 'ITINERARIES', itineraries_path %>

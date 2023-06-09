@@ -6,4 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :itineraries
   validates :first_name, :last_name, :email, :password, presence: true
+  has_many :chatrooms_as_user1, class_name: 'Chatroom', foreign_key: 'user1_id', dependent: :destroy
+  has_many :chatrooms_as_user2, class_name: 'Chatroom', foreign_key: 'user2_id', dependent: :destroy
+  has_many :messages, dependent: :destroy
 end
