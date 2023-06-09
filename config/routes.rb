@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   end
 
   resources :activities, only: %i[new create edit update destroy]
-  resource :user, only: %i[show edit update]
+  resources :users, only: %i[show edit update]
   resources :chatrooms, only: [:index, :show, :create]
 
+  #get "users/:id", to: "users#show", as: "user"
 end
