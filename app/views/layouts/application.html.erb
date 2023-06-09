@@ -11,12 +11,20 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-controller="home" data-home-target="body">
-    <div data-home-target="logo" class="homewrapper">
-      <div class="logoholder"></div>
-    </div>
-    <%= render "shared/flashes" %>
-    <%= yield %>
-    <%= render "layouts/navbar" %>
-  </body>
+<% if current_page?(controller: 'pages', action: 'home') %>
+    <body data-controller="home" data-home-target="body">
+      <div data-home-target="logo" class="homewrapper">
+        <div class="logoholder"></div>
+      </div>
+      <%= render "shared/flashes" %>
+      <%= yield %>
+      <%= render "layouts/navbar" %>
+    </body>
+  <% else %>
+    <body>
+      <%= render "shared/flashes" %>
+      <%= yield %>
+      <%= render "layouts/navbar" %>
+    </body>
+  <% end %>
 </html>

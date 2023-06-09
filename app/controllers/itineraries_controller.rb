@@ -13,14 +13,15 @@ class ItinerariesController < ApplicationController
     @activities = Activity.where(city_id: @itinerary.city_id)
     @itactivity = ItActivity.new
     @itactivities = ItActivity.all
-    @city = City.find(params[:id])
+    @city = @itinerary.city
     @cities = City.all
-    @markers = @cities.geocoded.map do |city|
+    @markers = @activities.geocoded.map do |activitiy|
       {
-        lat: city.latitude,
-        lng: city.longitude
+        lat: activitiy.latitude,
+        lng: activitiy.longitude
       }
     end
+    @marker = [lat: @city.latitude, lng: @city.longitude]
 
   end
 
