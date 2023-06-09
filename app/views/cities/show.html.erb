@@ -1,4 +1,3 @@
-
 <div class="container" style="width:360px; margin-bottom:10px;">
 <div class="search-index"><%= render "layouts/search_bar_index" %></div>
 <div class="card-trip">
@@ -23,11 +22,4 @@
 </div>
 
 <%= render "layouts/card_activity" %>
-</div>
-
-
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
 </div>
