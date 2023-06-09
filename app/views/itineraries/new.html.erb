@@ -1,12 +1,14 @@
-<h2>New itinerary</h2>
+<div class="container" style="width:360px; margin-bottom:10px;">
+  <h2>New itinerary</h2>
 
-  <div class="row col-10 justify-content-center newpage">
-      <%= simple_form_for @itinerary do |f| %>
-      <%= f.input :title %>
-      <%= f.input :city_id, collection: @cities, label_method: :name, value_method: :id, prompt: true %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <%= f.input :visibility %>
-      <%= f.submit class: "btn btn-warning" %>
-    <% end %>
-  </div>
+    <div class="row col-10 justify-content-center newpage">
+        <%= simple_form_for @itinerary do |f| %>
+        <%= f.input :title %>
+        <%= f.input :city_id, collection: @cities, label_method: :name, value_method: :id, prompt: true %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.input :visibility %>
+        <%= f.submit class: "btn btn-warning" %>
+      <% end %>
+    </div>
+</div>

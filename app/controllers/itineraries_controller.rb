@@ -4,7 +4,8 @@ class ItinerariesController < ApplicationController
 
   def index
     @itineraries = Itinerary.all
-    @ongoing_itineraries = current_user.itineraries.where("start_date >= ? AND end_date >= ?", Date.today, Date.today)
+    @ongoing_itineraries = current_user.itineraries.where("start_date <= ? AND end_date >= ?", Date.today, Date.today)
+    @upcoming_itineraries = current_user.itineraries.where("start_date > ? AND end_date >= ?", Date.today, Date.today)
     @past_itineraries = current_user.itineraries.where("end_date < ?", Date.today)
   end
 
