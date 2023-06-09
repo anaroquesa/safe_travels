@@ -10,12 +10,14 @@ class ActivitiesController < ApplicationController
   def new
     @city = City.find(params[:city_id])
     @activity = @city.activities.new
+    @itinerary_id = params[:itinerary_id]
   end
 
   def create
     @activity = Activity.new(activity_params)
-    if @activity.save
-      redirect_to @activity.city, notice: 'Activity was successfully created.'
+    if @activity.save!
+      ItActivity.create!(activity_id: @activity.id, itinerary_id: params[:activity][:itinerary_id] )
+      redirect_to itinerary_path(params[:activity][:itinerary_id] ), notice: 'New activity was added to your itinerary.'
     else
       render :new
     end
@@ -27,7 +29,7 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
-    @activity.update(activity_params)
+    @activity.update!(activity_params)
     redirect_to activities_path(@activity)
   end
 
