@@ -1,16 +1,16 @@
 class City < ApplicationRecord
   has_many :activities
   has_many :itineraries
-  geocoded_by :longitude, :latitude
-  after_validation :geocode
+  # geocoded_by :longitude, :latitude
+  # after_validation :geocode
 
   def index
     @cities = City.all
-    @markers = @cities.geocoded.map do |city|
-      {
-        lat: city.latitude,
-        lng: city.longitude
-      }
-    end
+    # @markers = @cities.geocoded.map do |city|
+    #   {
+    #     lat: city.latitude,
+    #     lng: city.longitude
+    #   }
+    # end
   end
 end
