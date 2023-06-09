@@ -1,8 +1,28 @@
-<h1>Profile</h1>
-<p>Hello implement user_signed_in</p>
+<div class="container">
+  <h1>Profile</h1>
+  <% if user_signed_in? && current_user == @user %>
+  <div class="edit-profile-link">
+    <%= link_to "Edit", edit_user_url, class: "underline-link" %>
+    </div>
+  <% end %>
 
-<% if user_signed_in? && current_user == @user %>
- <div class="edit-profile-link">
-  <%= link_to "Edit", edit_user_url, class: "underline-link" %>
-  </div>
-<% end %>
+  <div class="profile-card">
+    <div class="card-content">
+      <img src="<%= @user.photo %>"  class="profile-photo">
+    </div>
+
+  <p class="user-name"> <%= current_user.first_name %></p>
+      <div class="profile-icon">
+        <i class="fa-regular fa-message"></i>
+      </div>
+</div>
+
+<div class="container">
+        <div class="Bio-user">
+          <p > <%= current_user.summary%></p>
+        </div>
+
+        <div class="itineries-section">
+          <%= link_to "Itineraries",  itinerary_path%>
+        </div>
+</div>
