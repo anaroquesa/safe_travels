@@ -1,4 +1,4 @@
-require "open-uri"
+# require "open-uri"
 require "pry-byebug"
 
 User.destroy_all
@@ -9,11 +9,7 @@ puts "Cleaning DB 🧹"
 
 puts "Creating Users.."
 
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SlothDWA.jpg/1599px-SlothDWA.jpg?20200311221730")
-esther = User.create(first_name: "Esther", last_name: "Mueni", email: "Esther@email.com", password: "123456")
-esther.photo.attach(io: file, filename: "sloth.jpg", content_type: "image/jpg")
-esther.save!
-
+User.create(first_name: "Esther", last_name: "Mueni", email: "Esther@email.com", password: "123456")
 User.create(first_name: "Agustin", last_name: "Rivas", email: "Agustin@email.com", password: "123456")
 User.create(first_name: "Ana", last_name: "Sa", email: "Ana@email.com", password: "123456")
 User.create(first_name: "Dabin", last_name: "Im", email: "Dabin@email.com", password: "123456")
