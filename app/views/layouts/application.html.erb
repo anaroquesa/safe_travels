@@ -10,8 +10,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
+<% if params[:controller] == 'pages' &&  params[:action] == 'home' %>
+    <body data-controller="home" data-home-target="body" style="margin-bottom:130px;">
+    <%= render "layouts/header" %>
+
 <% if @show_loading_page %>
     <body data-controller="home" data-home-target="body">
+
       <div data-home-target="logo" class="homewrapper">
         <div class="logoholder"></div>
       </div>
@@ -26,6 +31,7 @@
     </body>
   <% else %>
     <body>
+      <%= render "layouts/header" %>
       <%= render "shared/flashes" %>
       <%= yield %>
       <%= render "layouts/navbar" %>
