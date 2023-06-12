@@ -1,15 +1,11 @@
 
-<div class="container" style="width: 360px; margin-bottom: 10px;">
+<div class="container" style="width: 360px; margin-bottom: 120px;">
   <%= link_to '<', itineraries_path %>
-
   <h1><%= @itinerary.title %></h1>
-
-
   <h3>Explore activities
   <%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %>
   <%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %>
   </h3>
-
   <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
   <% sorted_it_activities.keys.each do |date| %>
     <div class="category">
