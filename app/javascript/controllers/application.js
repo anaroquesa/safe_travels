@@ -9,4 +9,3 @@ window.Stimulus   = application
 export { application }
 
 //installed by Esther
-import "@rails/actioncable"
