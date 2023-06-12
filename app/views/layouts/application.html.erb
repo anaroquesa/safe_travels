@@ -13,9 +13,18 @@
 <% if params[:controller] == 'pages' &&  params[:action] == 'home' %>
     <body data-controller="home" data-home-target="body" style="margin-bottom:130px;">
     <%= render "layouts/header" %>
+
+<% if @show_loading_page %>
+    <body data-controller="home" data-home-target="body">
+
       <div data-home-target="logo" class="homewrapper">
         <div class="logoholder"></div>
       </div>
+      <script>
+        setTimeout(function() {
+          window.location.href = '<%= yield :redirect_path %>';
+        }, 3000); // Delay in milliseconds (e.g., 3000 for 3 seconds)
+      </script>
       <%= render "shared/flashes" %>
       <%= yield %>
       <%= render "layouts/navbar" %>

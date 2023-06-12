@@ -8,11 +8,23 @@ class ChatroomsController < ApplicationController
   def show
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
+
   end
 
   def create
     @user2 = User.find(params[:user2_id])
     @chatroom = Chatroom.find_or_create_by(user1: current_user, user2: @user2)
+
+    # if @chatroom
+    # else
+    #   Chatroom.create
+    # end
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    @chatroom = Chatroom.create(user1: current_user, user2: @user)
+
     redirect_to chatroom_path(@chatroom)
   end
 end

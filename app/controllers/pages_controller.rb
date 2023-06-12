@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [ :home, :cities ]
 
   def home
+    @show_loading_screen = session[:show_loading_screen]
+    session[:show_loading_screen] = false # Reset the flag
     @user = current_user
     if params[:query].present?
       sql_query = "name ILIKE :query"
@@ -18,5 +20,9 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+  end
+
+  def profiles
+    @users = User.where.not(email: current_user.email)
   end
 end

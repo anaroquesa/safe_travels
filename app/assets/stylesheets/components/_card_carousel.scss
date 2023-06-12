@@ -4,6 +4,14 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
+  transition: 0.1s all ease-in-out;
+
+  &:active {
+    // transform: scale(1.1);
+    box-shadow: 4px 2px 15px rgb(201, 200, 200);
+    // background: rgb(229, 228, 255);
+    background: rgb(224, 224, 227);
+  }
 }
 
 .card-trip > a {
