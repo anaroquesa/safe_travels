@@ -10,12 +10,17 @@
     <div class="card-content">
       <%# <%= cl_image_tag @user.photo.key, class: "profile-photo", height: 300, width: 400, crop: :fill %>
     </div>
-    <p class="user-name"> <%= current_user.first_name %></p>
+    <p class="user-name"> <%= @user.first_name %></p>
+    <% if @chatroom.id %>
+      <%= link_to "chat", chatroom_path(@chatroom) %>
+    <% else %>
+      <%= button_to "chat", user_chatrooms_path(@user) %>
+    <% end %>
   </div>
 
   <div class="container">
     <div class="Bio-user">
-      <p > <%= current_user.summary %></p>
+      <p > <%= @user.summary %></p>
     </div>
   </div>
 

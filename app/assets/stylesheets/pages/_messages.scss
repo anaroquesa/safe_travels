@@ -1,0 +1,29 @@
+.messages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message.sent {
+  justify-content: flex-end;
+  align-self: flex-end;
+  background-color: lightblue;
+}
+
+.message.sent img {
+  margin-left: 10px;
+  margin-right: 0;
+}

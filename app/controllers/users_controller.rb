@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @chatroom = Chatroom.where(user1: current_user, user2: @user).or(Chatroom.where(user1: @user, user2: current_user))
+    @chatroom = @chatroom.empty? ? Chatroom.new : @chatroom.first
   end
 
   def edit

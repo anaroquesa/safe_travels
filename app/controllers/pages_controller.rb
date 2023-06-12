@@ -21,4 +21,8 @@ class PagesController < ApplicationController
   def profile
     @user = current_user
   end
+
+  def profiles
+    @users = User.where.not(email: current_user.email)
+  end
 end
