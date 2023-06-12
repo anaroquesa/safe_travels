@@ -1,14 +1,20 @@
+<div class="header d-flex justify-content-between p-3" style="height:60px;">
+  <%= link_to itineraries_path, class: 'add-button' do %>
+    <h4><i class="fa-solid fa-circle-arrow-left" style="color:white;"></i></h4>
+  <% end %>
+  <%= @itinerary.title %>
+</div>
+<br>
+<%= render "layouts/map" %>
 
-<div class="container" style="width: 360px; margin-bottom: 10px;">
-  <%= link_to '<', itineraries_path %>
+<div class="d-flex justify-content-between p-3">
+  <div class="column justify-content-right">
+    <%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %>
+    <%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %>
+  </div>
+</div>
+<br>
 
-  <h1><%= @itinerary.title %></h1>
-
-
-  <h3>Explore activities
-  <%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %>
-  <%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %>
-  </h3>
 
   <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
   <% sorted_it_activities.keys.each do |date| %>
@@ -36,6 +42,11 @@
       <% end %>
     </div>
   <% end %>
+<!-- <div class="container" style="width:360px;">
+  <span><strong>PLAN ACTIVITIES</strong></span>
+<%= render "layouts/itactivities" %>
+</div> -->
+
 
   <% if !@itinerary.end_date.past? %>
     <div class="category">
@@ -91,18 +102,3 @@
       <%= @itinerary.review %>
     <% end %>
   <% end %>
-
-
-<% if @itactivities.empty? %>
-  <div style="width: 100%; height: 200px;" id="city"
-    data-controller="map"
-    data-map-markers-value="<%= @marker.to_json %>"
-    data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
-  </div>
-<% else %>
-  <div style="width: 100%; height: 200px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
-  </div>
-<% end %>
