@@ -5,16 +5,31 @@ class ItActivitiesController < ApplicationController
   end
 
   def index
-    @itactivities = ItActviity.all
+    @itactivities = ItActivity.all
   end
 
   def create
     @itinerary = Itinerary.find(params[:itinerary_id])
-    @itactivity = ItActivity.new(itinerary_id: params[:itinerary_id], activity_id: params[:it_activity][:activity_id], date: params[:date] )
+    @itactivity = ItActivity.new(it_activity_params)
     if @itactivity.save!
       redirect_to itinerary_path(@itinerary), notice: 'New activity was added to your itinerary.'
     else
       render :new
+    end
+  end
+
+  def edit
+    @itinerary = Itinerary.find(params[:itinerary_id])
+    @itactivity = ItActivity.find(params[:id])
+  end
+
+  def update
+    @itinerary = Itinerary.find(params[:itinerary_id])
+    @itactivity = ItActivity.find(params[:id])
+    if @itactivity.update(it_activity_params)
+      redirect_to itinerary_path(@itinerary), notice: 'Activity date was successfully updated.'
+    else
+      render :edit
     end
   end
 
