@@ -140,6 +140,13 @@ Activity.create!(
   address: "Reichstag Building, Platz der Republik 1, 11011 Berlin",
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_2_icwzsk.png"
 )
+Activity.create!(
+  city_id: "1",
+  title: "Berlin Cathedral",
+  category: "Culture",
+  address: "Am Lustgarten, 10178 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650766/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_4_srjzrh.png"
+)
 
 Activity.create!(
   city_id: "1",
@@ -148,6 +155,64 @@ Activity.create!(
   address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
 )
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Art",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Art",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Food",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Food",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Food",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Nature",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Nature",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+Activity.create!(
+  city_id: "1",
+  title: "",
+  category: "Nature",
+  address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+)
+
+
 
 Activity.create!(
   city_id: "2",
@@ -171,11 +236,4 @@ Activity.create!(
   category: "Nature",
   address: "Central Park West, New York, NY, USA",
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686651185/SafeTravels%20app/Images/City%20images/NY%20activities/NY_activities_3_mmn9nf.png"
-)
-Activity.create!(
-  city_id: "1",
-  title: "Berlin Cathedral",
-  category: "Culture",
-  address: "Am Lustgarten, 10178 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650766/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_4_srjzrh.png"
 )
