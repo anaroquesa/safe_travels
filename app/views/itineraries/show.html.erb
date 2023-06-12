@@ -1,8 +1,5 @@
-
-<%= link_to '<', itineraries_path %>
-
-
 <div class="container" style="width: 360px; margin-bottom: 10px;">
+  <%= link_to '<', itineraries_path %>
   <h1><%= @itinerary.title %></h1>
 
 
@@ -83,10 +80,16 @@
   <% end %>
 
 
-
-<div style="width: 100%; height: 200px;"
-  data-controller="map"
-  data-map-markers-value="<%= @marker.to_json %>"
-  data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
-
-</div>
+<% if @itactivities.empty? %>
+  <div style="width: 100%; height: 200px;" id="city"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
+  </div>
+<% else %>
+  <div style="width: 100%; height: 200px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsaGhnMjZ0aDBiYnUzbXByeXUwOGtiYWYifQ.-eVD2Jk29XEU7OpQmFeMWQ'] %>">
+  </div>
+<% end %>

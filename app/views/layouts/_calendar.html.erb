@@ -1,0 +1,6 @@
+<div>
+  <%= simple_form_for @itinerary  do |f| %>
+    <%= f.input :start_date, as: :string, label: "Pick a date",
+              input_html: { data: { controller: "datepicker" } } %>
+  <% end %>
+</div>
