@@ -1,4 +1,4 @@
-<div class="container mt-4 p-3">
+<div class="container mt-4 p-3 style = margin-bottom:120px;">
   <h1>Profile</h1>
   <% if user_signed_in? && current_user == @user %>
   <div class="edit-profile-link">
@@ -8,15 +8,18 @@
 
   <div class="profile-card">
     <div class="card-content">
-      <%# <%= cl_image_tag @user.photo.key, class: "profile-photo", height: 300, width: 400, crop: :fill %>
+       <img src="<%= @user.photo %>"  class="profile-photo">
     </div>
     <p class="user-name"> <%= @user.first_name %></p>
-    <% if @chatroom.id %>
-      <%= link_to "chat", chatroom_path(@chatroom) %>
-    <% else %>
-      <%= button_to "chat", user_chatrooms_path(@user) %>
+    <% unless current_user == @user %>
+      <% if @chatroom.id %>
+      <%= link_to icon("profile-icon", "fa-regular fa-message"), chatroom_path(@chatroom) %>
+      <% else %>
+        <%= button_to "Chatting with", user_chatrooms_path(@user) %>
+      <% end %>
     <% end %>
   </div>
+
 
   <div class="container">
     <div class="Bio-user">
