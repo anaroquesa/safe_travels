@@ -7,4 +7,7 @@
   <div class="small"> Learn more ></div>
 </div>
 
+<%# Move logout button in homepage. Copy and paste this link over to profile %>
+<%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
+
 <div class="container" style="width:360px;z-index:1;"><%= render "layouts/card_carousel" %></div>
