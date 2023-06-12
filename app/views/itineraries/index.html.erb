@@ -1,88 +1,16 @@
-
-<div class="container" style="width:360px; margin-bottom:10px;">
-  <h1>
-    Ongoing plans
-    <%= link_to new_itinerary_path, class: 'add-button' do %>
-      <i class="fas fa-plus"></i>
-    <% end %>
-  </h1>
-  <% @ongoing_itineraries.group_by(&:city).each do |city, itineraries| %>
-    <div class="card-trip">
-      <div class="row">
-        <div class="col-md-1">
-          <a href="<%= itinerary_path(itineraries.first) %>">
-            <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
-            <h2><%= city.name %></h2>
-          </a>
-        </div>
-        <div class="card-trip-infos">
-          <% itineraries.each do |itinerary| %>
-            <div>
-              <h2><%= itinerary.title %>
-              <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_path(itinerary), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
-              <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary) %>
-              </h2>
-              <p><%= itinerary.start_date %> to <%= itinerary.end_date %></p>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-  <h1>Upcoming plans</h1>
-  <% @upcoming_itineraries.group_by(&:city).each do |city, itineraries| %>
-    <div class="card-trip">
-      <div class="row">
-        <div class="col-md-1">
-          <a href="<%= itinerary_path(itineraries.first) %>">
-            <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
-            <h2><%= city.name %></h2>
-          </a>
-        </div>
-        <div class="card-trip-infos">
-          <% itineraries.each do |itinerary| %>
-            <div>
-              <h2><%= itinerary.title %>
-              <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_path(itinerary), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
-              <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary) %>
-              </h2>
-              <p><%= itinerary.start_date %> to <%= itinerary.end_date %></p>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-  <h1>Past plans</h1>
-
-  <% @past_itineraries.group_by(&:city).each do |city, itineraries| %>
-    <div class="card-trip">
-      <div class="row">
-        <div class="col-md-1">
-          <a href="<%= itinerary_path(itineraries.first) %>">
-            <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
-            <h2><%= city.name %></h2>
-          </a>
-        </div>
-        <div class="card-trip-infos">
-          <% itineraries.each do |itinerary| %>
-            <div>
-              <h2><%= itinerary.title %>
-                <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_path(itinerary), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
-                <% unless itinerary.review.present? %>
-                  <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary), class: 'edit-icon text-warning' %>
-                  <span class="text-warning">Tell us how it was!</span>
-                <% else %>
-                  <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary), class: 'edit-icon' %>
-                <% end %>
-              </h2>
-              <p><%= itinerary.start_date %> to <%= itinerary.end_date %></p>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
+<div class="header d-flex justify-content-between p-3" style="height:60px;">
+<h4>Itineraries</h4>
+  <%= link_to new_itinerary_path, class: 'add-button' do %>
+<h4><i class="fa-solid fa-circle-plus" style="color:white;"></i></h4>
   <% end %>
 </div>
+
+<div class="container" style="width:360px; margin-bottom:130px;">
+<div class="wrapper" style="margin-top:20px;">
+  <span><strong>Upcoming Trips</strong></span>
+    <%= render "layouts/ongoing_itinerary_activity_card" %>
+  <span><strong>Past Trips</strong></span>
+    <%= render "layouts/past_itinerary_activity_card" %>
+</div>
+</div>
+

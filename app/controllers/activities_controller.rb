@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(activity_params)
     if @activity.save!
-      ItActivity.create!(activity_id: @activity.id, itinerary_id: params[:activity][:itinerary_id] )
+      ItActivity.create!(activity_id: @activity.id, itinerary_id: params[:activity][:itinerary_id], date: @activity.date )
       redirect_to itinerary_path(params[:activity][:itinerary_id] ), notice: 'New activity was added to your itinerary.'
     else
       render :new
