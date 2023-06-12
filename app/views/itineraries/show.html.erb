@@ -28,8 +28,11 @@
           <% end %>
           <%= activity.title %>
           <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %>
-          <%= link_to icon('fa-regular', 'edit icon-hover-edit'), itinerary_it_activity_path(@itinerary, it_activity) %>
-        </div>
+          <%= link_to icon('fa-regular', 'edit icon-hover-edit'), '#', class: 'edit-activity' %>
+          <%= form_with(model: it_activity, url: itinerary_it_activity_path(@itinerary, it_activity), class: 'hidden-form', local: true) do |form| %>
+            <%= form.date_field :date %>
+            <%= form.submit 'Update', class: 'update-button' %>
+          <% end %>
       <% end %>
     </div>
   <% end %>
@@ -49,7 +52,7 @@
                 <%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
                   <%= f.hidden_field :activity_id, value: activity.id %>
                   <%= f.hidden_field :itinerary_id, value: @itinerary.id %>
-                  <%= f.hidden_field :date, value: activity.date %>
+                  <%= f.date_field :date %>
                   <%= f.button :submit, "", class: "btn btn-primary btn-sm", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) do %>
                     <i class="fas fa-plus"></i>
                   <% end %>
@@ -73,6 +76,7 @@
                 <%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
                   <%= f.hidden_field :activity_id, value: activity.id %>
                   <%= f.hidden_field :itinerary_id, value: @itinerary.id %>
+                  <%= f.date_field :date %>
                   <%= f.button :submit, "", class: "btn btn-primary btn-sm", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) do %>
                     <i class="fas fa-plus"></i>
                   <% end %>

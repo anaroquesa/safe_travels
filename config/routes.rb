@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :itineraries do
     resources :reviews
-    resources :it_activities, only: %i[new index create destroy]
+    resources :it_activities, only: %i[new index create destroy edit update]
   end
 
   resources :cities do
