@@ -12,17 +12,17 @@ class ItinerariesController < ApplicationController
   def show
     @activities = Activity.where(city_id: @itinerary.city_id)
     @itactivity = ItActivity.new
-    @itactivities = ItActivity.all
+    @itactivities = ItActivity.where(itinerary_id: @itinerary.id)
     @city = @itinerary.city
     @cities = City.all
-    @markers = @activities.geocoded.map do |activitiy|
-      {
-        lat: activitiy.latitude,
-        lng: activitiy.longitude
-      }
-    end
-    @marker = [lat: @city.latitude, lng: @city.longitude]
+      @markers = @itactivities.map do |itactivity|
+        {
+          lat: itactivity.activity.latitude,
+          lng: itactivity.activity.longitude
+        }
+      end
 
+    @marker = [lat: @city.latitude, lng: @city.longitude]
   end
 
   def new
@@ -31,10 +31,12 @@ class ItinerariesController < ApplicationController
   end
 
   def create
-    @itinerary = Itinerary.new(itinerary_params)
+    start_date = params[:itinerary][:start_date].split(" to ")[0]
+    end_date = params[:itinerary][:start_date].split(" to ")[1]
+    @itinerary = Itinerary.new(start_date: start_date, end_date: end_date, **itinerary_params)
     @itinerary.user = current_user
-    if @itinerary.save
-      redirect_to city_path(@itinerary.city_id), notice: 'Itinerary was successfully created.'
+    if @itinerary.save!
+      redirect_to @itinerary, notice: 'Itinerary was successfully created.'
     else
       render :new
     end
@@ -71,7 +73,6 @@ class ItinerariesController < ApplicationController
   end
 
   def itinerary_params
-    params.require(:itinerary).permit(:user_id, :city_id, :start_date, :end_date, :title, :visibility, :status, :review)
+    params.require(:itinerary).permit(:user_id, :city_id, :title, :visibility, :status, :review)
   end
-
 end
