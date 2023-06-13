@@ -24,7 +24,7 @@
 </div>
 
 <div class="row col-12 justify-content-center newpage">
-  <%= simple_form_for @user, html: { multipart: true } do |f| %>
+  <%= simple_form_for @user, html: { multipart: true }, method: :patch do |f| %>
     <div><%= f.input :first_name %></div>
     <div><%= f.input :photo, as: :file %></div> <!-- Add this line for the file input -->
     <div><%= f.input :summary, label: "Biography" %></div>
