@@ -1,0 +1,30 @@
+<% @activities.each do |activity| %>
+<div class="card-trip">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+          <div class="activity-image-container">
+            <% unless activity.custom || @itinerary.it_activities.exists?(activity_id: activity.id) %>
+                <% if activity.image_url.present? %>
+                  <img src="<%= activity.image_url %>" alt="">
+                <% end %>
+          </div>
+
+          <div class="card-trip-infos">
+            <%= activity.title %>
+          </div>
+
+      </div>
+    </div>
+            <% else %>
+              <% if @itinerary.review.present? %>
+      <div class="carousel-item">
+                <h5>Review</h5>
+                <%= @itinerary.review %>
+      </div>
+            <% end %>
+
+        <% end %>
+  </div>
+</div>
+<% end %>
