@@ -52,7 +52,10 @@
   font-weight: bold;
 }
 
-.navbar a:active {
+.icon-text-container.active .icon{
+  color: #524FF7;
+}
+.icon-text-container.active .text{
   color: #524FF7;
 }
 

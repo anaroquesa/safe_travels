@@ -3,3 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+// import "@rails/actioncable"
+
+const application = Application.start();
+application.register("navbar", NavbarController);
+

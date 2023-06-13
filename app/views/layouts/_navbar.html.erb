@@ -1,19 +1,18 @@
 
 <nav class="navbar">
   <div class="icons-container">
-
-    <div class="icon-text-container">
-      <a href="/">
-        <div class="icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+  <div class="icon-text-container <%= 'active' if request.path == root_path %>">
+    <a href="/">
+      <div class="icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
         <div class="text">
           Explore
         </div>
       </a>
       </div>
 
-    <div class="icon-text-container">
+   <div class="icon-text-container <%= 'active' if request.path == itineraries_path %>">
       <a href="/itineraries">
         <div class="icon">
           <i class="fa-regular fa-heart"></i>
@@ -24,7 +23,7 @@
       </a>
       </div>
 
-    <div class="icon-text-container">
+  <div class="icon-text-container <%= 'active' if request.path == root_path %>">
       <a href="/home">
         <div class="icon">
           <i class="fa-regular fa-bell"></i>
@@ -34,7 +33,7 @@
         </div>
       </a>
       </div>
-      <div class="icon-text-container">
+  <div class="icon-text-container <%= 'active' if request.path == chatrooms_path %>">
         <a href="<%= chatrooms_path %>">
           <div class="icon">
             <i class="fa-regular fa-message"></i>
@@ -44,28 +43,27 @@
           </div>
         </a>
       </div>
-    <div class="icon-text-container">
-
+  <div class="icon-text-container <%= 'active' if user_signed_in? && current_page?(user_path(current_user)) %>">
   <% if user_signed_in? %>
     <%= link_to user_path(current_user) do  %>
       <div class="icon">
         <i class="fa-regular fa-user"></i>
       </div>
-        <div class="text">
-          Profile
-        </div>
-      <% end %>
-      <% else %>
-      <%= link_to new_user_session_path do  %>
+      <div class="text">
+        Profile
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path do  %>
       <div class="icon">
         <i class="fa-regular fa-user"></i>
       </div>
-        <div class="text">
-          Profile
-        </div>
-        <% end %>
+      <div class="text">
+        Profile
+      </div>
+    <% end %>
   <% end %>
-
-    </div>
+</div>
+    
 </div>
 </nav>

@@ -1,5 +1,8 @@
 <div class="container chatroom">
-  <h1>Chat with <%= @chatroom.user2.first_name == current_user.first_name ? @chatroom.user1.first_name : @chatroom.user2.first_name  %></h1>
+  <h1>
+    Chat with
+    <%= @chatroom.user2.first_name == current_user.first_name ? @chatroom.user1.first_name : @chatroom.user2.first_name  %>
+  </h1>
 
   <div class="messages">
     <% @messages.each do |message| %>
