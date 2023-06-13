@@ -1,0 +1,8 @@
+<h1>Chatrooms</h1>
+
+<% @users.each do |user| %>
+  <div class="chatroom">
+    <%= image_tag user.photo, class: "profile-picture" if user.photo.attached? %>
+    <%= link_to user.first_name, chatroom_path(id: user.id), class: "chatroom-link" %>
+  </div>
+<% end %>
