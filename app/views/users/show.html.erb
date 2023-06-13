@@ -6,20 +6,20 @@
     </div>
   <% end %>
 
-  <div class="profile-card">
-    <div class="card-content">
-       <img src="<%= @user.photo %>"  class="profile-photo">
-    </div>
-    <p class="user-name"> <%= @user.first_name %></p>
-    <% unless current_user == @user %>
-      <% if @chatroom.id %>
-      <%= link_to icon("profile-icon", "fa-regular fa-message"), chatroom_path(@chatroom) %>
-      <% else %>
-        <%= button_to "Chatting with", user_chatrooms_path(@user) %>
-      <% end %>
-    <% end %>
-  </div>
 
+  <div class="profile-card">
+  <div class="card-content">
+    <%= image_tag(@user.photo, class: "profile-photo") if @user.photo.attached? %>
+  </div>
+  <p class="user-name"><%= @user.first_name %></p>
+  <% unless current_user == @user %>
+    <% if @chatroom.id %>
+      <%= link_to icon("profile-icon", "fa-regular fa-message"), chatroom_path(@chatroom) %>
+    <% else %>
+      <%= button_to "Chatting with", user_chatrooms_path(@user) %>
+    <% end %>
+  <% end %>
+</div>
 
   <div class="container">
     <div class="Bio-user">

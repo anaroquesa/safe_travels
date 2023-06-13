@@ -18,7 +18,8 @@ Rails.application.routes.draw do
     resources :messages, only: %i[index create]
     resources :chatrooms, only: %i[index show create]
   end
-  resources :chatrooms, only: %i[show edit update] do
+  resources :chatrooms, only: %i[index show edit update] do
     resources :messages, only: :create
   end
+  mount ActionCable.server => '/cable'
 end
