@@ -19,9 +19,8 @@
 
     <div class="card-product-infos">
       <h2><%= activity.title %></h2>
-      <h2><%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %>
-          <%= link_to icon('fa-regular', 'edit icon-hover-edit'), itinerary_it_activity_path(@itinerary, it_activity) %>
-      </h2>
+      <h2><%= link_to icon('fa-regular', 'edit icon-hover-edit'), itinerary_it_activity_path(@itinerary, it_activity) %>
+          <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %></h2>
     </div>
   </div>
     <% end %>
