@@ -36,7 +36,7 @@ class ItinerariesController < ApplicationController
     @itinerary = Itinerary.new(start_date: start_date, end_date: end_date, **itinerary_params)
     @itinerary.user = current_user
     if @itinerary.save!
-      redirect_to @itinerary, notice: 'Itinerary was successfully created.'
+      redirect_to @itinerary
     else
       render :new
     end
@@ -49,7 +49,7 @@ class ItinerariesController < ApplicationController
 
   def update
     if @itinerary.update(itinerary_params)
-      redirect_to itinerary_path(@itinerary), notice: "Itinerary updated successfully."
+      redirect_to itinerary_path(@itinerary)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -58,7 +58,7 @@ class ItinerariesController < ApplicationController
   def destroy
     @itinerary = Itinerary.find(params[:id])
     @itinerary.destroy
-    redirect_to itineraries_url, notice: 'Itinerary was successfully deleted.'
+    redirect_to itineraries_url
   end
 
 

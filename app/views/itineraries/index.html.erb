@@ -1,40 +1,37 @@
 <div class="header d-flex justify-content-between p-3" style="height:60px;">
   <h4>Itineraries</h4>
   <%= link_to new_itinerary_path, class: 'add-button' do %>
-  <h4><i class="fa-solid fa-circle-plus" style="color:white;"></i></h4>
+    <h4><i class="fa-solid fa-circle-plus" style="color:white;"></i></h4>
   <% end %>
 </div>
 
-<div class="container" style="width:360px; margin-bottom:130px; postion:relative;">
+<div class="container" style="width:360px; margin-bottom:130px; position:relative;">
   <% @ongoing_itineraries.group_by(&:city).each do |city, itineraries| %>
     <a href="<%= itinerary_path(itineraries.first) %>">
       <img src="<%= city.image_url_one %>" style="width:100%; height:200px; padding:10px; border-radius:40px;" />
     </a>
-  <div style="">
-    <h2><%= city.name %></h2>
-  </div>
-<% end %>
+    <div style="">
+      <h2><%= city.name %></h2>
+    </div>
+  <% end %>
 
-
-<div>
-  <span><strong>Upcoming Trips</strong></span>
-      <%= render "layouts/upcoming_itinerary_activity_card" %>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <strong>Past Trips</strong>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-      <%= render "layouts/past_itinerary_activity_card" %>
+  <div>
+    <span><strong>Upcoming Trips</strong></span>
+    <%= render "layouts/upcoming_itinerary_activity_card" %>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>Past Trips</strong>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <%= render "layouts/past_itinerary_activity_card" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-
-</div>
-
-  </div>
