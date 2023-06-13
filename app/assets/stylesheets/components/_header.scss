@@ -1,5 +1,12 @@
 .header{
   background:#524FF7;
   height:40px;
+  width: 100%;
   color:white;
+  position: sticky-top;
+}
+
+.header h4 {
+  text-decoration: none;
+  color: white;
 }

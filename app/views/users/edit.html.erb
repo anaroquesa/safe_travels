@@ -1,10 +1,8 @@
-<div class="container mt-4 p-3" style="margin-bottom:120px;">
-  <h2>Edit Profile</h2>
-  <% if user_signed_in? && current_user == @user %>
-    <div class="edit-profile-link">
-      <%= link_to "Back to Profile", user_path%>
-    </div>
+<div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
+  <%= link_to user_path, class: 'add-button' do %>
+    <h4><i class="fa-solid fa-circle-arrow-left" style="color:white;"></i>  Profile</h4>
   <% end %>
+</div>
 
   <div class="profile-card">
     <div class="card-content">
@@ -15,6 +13,7 @@
         <i class="fa-regular fa-message"></i>
       </div> %>
 </div>
+
 
 <div class="container">
         <div class="Bio-user">

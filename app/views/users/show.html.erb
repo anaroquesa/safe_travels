@@ -1,12 +1,14 @@
-<div class="container mt-4 p-3 style = margin-bottom:120px;">
-  <h1>Profile</h1>
-  <% if user_signed_in? && current_user == @user %>
-  <div class="edit-profile-link">
-    <%= link_to "Edit", edit_user_url, class: "underline-link" %>
-    </div>
+<div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
+  <%= link_to home_path, class: 'add-button' do %>
+    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>    Profile</h4>
   <% end %>
+  <% if user_signed_in? && current_user == @user %>
+    <h6><%= link_to "Edit", edit_user_url, class: "underline-link" %></h6>
+  <% end %>
+</div>
 
 
+<div class="container">
   <div class="profile-card">
   <div class="card-content">
     <%= image_tag(@user.photo, class: "profile-photo") if @user.photo.attached? %>
@@ -14,19 +16,22 @@
   <p class="user-name"><%= @user.first_name %></p>
   <% unless current_user == @user %>
     <% if @chatroom.id %>
-      <%= link_to icon("profile-icon", "fa-regular fa-message"), chatroom_path(@chatroom) %>
+      <%= link_to icon("profile-icon", "fa-solid fa-message"), chatroom_path(@chatroom) %>
     <% else %>
-      <%= button_to "Chatting with", user_chatrooms_path(@user) %>
+      <%= button_to "chat", user_chatrooms_path(@user) %>
     <% end %>
   <% end %>
 </div>
 
-  <div class="container">
-    <div class="Bio-user">
-      <p > <%= @user.summary %></p>
-    </div>
+
+  <div class="Bio-user">
+    <p > <%= @user.summary %></p>
   </div>
 
+  <div class="form-actions p-2">
+  <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
+  </div>
+</div>
   <%# <div class="container">
     <div class="itineries-section">
       <%= link_to "Your itineraries", itinerary_path %>

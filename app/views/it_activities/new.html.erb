@@ -1,1 +1,9 @@
 <h1>YOUR NEW ACTIVITY</h1>
+<%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
+                  <%= f.hidden_field :activity_id, value: activity.id %>
+                  <%= f.hidden_field :itinerary_id, value: @itinerary.id %>
+                  <%= f.date_field :date %>
+                  <%= f.button :submit, "", class: "btn btn-primary btn-sm", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) do %>
+                    <i class="fas fa-plus"></i>
+                  <% end %>
+                <% end %>

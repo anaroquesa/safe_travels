@@ -7,34 +7,28 @@ class UsersController < ApplicationController
     @chatroom = @chatroom.empty? ? Chatroom.new : @chatroom.first
   end
 
-  def edit
-    @user = User.find(params[:id])
+  def create
+    @user = User.new(user_params)
+    @User.save!
   end
 
-  # def update
-  #   @user = current_user
-  #   if @user.update(profile_params)
-  #     redirect_to user_path, alert: "Profile updated successfully."
-  #   else
-  #     render :show, status: :unprocessable_entity
-  #   end
-  # end
+  def edit
+    @user = User.find(params[:id])
+     @user = current_user
+  end
 
-  def update
-    @user = current_user
-    if @user.update(user_params)
-      redirect_to user_path(@user), notice: "Profile updated successfully."
-    else
-      render :edit, status: :unprocessable_entity
+  def user_update
+    @user = User.find(params[:id])
+    if @user.update!(user_params)
+      redirect_to user_path(@user)
+   else
+      render :show, status: :unprocessable_entity
     end
   end
 
   private
 
-  # def user_params
-  #   params.require(:user).permit(:name, :summary, :photo, :email, :emergency_contact_name, :emergency_contact_number)
-  # end
   def user_params
-    params.require(:user).permit(:first_name, :summary, :email, :emergency_contact_name, :emergency_contact_number, :photo)
+    params.require(:user).permit(:first_name, :summary, :emergency_contact_name, :emergency_contact_number, :photo)
   end
 end
