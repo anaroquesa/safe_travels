@@ -1,6 +1,6 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <%= link_to home_path, class: 'add-button' do %>
-    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></i>      Profile</h4>
+    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>    Profile</h4>
   <% end %>
   <% if user_signed_in? && current_user == @user %>
     <h6><%= link_to "Edit", edit_user_url, class: "underline-link" %></h6>
@@ -8,7 +8,7 @@
 </div>
 
 
-
+<div class="container">
   <div class="profile-card">
   <div class="card-content">
     <%= image_tag(@user.photo, class: "profile-photo") if @user.photo.attached? %>
@@ -23,14 +23,16 @@
   <% end %>
 </div>
 
-  <div class="container">
-    <div class="Bio-user">
-      <p > <%= @user.summary %></p>
-    </div>
+
+  <div class="Bio-user">
+    <p > <%= @user.summary %></p>
   </div>
 
+  <div class="form-actions p-2">
+  <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
+  </div>
+</div>
   <%# <div class="container">
     <div class="itineries-section">
       <%= link_to "Your itineraries", itinerary_path %>
 </div>
-<%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>

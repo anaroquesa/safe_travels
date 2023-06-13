@@ -24,4 +24,28 @@
     </div>
   </div>
     <% end %>
+
+    <% if activity.custom? %>
+      <div data-controller="toggler">
+        <i class="fa-regular fa-pen-to-square" data-action="click->toggler#toggle"></i>
+        <div data-toggler-target="togglableElement" class="d-none">
+          <%= form_with(model: activity, url: activity_path(activity), class: 'hidden-form', local: true) do |form| %>
+            <%= form.text_field :title, value: activity.title %>
+            <%= form.text_field :address, value: activity.address %>
+            <%= form.submit 'Update', class: 'update-button' %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <div data-controller="calendar">
+      <i class="fa-regular fa-calendar" data-action="click->calendar#toggle"></i>
+      <div data-calendar-target="togglableElement" class="d-none">
+        <%= form_with(model: it_activity, url: itinerary_it_activity_path(@itinerary, it_activity), class: 'hidden-form', local: true) do |form| %>
+          <%= form.date_field :date %>
+          <%= form.submit 'Update', class: 'update-button' %>
+        <% end %>
+      </div>
+    </div>
+
 <% end %>
