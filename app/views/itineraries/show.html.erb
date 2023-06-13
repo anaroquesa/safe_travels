@@ -22,11 +22,12 @@
 
   <%= render "layouts/itactivities" %>
 
-  <strong>OUR TOP SELECTION FOR YOU:</strong></div>
+  <strong>OUR SUGGESTIONS</strong></div>
 
 <div class="">
 
-  <div class="card-product mt-3">
+  <div>
+    <div class="scroll-container">
     <% @activities.each do |activity| %>
       <div class="activity-image-container" style="width=100px;">
         <% unless activity.custom || @itinerary.it_activities.exists?(activity_id: activity.id) %>
@@ -34,7 +35,7 @@
               <img src="<%= activity.image_url %>" alt="">
             <% end %>
         <div class="card-product-infos">
-          <h2><%= activity.title %></h2>
+          <p><%= activity.title %></p>
         </div>
           <%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
         <div class="card-product-infos">

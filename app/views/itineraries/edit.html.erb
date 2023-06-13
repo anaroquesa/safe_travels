@@ -5,15 +5,14 @@
   <h4>Edit plan</h4>
 </div>
 
-<div class="container" style="width:360px; margin-bottom:10px;">
+<div class="container" style="width:360px;">
 
     <%= simple_form_for @itinerary do |f| %>
-      <div class="card-trip">
-      <img src="<%= @itinerary.city.image_url_one %>" class="d-block w-100" alt="...">
+      <div class="form-inputs">
+      <div class="card-category-img mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @itinerary.city.image_url_one %>); width:100%; height:200px; padding:10px;">
+        <h2><%= @itinerary.city.name %></h2>
       </div>
       <%= f.input :title %>
-      <p>City name: <%= @itinerary.city.name %></p>
-      <%= f.input :visibility, as: :boolean %>
       <% if @itinerary.end_date.past? %>
         <%= f.input :review, as: :text %>
       <% end %>
@@ -23,8 +22,9 @@
       <% else %>
         <p><%= @itinerary.start_date %> to <%= @itinerary.end_date %></p>
       <% end %>
-      <div>
-        <%= f.submit "Update plan" %>
+      <%= f.input :visibility, as: :boolean %>
+        <div class="form-actions">
+        <%= f.button :submit, "Update" %>
       </div>
     <% end %>
 </div>
