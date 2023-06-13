@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  patch 'users/:id', to: 'users#user_update'
   devise_for :users
   root to: "pages#home"
   get "/home", to: "pages#home", as: :home
