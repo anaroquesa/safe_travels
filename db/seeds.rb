@@ -11,9 +11,9 @@ puts "Creating Users.."
 
 User.create(first_name: "Esther", last_name: "Mueni", email: "Esther@email.com", password: "123456", summary: "Esther Was was born on November 23, 1985, in a small town in the Midwest. From a young age, she displayed a deep curiosity and passion for the natural world. Emma spent her childhood exploring the nearby forests, observing the wildlife, and collecting rocks and plant specimens")
 User.create(first_name: "Agustin", last_name: "Rivas", email: "Agustin@email.com", password: "123456")
-User.create(first_name: "Ana", last_name: "Sa", email: "Ana@email.com", password: "123456")
-User.create(first_name: "Dabin", last_name: "Im", email: "Dabin@email.com", password: "123456")
-User.create(first_name: "Emily", last_name: "Yetsko", email: "Emily@email.com", password: "123456")
+User.create(first_name: "Ana", last_name: "Sa", email: "Ana@email.com", password: "123456", summary: "Ana Was was born on November 23, 1985, in a small town in the Midwest. From a young age, she displayed a deep curiosity and passion for the natural world. Emma spent her childhood exploring the nearby forests, observing the wildlife, and collecting rocks and plant specimens")
+User.create(first_name: "Dabin", last_name: "Im", email: "Dabin@email.com", password: "123456", summary: "Dabin Was was born on November 23, 1985, in a small town in the Midwest. From a young age, she displayed a deep curiosity and passion for the natural world. Emma spent her childhood exploring the nearby forests, observing the wildlife, and collecting rocks and plant specimens")
+User.create(first_name: "Emily", last_name: "Yetsko", email: "Emily@email.com", password: "123456", summary: "Emily Was was born on November 23, 1985, in a small town in the Midwest. From a young age, she displayed a deep curiosity and passion for the natural world. Emma spent her childhood exploring the nearby forests, observing the wildlife, and collecting rocks and plant specimens")
 
 puts "Creating Cities.."
 
