@@ -1,5 +1,6 @@
 .navbar {
-  position: sticky;
+  position: fixed;
+  display: block;
   bottom: 0;
   width: 100%;
   background-color: #f8f9fa;
@@ -49,4 +50,8 @@
   text-decoration: none;
   font-size: 10px;
   font-weight: bold;
+}
+
+.navbar a:active {
+  color: #524FF7;
 }
