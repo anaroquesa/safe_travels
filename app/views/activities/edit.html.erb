@@ -2,9 +2,11 @@
   <div class="row col-12 justify-content-center center-form">
     <div>
       <%= simple_form_for @activity do |f| %>
-        <%= f.input :title %>
-        <%= f.input :category %>
-        <%= f.input :address %>
+        <%= f.input :title, label: 'Title' %>
+        <%= f.input :address, label: 'Address' %>
+        <%= f.input :custom, as: :hidden, input_html: { value: true } %>
+        <%= f.hidden_field :city_id, value: @activity.city_id %>
+        <%# <%= f.hidden_field :itinerary_id, value: @itinerary_id %>
         <%= f.submit class: "btn btn-primary", label: "Updated" %>
       <% end %>
     </div>

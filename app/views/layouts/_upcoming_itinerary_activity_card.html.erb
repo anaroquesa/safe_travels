@@ -1,8 +1,8 @@
 <% @upcoming_itineraries.group_by(&:city).each do |city, itineraries| %>
-<div class="card-product">
-  <a href="<%= itinerary_path(itineraries.first) %>">
-    <img src="<%= city.image_url_one %>" />
-  </a>
+  <div class="card-product">
+    <a href="<%= itinerary_path(itineraries.first) %>">
+      <img src="<%= city.image_url_one %>" />
+    </a>
 
   <div class="card-product-infos">
   <% itineraries.each do |itinerary| %>
@@ -14,8 +14,6 @@
     <h3><%= city.name %></h3>
       <p><%= itinerary.start_date %> - <%= itinerary.end_date %><p>
       <% end %>
+    </div>
   </div>
-
-
-</div>
 <% end %>

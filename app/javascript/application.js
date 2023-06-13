@@ -7,4 +7,3 @@ import "bootstrap"
 
 const application = Application.start();
 application.register("navbar", NavbarController);
-

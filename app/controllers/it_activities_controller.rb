@@ -12,7 +12,7 @@ class ItActivitiesController < ApplicationController
     @itinerary = Itinerary.find(params[:itinerary_id])
     @itactivity = ItActivity.new(it_activity_params)
     if @itactivity.save!
-      redirect_to itinerary_path(@itinerary), notice: 'New activity was added to your itinerary.'
+      redirect_to itinerary_path(@itinerary)
     else
       render :new
     end
@@ -27,7 +27,7 @@ class ItActivitiesController < ApplicationController
     @itinerary = Itinerary.find(params[:itinerary_id])
     @itactivity = ItActivity.find(params[:id])
     if @itactivity.update(it_activity_params)
-      redirect_to itinerary_path(@itinerary), notice: 'Activity date was successfully updated.'
+      redirect_to itinerary_path(@itinerary)
     else
       render :edit
     end
@@ -36,8 +36,11 @@ class ItActivitiesController < ApplicationController
   def destroy
     @itinerary = Itinerary.find(params[:itinerary_id])
     @itactivity = ItActivity.find(params[:id])
-    @itactivity.destroy!
-    redirect_to itinerary_path(@itinerary)
+    if @itactivity.destroy!
+      redirect_to itinerary_path(@itinerary)
+    else
+      render :edit
+    end
   end
 
   private
