@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  patch 'users/:id', to: 'users#user_update'
   devise_for :users
   root to: "pages#home"
   get "/home", to: "pages#home", as: :home
   get "/profiles", to: "pages#profiles"
+  get '/itineraries', to: 'itineraries#index', as: :itineraries
+
 
   resources :itineraries do
     resources :reviews
@@ -21,5 +24,5 @@ Rails.application.routes.draw do
   resources :chatrooms, only: %i[index show edit update] do
     resources :messages, only: :create
   end
-  mount ActionCable.server => '/cable'
+  # mount ActionCable.server => '/cable'
 end

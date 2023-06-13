@@ -1,8 +1,17 @@
 <h1>Chatrooms</h1>
 
 <% @users.each do |user| %>
-  <div class="chatroom">
-    <%= image_tag user.photo, class: "profile-picture" if user.photo.attached? %>
-    <%= link_to user.first_name, chatroom_path(id: user.id), class: "chatroom-link" %>
-  </div>
+  <%= user.chatrooms_as_user1.each do |chatroom| %>
+    <div class="chatroom">
+      <%= image_tag chatroom.user2.photo, class: "profile-picture" if chatroom.user2.photo.attached? %>
+      <%= link_to chatroom.user2.first_name, chatroom_path(chatroom), class: "chatroom-link" %>
+    </div>
+  <% end %>
+
+    <%= user.chatrooms_as_user2.each do |chatroom| %>
+    <div class="chatroom">
+      <%= image_tag chatroom.user1.photo, class: "profile-picture" if chatroom.user1.photo.attached? %>
+      <%= link_to chatroom.user1.first_name, chatroom_path(chatroom), class: "chatroom-link" %>
+    </div>
+  <% end %>
 <% end %>
