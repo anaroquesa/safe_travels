@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "cloudinary": "^1.37.0"
-  }
+  },
+  "imports": {
+    "stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+}
 }

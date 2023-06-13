@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    @user = current_user
   end
 
   # def update
@@ -24,7 +23,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      redirect_to user_path, notice: "Profile updated successfully."
+      redirect_to user_path(@user), notice: "Profile updated successfully."
     else
       render :edit, status: :unprocessable_entity
     end
