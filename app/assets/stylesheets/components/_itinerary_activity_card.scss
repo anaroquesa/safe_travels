@@ -65,7 +65,11 @@
 
 .accordion-item {
   color: black;
-}
+
+.accordion-button:not(.collapsed) {
+  /* color: var(--bs-accordion-active-color); */
+  color: black !important;
+
 .delete {
 position: absolute;
 top: 0%;
