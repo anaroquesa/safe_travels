@@ -1,0 +1,26 @@
+.yellow {
+  position:fixed;
+  top: 25%;
+  bottom: 30%;
+  left: 10%;
+  right: 10%;
+  border-radius:10px;
+  z-index: 1;
+}
+
+.yellow div {
+  margin-top: 10px;
+}
+
+.yellow h1 {
+  text-align: end;
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+}
+
+
+.yellow h2 {
+  font-size: 20px;
+  font-weight: bold;
+}

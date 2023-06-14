@@ -3,42 +3,85 @@
 <div class="scroll-container">
   <% @culture_activities.each do |activity| %>
     <div class="activity-image-container">
-      <img src="<%= activity.image_url %>" alt="">
-      <%# <i class="fa-regular fa-heart"></i>
-      <i class="fa-solid fa-star"> 5</i> %>
+      <div data-controller="toggler" data-action="click->toggler#toggle">
+        <img src="<%= activity.image_url %>" alt="">
+        <div data-toggler-target="togglableElement" class="d-none">
+          <div class="yellow d-flex flex-column shadow-lg p-3 mb-5 bg-white">
+            <img src="<%= activity.image_url %>" style="width: 100%;height: 150px; object-fit: cover;">
+            <div class="d-flex justify-content-between">
+              <div><h2><%= activity.title %></h2>
+                    <p><%= activity.address %></p></div>
+              <div><h1><%= link_to 'x', city_path(@city) %></h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
+
 <div class="category"></div>
 <i class="fa-solid fa-tree"></i> <strong>Nature</strong>
 <div class="scroll-container">
   <% @nature_activities.each do |activity| %>
     <div class="activity-image-container">
-      <img src="<%= activity.image_url %>" alt="">
-      <%# <i class="fa-regular fa-heart"></i>
-      <i class="fa-solid fa-star"> 5</i> %>
+      <div data-controller="toggler" data-action="click->toggler#toggle">
+        <img src="<%= activity.image_url %>" alt="">
+        <div data-toggler-target="togglableElement" class="d-none">
+          <div class="yellow d-flex flex-column shadow-lg p-3 mb-5 bg-white">
+            <img src="<%= activity.image_url %>" style="width: 100%;height: 150px; object-fit: cover;">
+            <div class="d-flex justify-content-between">
+              <div><h2><%= activity.title %></h2>
+                    <p><%= activity.address %></p></div>
+              <div><h1><%= link_to 'x', city_path(@city) %></h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
+
 <div class="category"></div>
 <i class="fa-solid fa-palette"></i> <strong>Art</strong>
 <div class="scroll-container">
   <% @art_activities.each do |activity| %>
     <div class="activity-image-container">
-      <img src="<%= activity.image_url %>" alt="">
-      <%# <i class="fa-regular fa-heart"></i>
-      <i class="fa-solid fa-star"> 5</i> %>
+      <div data-controller="toggler" data-action="click->toggler#toggle">
+        <img src="<%= activity.image_url %>" alt="">
+        <div data-toggler-target="togglableElement" class="d-none">
+          <div class="yellow d-flex flex-column shadow-lg p-3 mb-5 bg-white">
+            <img src="<%= activity.image_url %>" style="width: 100%;height: 150px; object-fit: cover;">
+            <div class="d-flex justify-content-between">
+              <div><h2><%= activity.title %></h2>
+                    <p><%= activity.address %></p></div>
+              <div><h1><%= link_to 'x', city_path(@city) %></h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
+
 <div class="category"></div>
 <i class="fa-solid fa-utensils"></i> <strong>Food</strong>
 <div class="scroll-container">
   <% @food_activities.each do |activity| %>
     <div class="activity-image-container">
-      <img src="<%= activity.image_url %>" alt="">
-      <%# <i class="fa-regular fa-heart"></i>
-      <i class="fa-solid fa-star"> 5</i> %>
+      <div data-controller="toggler" data-action="click->toggler#toggle">
+        <img src="<%= activity.image_url %>" alt="">
+        <div data-toggler-target="togglableElement" class="d-none">
+          <div class="yellow d-flex flex-column shadow-lg p-3 mb-5 bg-white">
+            <img src="<%= activity.image_url %>" style="width: 100%;height: 150px; object-fit: cover;">
+            <div class="d-flex justify-content-between">
+              <div><h2><%= activity.title %></h2>
+                    <p><%= activity.address %></p></div>
+              <div><h1><%= link_to 'x', city_path(@city) %></h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
