@@ -97,7 +97,8 @@ new_york = City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/City_NY_City_oyzts0.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/Activities_1_NY_City_abp0km.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/NY/Activities_2_NY_City_niaugo.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Time Square, NY", safety_rating: 2
+  latitude: 13.381777, longitude: 52.531677, address: "Time Square, NY",
+  safety_rating: 2
 )
 
 City.create!(
@@ -106,7 +107,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/Mexico%20City/City_Mexico_City_r6rlzy.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/Mexico%20City/Activities_1_Mexico_City_oficzv.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Mexico%20City/Activities_2_Mexico_City_cindms.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Mexico City, Mexico", safety_rating: 3
+  latitude: 13.381777, longitude: 52.531677, address: "Mexico City, Mexico",
+  safety_rating: 3
 )
 
 City.create!(
@@ -115,7 +117,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586895/SafeTravels%20app/Images/City%20images/Toronto/City_Toronto_Canada_yhnilk.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Toronto/Activities_1_Toronto_Canada_efgrnq.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586895/SafeTravels%20app/Images/City%20images/Toronto/Activities_2_Toronto_Canada_llqzkd.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Avenue Road, 1008. Toronto ON", safety_rating: 1
+  latitude: 13.381777, longitude: 52.531677, address: "Avenue Road, 1008. Toronto ON",
+  safety_rating: 1
 )
 
 City.create!(
@@ -124,7 +127,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/City_Tokyo_Japan_c3dymt.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/Activities_1_Tokyo_Japan_k06tpo.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649608/SafeTravels%20app/Images/City%20images/Tokyo/Activities_3_Tokyo_Japan_du769b.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Tokyo", safety_rating: 1
+  latitude: 13.381777, longitude: 52.531677, address: "Tokyo",
+  safety_rating: 1
 )
 
 City.create!(
@@ -133,7 +137,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686648659/SafeTravels%20app/Images/City%20images/London/City_London_UK_flhzo1.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586889/SafeTravels%20app/Images/City%20images/London/Activities_2_London_UK_psqfry.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/London/Activities_3_London_UK_spa1w9.png",
-  latitude: 13.381777, longitude: 52.531677, address: "London SW1A 1AA, United Kingdom", safety_rating: 2
+  latitude: 13.381777, longitude: 52.531677, address: "London SW1A 1AA, United Kingdom",
+  safety_rating: 2
 )
 
 City.create!(
@@ -142,7 +147,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586889/SafeTravels%20app/Images/City%20images/Paris/City_Paris_France_d7toqq.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/Paris/Activities_1_Paris_France_agiab8.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586895/SafeTravels%20app/Images/City%20images/Paris/Activities_2_Paris_France_cxzt6x.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Champ de Mars, 5 Av. Anatole France, 75007 Paris", safety_rating: 2
+  latitude: 13.381777, longitude: 52.531677, address: "Champ de Mars, 5 Av. Anatole France, 75007 Paris",
+  safety_rating: 2
 )
 
 City.create!(
@@ -151,7 +157,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Florence/City_Florence_Italy_cj3iea.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Florence/Activities_2_Florence_Italy_ii4qir.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Florence/Activities_3_Florence_Italy_p485ew.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence", safety_rating: 2
+  latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence",
+  safety_rating: 2
 )
 
 City.create!(
@@ -160,7 +167,8 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Nukuru/City_Nakuru_Kenya_zsslsi.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Nukuru/Activities_1_Nakuru_Kenya_x257wq.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Nukuru/Activities_2_Nakuru_Kenya_p11umr.png",
-  address: "Nakuru, Kenya", safety_rating: 2
+  address: "Nakuru, Kenya",
+  safety_rating: 2
 )
 
 portugal = City.create!(
@@ -169,7 +177,8 @@ portugal = City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Amarante/City_Amarante_Portugal_anzxgd.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_1_Amarante_Portugal_p2vsub.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_3_Amarante_Portugal_pdwtgu.png",
-  address: "Largo de São Gonçalo 3, 4600-038 Amarante", safety_rating: 1
+  address: "Largo de São Gonçalo 3, 4600-038 Amarante",
+  safety_rating: 1
 )
 
 puts "Creating Activities.."
