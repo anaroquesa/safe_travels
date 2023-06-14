@@ -4,11 +4,12 @@
   display: flex;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid rgb(205, 205, 205);
+  // border-bottom: 1px solid rgb(205, 205, 205);
   margin-bottom: 10px;
   margin-top:10px;
   padding-bottom: 10%;
   padding-top: 10%;
+  position: relative;
 }
 
 .card-product img {
@@ -64,4 +65,16 @@
 
 .accordion-item {
   color: black;
+
+.accordion-button:not(.collapsed) {
+  /* color: var(--bs-accordion-active-color); */
+  color: black !important;
+
+.delete {
+position: absolute;
+top: 0%;
+right: 2%;
+a {
+  color: black;
+}
 }

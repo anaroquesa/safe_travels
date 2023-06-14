@@ -8,7 +8,7 @@
   <% end %>
 </div>
 
-<div class="" style="margin-bottom:120px;">
+<div class="user-top-container">
   <div class="profile-card">
   <div class="card-content">
 
@@ -28,18 +28,24 @@
 </div>
 
 
-  <div class="container">
+  <div class="container user-container" >
     <div class="bio-user">
-    <h3>Bio:</h3>
+    <h3>Biography</h3>
       <p > <%= @user.summary %></p>
 
-
+  <div>
+    <h3>Trips</h3>
+    <div class="scroll-container">
+      <% @user.itineraries.each do |itinerary| %>
+        <div class="activity-image-container">
+          
 <div>
-  <h3>Plans:</h3>
+  <h3>Trips</h3>
   <div class="scroll-container">
     <% @user.itineraries.where(visibility: true).each do |itinerary| %>
       <div class="activity-image-container">
         <%= link_to itinerary_path(itinerary) do %>
+
           <img src="<%= itinerary.city.image_url_one %>" alt="">
         <% end %>
         <div class="activity-info">
@@ -51,8 +57,6 @@
     <% end %>
   </div>
 </div>
-
-
 
 
 </div>
