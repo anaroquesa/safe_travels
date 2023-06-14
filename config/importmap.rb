@@ -28,3 +28,4 @@ pin "xtend", to: "https://ga.jspm.io/npm:xtend@4.0.2/immutable.js"
 
 pin "typed.js", to: "https://ga.jspm.io/npm:typed.js@2.0.16/dist/typed.module.js"
 pin "flatpickr", to: "https://ga.jspm.io/npm:flatpickr@4.6.13/dist/esm/index.js"
+pin "sweetalert2", to: "https://ga.jspm.io/npm:sweetalert2@11.7.12/dist/sweetalert2.all.js"

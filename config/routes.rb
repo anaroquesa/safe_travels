@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/profiles", to: "pages#profiles"
   get '/itineraries', to: 'itineraries#index', as: :itineraries
 
+  post '/status_update', to: 'itineraries#status_update'
+
 
   resources :itineraries do
     resources :reviews

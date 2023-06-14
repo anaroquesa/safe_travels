@@ -9,8 +9,8 @@ export default class extends Controller {
   }
 
   toggle() {
-    console.log("Hello from calendar_controller.js")
-    this.togglableElementTarget.classList.toggle("d-none");
+    // console.log("Hello from calendar_controller.js")
+     this.togglableElementTarget.classList.toggle("d-none");
   }
 
 }
