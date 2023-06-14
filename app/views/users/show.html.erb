@@ -8,13 +8,15 @@
   <% end %>
 </div>
 
-<div class="container" style="margin-bottom:120px;">
+<div class="" style="margin-bottom:120px;">
   <div class="profile-card">
   <div class="card-content">
-   <%= cl_image_tag @user.photo.key%>
+
+   <%= cl_image_tag @user.photo.key %>
   </div>
   <div>
-  <h1 class="user-name"><%= @user.first_name %></h1>
+  <h2 class="user-name"><%= @user.first_name %></h2>
+
   </div>
   <% unless current_user == @user %>
     <% if @chatroom.id %>
@@ -27,10 +29,10 @@
 
 
   <div class="container">
-    <div class="Bio-user">
+    <div class="bio-user">
     <h3>Bio:</h3>
       <p > <%= @user.summary %></p>
-    </div>
+
 
   <div>
     <h3>Plans:</h3>
@@ -42,6 +44,7 @@
       <% end %>
     </div>
   </div>
+</div>
 </div>
 
 <div class="log-out">
