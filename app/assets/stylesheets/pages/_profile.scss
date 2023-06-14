@@ -38,7 +38,7 @@
   }
 }
 
-.profile-photo {
+.card-content img{
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -46,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .edit-profile-link {
@@ -57,6 +58,10 @@
 text-align: center;
 }
 
+.bio-user{
+  margin-top: 30px;
+  padding: 10px;
+}
 .profile-icon {
   display: flex;
   justify-content: center;
