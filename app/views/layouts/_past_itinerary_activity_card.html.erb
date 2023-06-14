@@ -1,23 +1,22 @@
-<% @past_itineraries.group_by(&:city).each do |city, itineraries| %>
+<% @past_itineraries.each do |itinerary| %>
   <div class="card-product">
-    <a href="<%= itinerary_path(itineraries.first) %>">
-      <img src="<%= city.image_url_one %>" />
+    <a href="<%= itinerary_path(itinerary) %>">
+      <img src="<%= itinerary.city.image_url_one %>" />
     </a>
     <div class="card-product-infos">
-      <% itineraries.each do |itinerary| %>
-        <h2>
-          <%= itinerary.title %>
-          <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_path(itinerary), class: 'trash-icon', data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
-          <% unless itinerary.review.present? %>
-            <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary), class: 'edit-icon text-warning' %>
-            <div class="text-warning">Tell us how it was!</div>
-          <% else %>
-            <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary), class: 'edit-icon' %>
-          <% end %>
-        </h2>
-        <h2><%= city.name %></h2>
-        <p><%= itinerary.start_date %> - <%= itinerary.end_date %></p>
-      <% end %>
+      <h2>
+        <%= itinerary.title %>
+        <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_path(itinerary), class: 'trash-icon', data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
+        <% unless itinerary.review.present? %>
+          <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary), class: 'edit-icon text-warning' %>
+          <div class="text-warning">Tell us how it was!</div>
+        <% else %>
+          <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(itinerary), class: 'edit-icon' %>
+        <% end %>
+      </h2>
+      <h2><%= itinerary.city.name %></h2>
+      <p><%= itinerary.start_date %> - <%= itinerary.end_date %></p>
     </div>
   </div>
 <% end %>
+
