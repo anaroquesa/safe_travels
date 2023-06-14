@@ -1,7 +1,9 @@
 class CitiesController < ApplicationController
   def index
     if params[:query].present?
-      sql_query = "name ILIKE :query"
+      # sql_query = "name ILIKE :query"
+      # @cities = City.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = "name ILIKE :query OR country ILIKE :query"
       @cities = City.where(sql_query, query: "%#{params[:query]}%")
     else
       @cities = City.all

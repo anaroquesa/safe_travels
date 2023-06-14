@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :activities, only: %i[edit new]
   end
 
-  resources :activities, only: %i[new create edit update destroy]
+  resources :activities, only: %i[new create edit update destroy index]
   resources :users, only: %i[show edit update] do
     resources :messages, only: %i[index create]
     resources :chatrooms, only: %i[index show create]

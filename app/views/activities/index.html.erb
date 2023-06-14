@@ -1,11 +1,23 @@
-<h2>All your activities</h2>
+<div class="search-index"><%= render "layouts/search_bar_index" %></div>
+<p><strong>Top Recommendations</strong></p>
+<div class="scroll-container">
+  <% @activities.each do |activity| %>
+    <div class="activity-image-container">
+      <img src="<%= activity.image_url %>" alt="">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-star"> 5</i>
+      <%= activity.title %>
+      <%= activity.category %>
+    </div>
+  <% end %>
+</div>
 
 
-<% @activities.each do |activity| %>
-<div><%= activity.title %></div>
-<div><%= activity.category %></div>
-<div><%= activity.address %></div>
-<div><img src="<%= activity.image_url %>" alt=""></div>
-<% end %>
+<%# <h2>All your activities</h2> %>
 
-
+<%# <% @activities.each do |activity| %>
+<%# <div><%= activity.title %>
+<%# <div><%= activity.category %>
+<%# <div><%= activity.address %>
+<%# <div><img src="<%= activity.image_url %>
+<%# <% end %>

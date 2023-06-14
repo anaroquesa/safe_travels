@@ -1,6 +1,13 @@
 class ActivitiesController < ApplicationController
   def index
-    @activities = Activity.all
+    if params[:query].present?
+      # sql_query = "name ILIKE :query"
+      # @cities = City.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = "title ILIKE :query OR category ILIKE :query"
+      @activities = Activity.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @activities = Activity.all
+    end
   end
   def show
     @city = City.find(params[:city_id])

@@ -11,10 +11,12 @@
 <div class="" style="margin-bottom:120px;">
   <div class="profile-card">
   <div class="card-content">
+
    <%= cl_image_tag @user.photo.key %>
   </div>
   <div>
   <h2 class="user-name"><%= @user.first_name %></h2>
+
   </div>
   <% unless current_user == @user %>
     <% if @chatroom.id %>
