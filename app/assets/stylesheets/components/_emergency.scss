@@ -1,0 +1,55 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F7574F;
+  margin: 0;
+}
+
+h1 {
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10vh;
+}
+
+.background h2 {
+  color:#F7574F;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.background button {
+  width: 240px;
+  height: 240px;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  display: table-cell;
+  border-radius: 50%;
+  border: 0;
+  display:block;
+}
+
+.background button:active {
+  opacity: 0.8;
+  width: 270px;
+  height: 270px;
+  transition-duration: 0.5s;
+}
+
+.background .centered {
+  display: table;
+  width: 270px;
+  height: 270px;
+  background-color: #fc8983;
+  border-radius: 50%;
+  border: 0;
+  margin:auto;
+  display: grid;
+  left: 15%;
+  right: 15%;
+  top: 30%;
+  bottom: 30%;
+}
