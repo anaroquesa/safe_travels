@@ -3,9 +3,9 @@
 require "open-uri"
 
 puts "Cleaning DB 🧹"
-User.destroy_all
-City.destroy_all
 Activity.destroy_all
+City.destroy_all
+User.destroy_all
 
 puts "Creating Users.."
 
@@ -79,7 +79,7 @@ puts "Creating Users.."
 # const four = 4
 puts "Creating Cities.."
 
-City.create!(
+berlin = City.create!(
   name: "Berlin",
   country: "Germany",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Berlin/City_Berlin_Germany_dxdavb.png",
@@ -91,7 +91,7 @@ City.create!(
   safety_rating: 2
 )
 
-City.create!(
+new_york = City.create!(
   name: "New York City",
   country: "US",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/City_NY_City_oyzts0.png",
@@ -163,7 +163,7 @@ City.create!(
   address: "Nakuru, Kenya", safety_rating: 2
 )
 
-City.create!(
+portugal = City.create!(
   name: "Amarante",
   country: "Portugal",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Amarante/City_Amarante_Portugal_anzxgd.png",
@@ -177,7 +177,7 @@ puts "Creating Activities.."
 # 3 for each category: Nature, Culture, Art, Food
 # BERLIN
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Tiefwerder Wiesen",
   category: "Nature",
   address: "13597 Berlin",
@@ -185,7 +185,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Nature Park Schöneberger Südgelände",
   category: "Nature",
   address: "Prellerweg 47-49, 12157 Berlin",
@@ -193,7 +193,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Landschaftspark Wuhletal",
   category: "Nature",
   address: "Alt-Biesdorf 46, 12683 Berlin",
@@ -201,7 +201,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Brandenburg Gate",
   category: "Culture",
   address: "Brandenburger Tor, 10117 Berlin",
@@ -209,14 +209,14 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Reichstag Building",
   category: "Culture",
   address: "Reichstag Building, Platz der Republik 1, 11011 Berlin",
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_2_icwzsk.png"
 )
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Berlin Cathedral",
   category: "Culture",
   address: "Am Lustgarten, 10178 Berlin",
@@ -224,7 +224,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "East Side Gallery",
   category: "Art",
   address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
@@ -232,7 +232,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Pergamonmuseum",
   category: "Art",
   address: "Bodestraße 1-3, 10178 Berlin",
@@ -240,7 +240,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Dark Matter",
   category: "Art",
   address: "Köpenicker Ch 46, 10317 Berlin",
@@ -248,7 +248,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Curry 36",
   category: "Food",
   address: "Mehringdamm 36, 10961 Berlin",
@@ -256,7 +256,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "Berliner Fernsehturm",
   category: "Food",
   address: "Panoramastraße 1A, 10178 Berlin",
@@ -264,7 +264,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "1",
+  city: berlin,
   title: "BRLO Brwhouse",
   category: "Food",
   address: "Schöneberger Str. 16, 10963 Berlin",
@@ -273,7 +273,7 @@ Activity.create!(
 
 # NEW YORK
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Central Park",
   category: "Nature",
   address: "Central Park West, New York, NY, USA",
@@ -281,7 +281,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Hallett Nature Sanctuary",
   category: "Nature",
   address: "6th Avenue &, Central Park S, New York, NY 10019, United States",
@@ -289,7 +289,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Mill Rock Park",
   category: "Nature",
   address: "East River, New York, NY 10128, United States",
@@ -297,7 +297,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Empire State Building",
   category: "Culture",
   address: "Empire State Building, 20 W 34th St., New York, NY 10001, United States",
@@ -305,7 +305,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "American Museum of Natural History",
   category: "Culture",
   address: "American Museum of Natural History, 200 Central Park West, New York, NY 10024, United States",
@@ -313,7 +313,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Central Park",
   category: "Culture",
   address: "New York, NY, United States",
@@ -321,7 +321,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Museum of Ice Cream",
   category: "Art",
   address: "558 Broadway, New York, NY 10012, United States",
@@ -329,7 +329,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "The Metropolitan Museum of Art",
   category: "Art",
   address: "1000 5th Ave, New York, NY 10028, United States",
@@ -337,7 +337,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "MoMa Museum",
   category: "Art",
   address: "11w W 53rd St, New York, NY 10019, United States",
@@ -345,7 +345,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Black Iron Burger",
   category: "Food",
   address: "245 W 38th St, New York, NY 10018, United States",
@@ -353,7 +353,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Olive Garden",
   category: "Food",
   address: "2 Times Sq, New York, NY 10036, United States",
@@ -361,7 +361,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "2",
+  city: new_york,
   title: "Sweet Rehab",
   category: "Food",
   address: "135 Sullivan St, New York, NY 10012, United States",
@@ -370,7 +370,7 @@ Activity.create!(
 
 # PORTUGAL
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Amarante camping",
   category: "Nature",
   address: "Rua Pedro Alvellos, sn, Largo Santa M.nha 56, 4600-099 Amarante, Portugal",
@@ -378,7 +378,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Amarante Garden",
   category: "Nature",
   address: "4600-758 Amarante, Portugal",
@@ -386,7 +386,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Naturpassion",
   category: "Nature",
   address: "rua de campesinhos n27 Lomba, 4600-663 Amarante, Portugal",
@@ -394,7 +394,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Igreja do Carmo",
   category: "Culture",
   address: "R. do Carmo, 4050-164 Porto, Portugal",
@@ -402,7 +402,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Trilho das Azenhas",
   category: "Culture",
   address: "4600-758 Amarante, Portugal",
@@ -410,7 +410,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Amarantrilhos Bikeshop",
   category: "Culture",
   address: "R. de Freitas Bloco C fração AB, 4600-081 Amarante, Portugal",
@@ -418,7 +418,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Museu Paroquial de Arte Sacra de Amarante",
   category: "Art",
   address: "4600-758 Amarante, Portugal",
@@ -426,7 +426,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Ponte do Arquinho",
   category: "Art",
   address: "Largo do Arquinho, 4600-758 Amarante, Portugal",
@@ -434,7 +434,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Municipal Museum Amadeo de Souza Cardoso",
   category: "Art",
   address: "4600-758 Amarante, Portugal",
@@ -442,7 +442,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "O Prato",
   category: "Food",
   address: "Edf.Cimo de Vila,LJ CB, 4600-088 Amarante, Portugal",
@@ -450,7 +450,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Restaurante Residencial ESTORIL",
   category: "Food",
   address: "R. 31 de Janeiro 150, 4600-043 Amarante, Portugal",
@@ -458,7 +458,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city_id: "10",
+  city: portugal,
   title: "Bar do Girassol",
   category: "Food",
   address: "Av. Gen. Silveira 193, 4600-017 Amarante, Portugal",
