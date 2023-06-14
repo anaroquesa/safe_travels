@@ -5,38 +5,23 @@
   <% end %>
 </div>
 
-<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+<div class="itin-index" style="width:90%; margin-bottom:100px;">
 
   <% @ongoing_itineraries.group_by(&:city).each do |city, itineraries| %>
   <div style="position:relative;">
-    <a href="<%= itinerary_path(itineraries.first) %>">
-
-      
-    <img src="<%= city.image_url_one %>" style="width:100%; height:200px; padding:10px; object-fit:contain; border-radius:20px;"/>
-        <div style="position:absolute; top:50%; left:40%; color:white;">
-        <%= city.name %></div>
-
-      
-      <div class="card-category-img mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= city.image_url_one %>); width:100%; height:200px; padding:10px;">
+    <a href="<%= itinerary_path(itineraries.first) %>" style="text-decoration:none;">
+      <div class="card-category-img mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= city.image_url_one %>); width:100%; height:200px; padding:10px; background-size: contain;">
         <div class="d-flex flex-column mt-2" style="text-align:center">
           <h2><%= city.name %></h2>
-          <% @ongoing_itineraries.each do |itinerary| %>
+            <% @ongoing_itineraries.each do |itinerary| %>
             <p style="font-size:12px; font-weight: 200;"><%= itinerary.start_date.strftime('%B %d ') %> - <%= itinerary.end_date.strftime('%B %d ') %></p>
           <% end %>
-
         </div>
-
       </div>
     </a>
   <% end %>
   <div>
-
-
-    
   <div class="master">
-    
-    
-
     <span><strong>Upcoming Trips</strong></span>
       <%= render "layouts/upcoming_itinerary_activity_card" %>
     <div class="accordion mt-3" id="accordionExample">
@@ -56,6 +41,6 @@
 
     </div>
 
-    
+
   </div>
 </div>
