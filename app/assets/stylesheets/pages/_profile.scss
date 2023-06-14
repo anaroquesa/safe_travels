@@ -69,7 +69,10 @@ text-align: center;
   color: white;
   margin: 0 auto;
 }
-
+.header a {
+  color:white;
+  text-decoration: none;
+}
 
 //  #chatroom index code
 .profile-picture {
@@ -83,4 +86,10 @@ text-align: center;
 .chatroom-link {
   display: inline-block;
   margin-top: 10px;
+}
+.log-out{
+  margin-top: 50px;
+  background-color: white;
+  text-align: center;
+
 }

@@ -16,6 +16,7 @@ module SafeTravels
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.secret_key_base = '31e1bfb2ae6ab996f9ce9bf76a2525a507c7200c26e7a75d051b33ed67d257be807c6cf11ee459057e6ccf9ca977a4c6c42135bb991f2330bb947483651c350c'
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

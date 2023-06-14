@@ -31,14 +31,12 @@
           window.location.href = '<%= yield :redirect_path %>';
         }, 3000); // Delay in milliseconds (e.g., 3000 for 3 seconds)
       </script>
-      <%= render "shared/flashes" %>
       <%= yield %>
       <%= render "layouts/navbar" %>
     </body>
   <% else %>
     <body>
       <%= render "layouts/header" %>
-      <%= render "shared/flashes" %>
       <%= yield %>
       <%= render "layouts/navbar" %>
     </body>

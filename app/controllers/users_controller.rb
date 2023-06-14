@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
   def show
     @user = User.find(params[:id])
     @chatroom = Chatroom.where(user1: current_user, user2: @user).or(Chatroom.where(user1: @user, user2: current_user))
@@ -14,14 +13,14 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-     @user = current_user
+    @user = current_user
   end
 
   def user_update
     @user = User.find(params[:id])
     if @user.update!(user_params)
       redirect_to user_path(@user)
-   else
+    else
       render :show, status: :unprocessable_entity
     end
   end
