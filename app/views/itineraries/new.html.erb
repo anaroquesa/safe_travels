@@ -5,16 +5,18 @@
   <h4>New plan</h4>
 </div>
 
-<div class="container" style="width:360px; margin-bottom:10px;">
+<div class="container" style="width:360px;">
 
-    <div class="row col-10 justify-content-center newpage">
+      <div class="form-inputs">
         <%= simple_form_for @itinerary do |f| %>
         <%= f.input :title %>
         <%= f.input :city_id, collection: @cities, label_method: :name, value_method: :id, prompt: true %>
         <%= f.input :start_date, as: :string, label: "Pick your dates",
               input_html: { data: { controller: "datepicker" } } %>
         <%= f.input :visibility %>
-        <%= f.submit class: "btn btn-warning" %>
+      <div class="form-actions">
+        <%= f.button :submit, "Create" %>
+      </div>
       <% end %>
     </div>
 </div>

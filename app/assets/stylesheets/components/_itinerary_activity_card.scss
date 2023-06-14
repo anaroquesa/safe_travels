@@ -6,14 +6,24 @@
   width: 100%;
   border-bottom: 1px solid rgb(205, 205, 205);
   margin-bottom: 10px;
+  margin-top:10px;
+  padding-bottom: 10%;
+  padding-top: 10%;
 }
 
 .card-product img {
   height: 100px;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
+  margin-top:10%;
   width: 100px;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.card-product h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .card-product h2 {
@@ -35,8 +45,6 @@
 }
 
 .card-category-img {
-  background-size: cover;
-  background-position: center;
   height: 180px;
   display: flex;
   justify-content: center;

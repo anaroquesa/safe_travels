@@ -1,13 +1,16 @@
-<div class="header col-12 d-flex justify-content-between p-3" style="height:60px;">
+<div class="header d-flex justify-content-between p-3" style="height:60px;">
   <%= link_to itineraries_path, class: 'add-button' do %>
-    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></h4>
+    <h4><i class="fa-solid fa-circle-arrow-left" style="color:white;"></i></h4>
   <% end %>
+
   <div><h5><%= @itinerary.title %> <%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %>
 </h5></div>
   <div>
     <h4><%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %></h4>
   </div>
 </div>
+
+
 
 <div class="container" style="margin-bottom:100px;">
   <%= render "layouts/map" %>
@@ -40,22 +43,97 @@
             <%= f.date_field :date %>
             <%= f.button :submit, "", class: "btn btn-primary btn-sm", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) do %>
               <i class="fas fa-plus"></i>
-            <% end %>
-        </div>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-    </div>
+=======
+<%= render "layouts/map" %>
 
+<div class="d-flex justify-content-between p-3">
+  <div class="column justify-content-right">
+    <%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %>
+    <%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %>
+  </div>
+</div>
+<br>
+
+
+  <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
+  <% sorted_it_activities.keys.each do |date| %>
+    <div class="category">
+      <% if date.present? %>
+        <strong><%= date.strftime('%A, %d %B') %></strong>
+      <% else %>
+        <strong>Unspecified Date</strong>
+      <% end %>
+    </div>
+    <div class="scroll-container">
+      <% sorted_it_activities[date].each do |it_activity| %>
+        <div class="activity-image-container">
+          <% activity = it_activity.activity %>
+          <% if activity.image_url.present? %>
+            <img src="<%= activity.image_url %>" alt="">
+          <% end %>
+          <%= activity.title %>
+
+          <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %>
+          <% if activity.custom? %>
+            <div data-controller="toggler">
+              <i class="fa-regular fa-pen-to-square" data-action="click->toggler#toggle"></i>
+              <div data-toggler-target="togglableElement" class="d-none">
+                <%= form_with(model: activity, url: activity_path(activity), class: 'hidden-form', local: true) do |form| %>
+                  <%= form.text_field :title, value: activity.title %>
+                  <%= form.text_field :address, value: activity.address %>
+                  <%= form.submit 'Update', class: 'update-button' %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+          <div data-controller="calendar">
+            <i class="fa-regular fa-calendar" data-action="click->calendar#toggle"></i>
+            <div data-calendar-target="togglableElement" class="d-none">
+              <%= form_with(model: it_activity, url: itinerary_it_activity_path(@itinerary, it_activity), class: 'hidden-form', local: true) do |form| %>
+                <%= form.date_field :date %>
+                <%= form.submit 'Update', class: 'update-button' %>
+              <% end %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if !@itinerary.end_date.past? %>
+    <div class="category">
+      <strong>Our top selection for you:</strong>
+    </div>
+    <div class="scroll-container">
+        <% @activities.each do |activity| %>
+          <div class="activity-image-container" data-controller="toggler">
+            <% unless activity.custom || @itinerary.it_activities.exists?(activity_id: activity.id) %>
+                <% if activity.image_url.present? %>
+                  <img src="<%= activity.image_url %>" alt="" data-action="click->toggler#toggle">
+                <% end %>
+                <%= activity.title %>
+                <div data-toggler-target="togglableElement" class="d-none">
+                  <%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
+                    <%= f.hidden_field :activity_id, value: activity.id %>
+                    <%= f.hidden_field :itinerary_id, value: @itinerary.id %>
+                    <%= f.date_field :date %>
+                    <%= f.button :submit, "+", class: "btn btn-primary btn-sm", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) %>
+                  <% end %>
+                  </div>
+
+            <% end %>
+          </div>
+        <% end %>
+    </div>
   <% else %>
     <% if @itinerary.review.present? %>
       <h5>Review</h5>
       <%= @itinerary.review %>
     <% end %>
   <% end %>
+
 </div>
 <%# <div class="container mt-3 mb-3 p" style="font-size:40px; text-align:center">
   <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_path(@itinerary), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this plan?" } %>
 <%# </div> %>
 </div>
+

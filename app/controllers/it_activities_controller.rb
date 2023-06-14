@@ -36,8 +36,11 @@ class ItActivitiesController < ApplicationController
   def destroy
     @itinerary = Itinerary.find(params[:itinerary_id])
     @itactivity = ItActivity.find(params[:id])
-    @itactivity.destroy!
-    redirect_to itinerary_path(@itinerary)
+    if @itactivity.destroy!
+      redirect_to itinerary_path(@itinerary)
+    else
+      render :edit
+    end
   end
 
   private

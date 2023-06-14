@@ -1,5 +1,6 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <%= link_to home_path, class: 'add-button' do %>
+
     <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></i>Profile</h4>
   <% end %>
   <% if user_signed_in? && current_user == @user %>
@@ -24,6 +25,7 @@
   <% end %>
 </div>
 
+
   <div class="container">
     <div class="Bio-user">
     <h3>Bio:</h3>
@@ -45,3 +47,4 @@
 <div class="log-out">
 <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
 </div>
+

@@ -30,7 +30,7 @@ class ActivitiesController < ApplicationController
   def update
     @activity = Activity.find(params[:id])
     @activity.update!(activity_params)
-    redirect_to activities_path(@activity)
+    redirect_to activity_path(@activity)
   end
 
   def destroy
