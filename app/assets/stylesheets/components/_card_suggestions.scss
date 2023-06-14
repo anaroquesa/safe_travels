@@ -1,4 +1,11 @@
-.card img {
+.suggestions  {
+  display:flex;
+  flex-direction: row;
+  width: 100px;
+
+}
+
+.suggestions img {
   height: 100px;
   margin-bottom: 10%;
   margin-top:10%;

@@ -66,10 +66,9 @@
 <% end %>
 
     <% if !@itinerary.end_date.past? %>
-      <div class="category">
-        <strong>OUR SUGGESTIONS</strong>
-      </div>
-      <div class="scroll-container">
+  <strong>OUR SUGGESTIONS</strong>
+
+      <div class="suggestions">
           <% @activities.each do |activity| %>
             <div class="activity-image-container" data-controller="toggler">
               <% unless activity.custom || @itinerary.it_activities.exists?(activity_id: activity.id) %>
