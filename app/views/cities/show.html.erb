@@ -1,5 +1,5 @@
 <div class="container" style="margin-bottom:80px; background:white; margin-top:0;">
-<div class="search-index"><%= render "layouts/search_bar_index" %></div>
+<div class="search-index"><%= render "layouts/search_bar_home" %></div>
    <% if @city.safety_rating == 1 %>
       <div class="card-trip" style="background-color:#B7D480;">
     <% elsif @city.safety_rating == 2 %>
@@ -28,12 +28,12 @@
   </div>
 </div>
 
-<ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top:10px;">
+<ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top:32px;">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" style="border-radius:6px;"><i class="fa-solid fa-binoculars"></i> Discover</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" style="border-radius:6px;"><i class="fa-solid fa-binoculars"></i>      Discover</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" style="border-radius:6px;"><i class="fa-solid fa-shield-heart"></i> Safety</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" style="border-radius:6px;"><i class="fa-solid fa-shield-heart"></i>      Safety</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -44,8 +44,9 @@
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#FDD984; border-radius:5px;">
-         <i class="fa-solid fa-suitcase"></i> Solo Travelers
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#FDD984; border-radius:10px;">
+         <i class="fa-solid fa-suitcase"></i>
+         <span style="margin-left:10px;">Solo Travelers</span>
         </button>
       </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -62,8 +63,9 @@
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color:#FFA676; border-radius:5px;">
-        <i class="fa-solid fa-map-pin"></i> Unknown Streets
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color:#FFA676; border-radius:10px;">
+        <i class="fa-solid fa-map-pin"></i>
+        <span style="margin-left:10px;">Unknown Streets</span>
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -71,12 +73,18 @@
         <p>
           Exploring unknown streets can be an exciting adventure, but it's important to prioritize your safety. When navigating unfamiliar areas, consider the following safety precautions:
           Stay alert and be aware of your surroundings at all times. Pay attention to the people around you and any potential risks or hazards.
+          <br>
+          <br>
           Plan your route in advance and use reliable maps or GPS navigation to minimize the chances of getting lost.
           Avoid walking alone at night in unfamiliar or poorly lit areas. If you must venture out after dark, try to stick to well-populated and well-lit streets.
           Trust your instincts and avoid any situation or individual that makes you feel uncomfortable or uneasy. If something doesn't feel right, it's better to err on the side of caution.
+          <br>
+          <br>
           Keep your valuables secure and out of sight. Avoid displaying expensive jewelry, gadgets, or large amounts of cash that might attract unwanted attention.
           Be cautious when accepting help or directions from strangers. It's always best to seek assistance from official sources such as police stations, tourist information centers, or reputable establishments.
           Familiarize yourself with local emergency contact numbers and have them readily accessible in case of any unforeseen circumstances.
+          <br>
+          <br>
           Remember, personal safety should always be your top priority when exploring unknown streets. By staying vigilant, using common sense, and taking necessary precautions, you can have a safe and enjoyable experience discovering new places.
         </p>
       </div>
@@ -85,7 +93,8 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color:#B7D480; border-radius:5px;">
-        <i class="fa-solid fa-house"></i> Where To Stay
+        <i class="fa-solid fa-house"></i>
+        <span style="margin-left:10px;">Where to Stay</span>
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -93,13 +102,23 @@
       <p>
         When it comes to choosing accommodation, safety is paramount, especially for women travelers. Here are some important safety considerations for selecting a place to stay:
         Prioritize well-established accommodations: Opt for reputable hotels, guesthouses, or hostels that have positive reviews and a track record of providing safe environments for their guests. Research and choose accommodations that prioritize security measures and have a good reputation for hosting women travelers.
+        <br>
+        <br>
         Location matters: Select accommodations in safe and well-populated areas, preferably near main streets or public transportation. Consider the proximity to essential services, such as hospitals, police stations, and pharmacies.
+        <br>
+        <br>
         Check the security features: Look for accommodations that have robust security measures, including secure entrances, well-lit common areas, and surveillance cameras. Rooms with deadbolt locks, peepholes, and safes add an extra layer of security.
         In-room safety: Ensure that the room has functioning locks on windows and doors. If available, request a room located on higher floors, as they may offer better security and privacy. It's also a good idea to avoid ground-level rooms with direct access to the outside.
+        <br>
+        <br>
         Research the neighborhood: Investigate the neighborhood where the accommodation is located. Look for information on safety records, crime rates, and any reported incidents. Online travel forums and review websites can provide insights from other women travelers.
         Seek female-friendly accommodations: Some accommodations specifically cater to women travelers, offering additional security features such as female-only floors, 24/7 female staff, or women-only dormitories. Consider these options if they align with your preferences.
+        <br>
+        <br>
         Transportation considerations: If you plan to explore the area, consider transportation options to and from your accommodation. Choose reputable taxi services or ride-sharing apps, and avoid traveling alone late at night. It's wise to inform the hotel staff or a trusted person about your plans and expected return time.
         Trust your instincts: If something feels off or uncomfortable about the accommodation or its staff, trust your instincts and consider finding an alternative place to stay. Your peace of mind and safety are paramount.
+        <br>
+        <br>
         Remember, thorough research, careful selection, and staying vigilant are key to ensuring a safe and comfortable stay. By taking these precautions, women travelers can enjoy their accommodation experience with peace of mind.
         Please note that specific safety considerations may vary depending on the destination and local circumstances. It's always advisable to stay informed about the specific location you plan to visit and follow any additional safety guidelines provided by local authorities or travel resources.
       </p>
@@ -109,19 +128,28 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingFour">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color:#CFB3E5; border-radius:5px;">
-        <i class="fa-solid fa-venus"></i> Women in the World
+        <i class="fa-solid fa-venus"></i>
+        <span style="margin-left:10px;">Women in the World</span>
       </button>
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <p>
-          Women traveling alone or in groups can have incredible and enriching experiences. To ensure a safe journey, it's important to prioritize personal safety. Some key tips include:
-          Research your destination: Familiarize yourself with the local culture, customs, and laws. Learn about any potential safety concerns or specific precautions to take for women travelers.
+          Women traveling alone or in groups can have incredible and enriching experiences. To ensure a safe journey, it's important to prioritize personal safety.
+          <br>
+          <br>
+          Some key tips include: Research your destination: Familiarize yourself with the local culture, customs, and laws. Learn about any potential safety concerns or specific precautions to take for women travelers.
           Plan and share your itinerary: Create a detailed itinerary and share it with a trusted friend or family member. Keep them updated on your whereabouts and check in regularly.
+          <br>
+          <br>
           Dress appropriately: Respect the local customs and dress modestly, especially in conservative areas. This can help you blend in and reduce unwanted attention.
           Stay aware of your surroundings: Be alert and mindful of your surroundings, especially in unfamiliar areas. Trust your instincts and avoid risky situations.
+          <br>
+          <br>
           Secure your belongings: Keep your valuables secure, use a money belt or hidden pouch, and be cautious of pickpockets. Avoid displaying expensive jewelry or flashy items that may attract unwanted attention.
           Use reliable transportation: Opt for reputable transportation options, such as licensed taxis or rideshare services. Avoid traveling alone late at night, and if possible, use well-lit and busy routes.
+          <br>
+          <br>
           Stay connected: Carry a charged mobile phone and ensure you have access to emergency contact numbers. Familiarize yourself with local emergency services.
         </p>
       </div>

@@ -38,7 +38,7 @@
   }
 }
 
-.profile-photo {
+.card-content img{
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -46,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .edit-profile-link {
@@ -57,6 +58,10 @@
 text-align: center;
 }
 
+.bio-user{
+  margin-top: 30px;
+  padding: 10px;
+}
 .profile-icon {
   display: flex;
   justify-content: center;
@@ -88,8 +93,17 @@ text-align: center;
   margin-top: 10px;
 }
 .log-out{
-  margin-top: 50px;
-  background-color: white;
+  margin-top: 20px;
   text-align: center;
+  width:100%;
+  padding: 5px;
+  text-align: center;
+  background-color: #F6C522;
+  line-height: 48px;
+  border-radius: 100px
+}
 
+
+.user-name{
+margin-top: 30px;
 }
