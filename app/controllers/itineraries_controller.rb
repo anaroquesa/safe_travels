@@ -1,12 +1,20 @@
 class ItinerariesController < ApplicationController
   # before_action :set_city, only: %i[update]
   before_action :set_itinerary, only: [:edit, :update, :show]
+  skip_forgery_protection
+
 
   def index
     @itineraries = Itinerary.all
     @ongoing_itineraries = current_user.itineraries.where("start_date <= ? AND end_date >= ?", Date.today, Date.today)
     @upcoming_itineraries = current_user.itineraries.where("start_date > ? AND end_date >= ?", Date.today, Date.today)
     @past_itineraries = current_user.itineraries.where("end_date < ?", Date.today)
+  end
+
+  def status_update
+    @itinerary = Itinerary.find(params[:id])
+    @itinerary.status = true
+    @itinerary.save!
   end
 
   def show

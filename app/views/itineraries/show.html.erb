@@ -1,7 +1,13 @@
 <div class="header col-12 d-flex justify-content-between p-3" style="height:60px;">
+
   <%= link_to itineraries_path, class: 'add-button' do %>
     <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></h4>
   <% end %>
+
+  <div data-controller="email" data-email-id-value="<%= @itinerary.id%>">
+    <h5><%= @itinerary.title %> <a href="#"data-action="click->email#show"><i class="fa fa-paper-plane"></i></a>   <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"><% end %></i><% end %></h5>
+  </div>
+
   <div>
     <h4><%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %></h4>
   </div>
@@ -17,7 +23,9 @@
   <p><%= @itinerary.start_date.strftime('%B %d ') %> - <%= @itinerary.end_date.strftime('%B %d ') %> </p>
 </div>
 <%= render "layouts/map" %>
+
 <div style="margin-top:20px; margin-bottom:20px;">Add an Activity <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %><% end %></div>
+
 <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
 <% sorted_it_activities.keys.each do |date| %>
   <% if date.present? %>
