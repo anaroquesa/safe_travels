@@ -1,12 +1,11 @@
 <div class="header col-12 d-flex justify-content-between p-3" style="height:60px;">
-
   <%= link_to itineraries_path, class: 'add-button' do %>
     <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></h4>
   <% end %>
-
-  <div data-controller="email" data-email-id-value="<%= @itinerary.id%>">
-    <h5><%= @itinerary.title %> <a href="#"data-action="click->email#show"><i class="fa fa-paper-plane"></i></a>   <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"><% end %></i><% end %></h5>
-  </div>
+  <p>
+    <%= @city.name %>
+    <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(@itinerary) %>
+  </p>
 
   <div>
     <h4><%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %></h4>
@@ -17,7 +16,9 @@
 <div style="text-align:center; margin:10px;">
   <h1>
     <%= @itinerary.title %>
-    <a href="mailto:emilyyetsko@gmail.com"><i class="fa-solid fa-share-nodes"></i></a>
+    <span data-controller="email" data-email-id-value="<%= @itinerary.id%>" style="font-size:20px;">
+     <a href="#"data-action="click->email#show"><i class="fa fa-paper-plane"></i></a>
+  </span>
   </h1>
 <%# @user.emergency_contact_email %>
   <p><%= @itinerary.start_date.strftime('%B %d ') %> - <%= @itinerary.end_date.strftime('%B %d ') %> </p>
