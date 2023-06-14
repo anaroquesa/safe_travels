@@ -2,28 +2,29 @@
   <%= link_to itineraries_path, class: 'add-button' do %>
     <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></h4>
   <% end %>
-  <div><h5><%= @itinerary.title %>    <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"><% end %></i><% end %></h5></div>
   <div>
     <h4><%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %></h4>
   </div>
 </div>
 
+<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+<div style="text-align:center; margin:10px;">
+  <h1>
+    <%= @itinerary.title %>
+    <a href="mailto:emilyyetsko@gmail.com"><i class="fa-solid fa-share-nodes"></i></a>
+  </h1>
+<%# @user.emergency_contact_email %>
+  <p><%= @itinerary.start_date.strftime('%B %d ') %> - <%= @itinerary.end_date.strftime('%B %d ') %> </p>
+</div>
 <%= render "layouts/map" %>
-
-
-<div class="container m-2">
-
-<div><strong>PLAN ACTIVITIES</strong></div>
-
+<div style="margin-top:20px; margin-bottom:20px;">Add an Activity <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %><% end %></div>
 <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
 <% sorted_it_activities.keys.each do |date| %>
-
   <% if date.present? %>
-    <p><%= date.strftime('%A, %d %B') %></p>
+    <p>  <strong><%= date.strftime('%A, %d %B') %></strong></p>
   <% else %>
-    <p>Unspecified Date</p>
+    <p></p>
   <% end %>
-
   <% sorted_it_activities[date].each do |it_activity| %>
     <div class="card-product">
       <% activity = it_activity.activity %>
@@ -58,24 +59,24 @@
                   </div>
                 </div>
               <% end %>
-            <%= link_to icon('fa-regular', 'trash-can icon-hover-trash'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %>
+              <div class="delete">
+                <%= link_to icon('fa-regular', 'circle-xmark'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this activity?" } %>
+              </div>
         </h2>
       </div>
     </div>
   <% end %>
 <% end %>
 
-    <% if !@itinerary.end_date.past? %>
-  <strong>OUR SUGGESTIONS</strong>
-
-      <div class="suggestions">
-          <% @activities.each do |activity| %>
-            <div class="activity-image-container" data-controller="toggler">
+<% if !@itinerary.end_date.past? %>
+  <strong>Our Suggestions</strong>
+<div class="scroll-container">
+  <% @activities.each do |activity| %>
+    <div class="activity-image-container" data-controller="toggler">
               <% unless activity.custom || @itinerary.it_activities.exists?(activity_id: activity.id) %>
                   <% if activity.image_url.present? %>
                     <img src="<%= activity.image_url %>" alt="" data-action="click->toggler#toggle">
                   <% end %>
-                  <%= activity.title %>
                   <div data-toggler-target="togglableElement" class="d-none">
                     <%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
                       <%= f.hidden_field :activity_id, value: activity.id %>
