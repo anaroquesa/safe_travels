@@ -11,10 +11,10 @@
 <div class="container" style="margin-bottom:120px;">
   <div class="profile-card">
   <div class="card-content">
-   <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+   <%= cl_image_tag @user.photo.key%>
   </div>
   <div>
-  <p class="user-name"><%= @user.first_name %></p>
+  <h1 class="user-name"><%= @user.first_name %></h1>
   </div>
   <% unless current_user == @user %>
     <% if @chatroom.id %>
@@ -47,4 +47,3 @@
 <div class="log-out">
 <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
 </div>
-
