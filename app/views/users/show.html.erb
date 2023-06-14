@@ -1,19 +1,20 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <%= link_to home_path, class: 'add-button' do %>
-    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></i>      Profile</h4>
+    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i></i>Profile</h4>
   <% end %>
   <% if user_signed_in? && current_user == @user %>
     <h6><%= link_to "Edit", edit_user_url, class: "underline-link" %></h6>
   <% end %>
 </div>
 
-
-
+<div class="container" style="margin-bottom:120px;">
   <div class="profile-card">
   <div class="card-content">
-    <%= image_tag(@user.photo, class: "profile-photo") if @user.photo.attached? %>
+   <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
+  <div>
   <p class="user-name"><%= @user.first_name %></p>
+  </div>
   <% unless current_user == @user %>
     <% if @chatroom.id %>
       <%= link_to icon("profile-icon", "fa-solid fa-message"), chatroom_path(@chatroom) %>
@@ -25,12 +26,22 @@
 
   <div class="container">
     <div class="Bio-user">
+    <h3>Bio:</h3>
       <p > <%= @user.summary %></p>
     </div>
-  </div>
 
-  <%# <div class="container">
-    <div class="itineries-section">
-      <%= link_to "Your itineraries", itinerary_path %>
+  <div>
+    <h3>Plans:</h3>
+    <div class="scroll-container">
+      <% @user.itineraries.each do |itinerary| %>
+        <div class="activity-image-container">
+          <img src="<%= itinerary.city.image_url_one %>" alt="">
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<div class="log-out">
 <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
+</div>

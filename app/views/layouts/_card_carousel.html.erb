@@ -1,12 +1,12 @@
 <% @cities.each do |city| %>
 <% if city.safety_rating == 1 %>
-      <div class="card-trip" style="background-color:green;">
+      <div class="card-trip" style="background-color:#B7D480;">
     <% elsif city.safety_rating == 2 %>
-      <div class="card-trip" style="background-color:yellow;">
+      <div class="card-trip" style="background-color:#FDD984;">
     <% elsif city.safety_rating == 3 %>
-      <div class="card-trip" style="background-color:orange;">
+      <div class="card-trip" style="background-color:#FFA676;">
     <% else %>
-      <div class="card-trip" style="background-color:red;">
+      <div class="card-trip" style="background-color:#F7574F;">
     <% end %>
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">

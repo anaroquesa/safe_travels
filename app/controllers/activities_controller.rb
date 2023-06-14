@@ -17,7 +17,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     if @activity.save!
       ItActivity.create!(activity_id: @activity.id, itinerary_id: params[:activity][:itinerary_id], date: @activity.date )
-      redirect_to itinerary_path(params[:activity][:itinerary_id] ), notice: 'New activity was added to your itinerary.'
+      redirect_to itinerary_path(params[:activity][:itinerary_id] )
     else
       render :new
     end
@@ -36,7 +36,7 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    redirect_to activities_path, alert: 'Activity was successfully deleted.'
+    redirect_to activities_path
   end
 
   private
