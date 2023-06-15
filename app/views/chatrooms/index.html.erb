@@ -19,7 +19,7 @@
 
 <div>
 <% @users.each do |user| %>
-<img src="<%= user.photo %>" alt="">
+<%= image_tag user.photo, class: "profile-picture" if user.photo.attached? %>
 <%= user.first_name %>
 <% end %>
 </div>
