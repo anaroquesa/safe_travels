@@ -17,19 +17,19 @@
     </div>
     <% unless current_user == @user %>
       <% if @chatroom.id %>
-        <%= link_to icon("profile-icon", "fa-solid fa-message"), chatroom_path(@chatroom) %>
-      <% else %>
-        <%= button_to "Chat", user_chatrooms_path(@user) %>
+        <%= link_to user_chatrooms_path(@user) do %><i class="fa-solid fa-message"></i><% end %>
       <% end %>
     <% end %>
   </div>
 </div>
+
 
 <div class="user-container">
   <div class="bio-user">
     <h3>Biography</h3>
     <p><%= @user.summary %></p>
     <div>
+
 
 <h3>Trips</h3>
 <div class="scroll-container">

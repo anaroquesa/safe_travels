@@ -177,8 +177,19 @@ portugal = City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Amarante/City_Amarante_Portugal_anzxgd.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_1_Amarante_Portugal_p2vsub.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_3_Amarante_Portugal_pdwtgu.png",
-  address: "Largo de São Gonçalo 3, 4600-038 Amarante",
+  # address: "Largo de São Gonçalo 3, 4600-038 Amarante",
+  address: "Amarante, Portugal",
   safety_rating: 1
+)
+
+russia = City.create!(
+  name: "Moscow",
+  country: "Russia",
+  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/City_Moscow_Russia_hjfhvh.png",
+  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824758/SafeTravels%20app/Images/City%20images/Moscow/Activities_Moscow_1_kgvvd3.png",
+  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/Activities_Moscow_2_xtxkg7.png",
+  address: "Moscow, Russia",
+  safety_rating: 4
 )
 
 puts "Creating Activities.."
@@ -472,4 +483,101 @@ Activity.create!(
   category: "Food",
   address: "Av. Gen. Silveira 193, 4600-017 Amarante, Portugal",
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666995/SafeTravels%20app/Images/Category/Food/Amarante_food/Amarante_food_3_yntnbg.png"
+)
+
+# MOSCOW, RUSSIA
+Activity.create!(
+  city: russia,
+  title: "Kolomenskoye",
+  category: "Culture",
+  address: "Andropova Ave, 39, Moscow, Russia, 115487",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_1_bm1zlt.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Bolshoi Theatre",
+  category: "Culture",
+  address: "Theatre Square, 1, Moscow, Russia, 125009",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_2_oeeljf.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Armoury Chamber",
+  category: "Culture",
+  address: "Moscow, Russia, 103132",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_3_jnkzcl.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Red Pond",
+  category: "Nature",
+  address: "Glavnaya Alleya, Moscow, Russia, 111123",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824822/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_1_wxka2i.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: 'Nature Reserve "Valley Setun River"',
+  category: "Nature",
+  address: "Glavnaya Alleya, Moscow, Russia, 111123",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824822/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_2_uiznua.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Kosinski Nature and History Park",
+  category: "Nature",
+  address: "ул. Медведева, Moscow, Russia, 111675",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824823/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_3_qeupjk.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Center for the Arts. Moscow.",
+  category: "Art",
+  address: "Ulitsa Volkhonka, 15, Moscow, Russia, 119019",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_1_rfkyh9.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Zverevsky Center for Contemporary Art",
+  category: "Art",
+  address: "строение 4, Novoryazanskaya Ulitsa, 29 строение 4, Moscow, Russia, 105066",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_2_jbxztg.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Russian Art Museum",
+  category: "Art",
+  address: "Tokmakov Pereulok, 21/2с1, Moscow, Russia, 105066",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_3_xpzdhr.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Taras Bulba",
+  category: "Food",
+  address: "Mokhovaya St, 8с1, Moscow, Russia, 119019",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824813/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1_ntiur6.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Cheburechnaya USSR",
+  category: "Food",
+  address: "Bol'shaya Bronnaya Ulitsa, 27/4с1, Moscow, Russia, 123104",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824814/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1-1_fx8kar.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Expedition. Northern Cuisine",
+  category: "Food",
+  address: "Pevcheskiy Pereulok, 6, Moscow, Russia, 109028",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824814/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1-2_had1n2.png"
 )
