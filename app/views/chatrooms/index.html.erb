@@ -2,14 +2,24 @@
   <h4>Chats</h4>
 </div>
 
+<div class="nearby">Travelers nearby</div>
 <% @users.each do |user| %>
   <div class="chatroom" id="index">
+
+  <div class="user">
     <% user.chatrooms_as_user1.each do |chatroom| %>
       <%= link_to user_path(chatroom.user2) do %>
         <%= image_tag chatroom.user2.photo, class: "profile-picture" if chatroom.user2.photo.attached? %>
-      <% end %>
       <%= link_to chatroom.user2.first_name, chatroom_path(chatroom), class: "" %>
+    <% end %>
+    </div>
     <% end %>
   </div>
 <% end %>
 
+<div>
+<% @users.each do |user| %>
+<img src="<%= user.photo %>" alt="">
+<%= user.first_name %>
+<% end %>
+</div>
