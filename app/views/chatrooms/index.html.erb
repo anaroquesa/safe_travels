@@ -2,6 +2,8 @@
   <h4>Chats</h4>
 </div>
 
+<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+
 <div class="nearby">Travelers nearby</div>
   <% @users.reject { |user| user == current_user }.each do |user| %>
     <div class="chatroom">
@@ -24,3 +26,4 @@
       </div>
     </div>
   <% end %>
+</div>
