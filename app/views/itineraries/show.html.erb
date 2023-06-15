@@ -41,7 +41,7 @@
 <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
 <% sorted_it_activities.keys.each do |date| %>
   <% if date.present? %>
-    <p>  <strong><%= date.strftime('%A, %d %B') %></strong></p>
+    <p><%= date.strftime('%A, %d %B') %></p>
   <% else %>
     <p></p>
   <% end %>
@@ -95,25 +95,24 @@
                     <img src="<%= activity.image_url %>" alt="" data-action="click->toggler#toggle">
                   <% end %>
                   <div data-toggler-target="togglableElement" class="d-none">
-                    <div class="yellow d-flex flex-column shadow-lg p-3 mb-1 bg-white">
-                      <img src="<%= activity.image_url %>" style="width: 100%;height: 150px; object-fit: cover;">
-                      <div class="d-flex justify-content-between">
+                    <div class="blue d-flex flex-column shadow-lg p-3 mb-1 bg-white">
+                      <img src="<%= activity.image_url %>" style="width: 100%;height: 200px; object-fit: cover;border-radius:5px;">
+
                         <div>
-                          <h5><% if activity.title.length > 20 %>
+                          <h2><% if activity.title.length > 20 %>
                             <%= "#{activity.title.slice(0,20)}..." %>
                             <% else %>
-                            <%= activity.title %><% end %></h5>
+                            <%= activity.title %><% end %></h2>
                           <p>Pick a day:</p>
                           <%= simple_form_for([@itinerary, ItActivity.new]) do |f| %>
                             <%= f.hidden_field :activity_id, value: activity.id %>
                             <%= f.hidden_field :itinerary_id, value: @itinerary.id %>
-                            <%= f.date_field :date %>
-                            <%= f.button :submit, "+", class: "btn btn-outline-success btn-block btn-sm", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) %>
+                          <div class="d-flex justify-content-center">
+                            <%= f.date_field :date, class:"form-actions", style: "border: 0;width: 12%;" %>
+                            <%= f.button :submit, "+", class:"form-actions", style: "width: 12%;", disabled: @itinerary.it_activities.exists?(activity_id: activity.id) %>
+                            <%= link_to 'x', itinerary_path(@itinerary), class:"form-actions", style: "width: 12%; text-decoration:none; color: black" %>
+                          </div>
                           <% end %>
-                            <div class="delete-bottom">
-                              <h2><strong><%= link_to 'x', itinerary_path(@itinerary) %></strong></h2>
-                            </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -127,7 +126,6 @@
         <%= @itinerary.review %>
       <% end %>
     <% end %>
-<%= link_to icon('fa-regular', 'circle-xmark'), itinerary_path(@itinerary), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
 </div>
 
 </div>
