@@ -1,25 +1,15 @@
-<div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;" >
-  <h4>Chat</h4>
-  <%# <%= link_to chatrooms_path, class: 'add-button' do %>
-  <%# <h4><i class="fa-solid fa-message" style="color:white;"></i></h4>
-  <% end %>
+<div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
+  <h4>Chats</h4>
 </div>
 
-
 <% @users.each do |user| %>
-<div class="chatroom" id="index">
-  <% user.chatrooms_as_user1.each do |chatroom| %>
-      <%= image_tag chatroom.user2.photo, class: "profile-picture" if chatroom.user2.photo.attached? %>
+  <div class="chatroom" id="index">
+    <% user.chatrooms_as_user1.each do |chatroom| %>
+      <%= link_to user_path(chatroom.user2) do %>
+        <%= image_tag chatroom.user2.photo, class: "profile-picture" if chatroom.user2.photo.attached? %>
+      <% end %>
       <%= link_to chatroom.user2.first_name, chatroom_path(chatroom), class: "" %>
+    <% end %>
+  </div>
+<% end %>
 
-       <% end %>
-       </div>
-  <% end %>
-
-
-    <%# <% user.chatrooms_as_user2.each do |chatroom| %>
-    <%# <div class="chatroom">
-      <%# <%= image_tag chatroom.user1.photo, class: "profile-picture" if chatroom.user1.photo.attached? %>
-      <%# <%= link_to chatroom.user1.first_name, chatroom_path(chatroom), class: "chatroom-link" %>
-    <%# </div>
-  <% end %>
