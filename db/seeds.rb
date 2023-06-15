@@ -182,7 +182,7 @@ portugal = City.create!(
   safety_rating: 1
 )
 
-portugal = City.create!(
+russia = City.create!(
   name: "Moscow",
   country: "Russia",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/City_Moscow_Russia_hjfhvh.png",
