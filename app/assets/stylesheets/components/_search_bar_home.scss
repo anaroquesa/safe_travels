@@ -1,15 +1,16 @@
 .search-home{
-  color: white;
-  position: absolute;
-  top: 6%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
+  padding-top:20px;
+  margin-bottom: 10px;
+  width: 85%;
+  text-align: right;
+  margin: auto;
+  display: table;
+  display:block;
 
-  i{
+  i {
   position:absolute;
-  top: 26%;
-  left: 88%;
-  color: black;
+  right: 12%;
+  top: 30px;
+  display:table-cell;
   }
 }
