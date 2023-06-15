@@ -4,6 +4,7 @@ class ChatroomsController < ApplicationController
   def index
     @chatrooms = Chatroom.where(user1: current_user).or(Chatroom.where(user2: current_user))
     @users = User.where(id: @chatrooms.pluck(:user1, :user2).flatten.uniq)
+    @users = User.all
   end
 
   def show
