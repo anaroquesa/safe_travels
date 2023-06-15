@@ -81,6 +81,10 @@ class ItinerariesController < ApplicationController
   end
 
   def itinerary_params
-    params.require(:itinerary).permit(:user_id, :city_id, :title, :visibility, :status, :review)
+    start_date = params[:itinerary][:start_date].split(" to ")[0]
+    end_date = params[:itinerary][:start_date].split(" to ")[1]
+    params[:itinerary][:start_date] = start_date
+    params[:itinerary][:end_date] = end_date
+    params.require(:itinerary).permit(:user_id, :city_id, :title, :visibility, :status, :review, :start_date, :end_date)
   end
 end
