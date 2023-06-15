@@ -5,7 +5,7 @@
   <% end %>
 </div>
 
-<div class="itin-index" style="width:90%; margin-bottom:100px;">
+<div class="container itin-index" style="width:90%; margin-bottom:100px;">
 
   <% @ongoing_itineraries.group_by(&:city).each do |city, itineraries| %>
   <div style="position:relative;">
