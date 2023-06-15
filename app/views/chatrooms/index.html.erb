@@ -1,8 +1,8 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <h4>Chats</h4>
 </div>
-
-<div class="nearby">Travelers nearby</div>
+<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+<h5>Travelers nearby</h5>
       <% @users.reject { |user| user == current_user }.each do |user| %>
   <div class="chatroom" id="index">
     <div class="user">
@@ -13,3 +13,4 @@
       <% end %>
     </div>
   </div>
+</div>
