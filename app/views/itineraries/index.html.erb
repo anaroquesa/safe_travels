@@ -8,12 +8,12 @@
 <div class="container itin-index" style="width:90%; margin-bottom:100px;">
 
   <% @ongoing_itineraries.group_by(&:city).each do |city, itineraries| %>
-  <div style="position:relative;">
-    <a href="<%= itinerary_path(itineraries.first) %>" style="text-decoration:none;">
-      <div class="card-category-img mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= city.image_url_one %>); width:100%; height:200px; padding:10px; background-size: contain;">
+  <a href="<%= itinerary_path(itineraries.first) %>" style="text-decoration:none;">
+    <div style="position:relative;">
+      <div class="card-category-img mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= city.image_url_one %>); width:100%; height:200px; padding:10px; background-size: cover;">
         <div class="d-flex flex-column mt-2" style="text-align:center">
           <h2><%= city.name %></h2>
-            <% @ongoing_itineraries.each do |itinerary| %>
+            <% itineraries.each do |itinerary| %>
             <p style="font-size:12px; font-weight: 200;"><%= itinerary.start_date.strftime('%B %d ') %> - <%= itinerary.end_date.strftime('%B %d ') %></p>
           <% end %>
         </div>
