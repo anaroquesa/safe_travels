@@ -38,6 +38,11 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
+  h4 {
+    font-size: 15px;
+    font-weight: 400;
+  }
 }
 
 .city-image
@@ -64,7 +69,7 @@ img{
 .safety-rating {
   border-radius: 20px;
   padding: 6px;
-  width: 150px;
+  width: 120px;
   text-align: center;
   position: absolute;
   top: 25%;

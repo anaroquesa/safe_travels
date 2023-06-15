@@ -15,7 +15,7 @@ puts "Creating Users.."
   last_name: "Mueni",
   email: "Esther@email.com",
   password: "123456",
-  summary: "Esther Mueni was born on June 4, 1992, in Nairobi, Kenya. Growing up in a bustling city filled with diverse cultures and vibrant energy, Esther was inspired by the rich tapestry of her surroundings. From a young age, she demonstrated a strong sense of determination and a passion for making a difference in the lives of others.")
+  summary: "Hi, I'm from Nairobi, Kenya. I grew up in a city filled with diverse cultures and vibrant energy. I love to be inspired by my surroundings and the people I love. I have passion to make a difference in the lives of others.")
   user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user1.save
 
@@ -25,7 +25,7 @@ puts "Creating Users.."
   last_name: "Sa",
   email: "Ana@email.com",
   password: "123456",
-  summary: "Ana Sa was born on September 27, 1990, in a vibrant coastal city in Portugal. From a young age, Ana displayed a natural talent and passion for the arts. Growing up in a culturally rich environment, she was exposed to various forms of artistic expression, which fueled her creativity and ignited her desire to pursue a career in the arts.")
+  summary: "Hi, I'm from a vibrant coastal city in Portugal. I have great passion for arts and music. I love to express creativity and will continue to pursue in arts.")
   user2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user2.save
 
@@ -35,7 +35,7 @@ puts "Creating Users.."
   last_name: "Im",
   email: "dabin@email.com",
   password: "123456",
-  summary: "Dabin Im, known by her stage name Dabin, was born on March 12, 1992, in Seoul, South Korea. From a young age, Dabin displayed a remarkable talent and passion for music. Growing up in a musically inclined family, she was exposed to various genres and instruments, which sparked her love for creating and performing music.")
+  summary: "Hi, I'm from Seoul, South Korea. I grew up in India and California. I have passion for design and food. I love exploring the world with people who spark joy and positive energy.")
   user3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user3.save
 
@@ -45,7 +45,7 @@ puts "Creating Users.."
   last_name: "Yetsko",
   email: "Emily@email.com",
   password: "123456",
-  summary: "Emily Yetsko was born on May 7, 1990, in the bustling city of New York. Raised in a vibrant and diverse community, From a young age, Emily exhibited a keen interest in technology and computers. She spent countless hours tinkering with gadgets, learning to code, and exploring the endless possibilities that the digital world had to offer.")
+  summary: "Hi, I'm from the bustling city of New York. Raised in a vibrant and diverse community. I am always keen to learn technology and computers. I love to geek out and learn to code, and explore the endless possibilities that the digital world has to offer.")
   user4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user4.save
 
@@ -55,7 +55,7 @@ puts "Creating Users.."
   last_name: "Rivas",
   email: "Agustin@email.com",
   password: "123456",
-  summary: "Austin Rivas, hailing from the beautiful country of Argentina, was born on June 25, 1992, in the vibrant city of Buenos Aires. Growing up in a culturally rich environment, Austin developed a deep appreciation for music, art, and the diverse traditions of his homeland.")
+  summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
   user5.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user5.save
 
