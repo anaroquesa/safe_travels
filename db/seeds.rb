@@ -49,25 +49,26 @@ puts "Creating Users.."
   user4.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user4.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
-  user5 = User.new(
-  first_name: "Agustina",
-  last_name: "Rivas",
-  email: "Agustin@email.com",
-  password: "123456",
-  summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
-  user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
-  user5.save
+#   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
+#   user5 = User.new(
+#   first_name: "Agustina",
+#   last_name: "Rivas",
+#   email: "Agustin@email.com",
+#   password: "123456",
+#   summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
+#   user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+#   user5.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
-  user5 = User.new(
+  user6 = User.new(
   first_name: "Pamela",
   last_name: "Aguiar Hartwig",
   email: "Pamela@email.com",
   password: "123456",
   summary: "Hi, I'm from Brazil. Before I became a supermom, I used to work for a big fashion industry. When I have the time, I love to explore the world, different cultures, and to be inspired.")
-  user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
-  user5.save
+  user6.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user6.save
+
 
 # query = "https://www.travel-advisory.info/api"
 # http_response = Net::HTTP.get_response(URI(query))
