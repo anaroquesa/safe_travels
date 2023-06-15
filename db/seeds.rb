@@ -3,8 +3,12 @@
 require "open-uri"
 
 puts "Cleaning DB 🧹"
+ItActivity.destroy_all
+Itinerary.destroy_all
 Activity.destroy_all
 City.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 
 puts "Creating Users.."

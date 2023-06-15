@@ -1,16 +1,26 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <h4>Chats</h4>
 </div>
-<div class="container itin-index" style="width:90%; margin-bottom:100px;">
-<h5>Travelers nearby</h5>
-      <% @users.reject { |user| user == current_user }.each do |user| %>
-  <div class="chatroom" id="index">
-    <div class="user">
-    <%= link_to user_path(user) do %>
-        <%= image_tag user.photo, class: "profile-picture" if user.photo.attached? %>
-    <% end %>
-        <%= user.first_name %>
-      <% end %>
+
+<div class="nearby">Travelers nearby</div>
+  <% @users.reject { |user| user == current_user }.each do |user| %>
+    <div class="chatroom">
+      <div class="user">
+        <%= link_to user_path(user) do %>
+          <%= image_tag user.photo, class: "profile-picture" if user.photo.attached? %>
+        <% end %>
+
+        <% chatroom = current_user.chatrooms_as_user1.where(user2: user.id).first %>
+        <% if !chatroom.present? %>
+          <% chatroom = current_user.chatrooms_as_user2.where(user1: user.id).first %>
+        <% end %>
+
+        <% if chatroom.present? %>
+          <%= link_to user.first_name, chatroom_path(chatroom) %>
+        <% else %>
+          <%= link_to user.first_name, user_chatrooms_path(current_user.id), data: {turbo_method: :post} %>
+        <% end %>
+
+      </div>
     </div>
-  </div>
-</div>
+  <% end %>
