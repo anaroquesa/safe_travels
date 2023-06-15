@@ -42,7 +42,7 @@
     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" style="border-radius:6px;"><i class="fa-solid fa-shield-heart"></i>      Safety</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane" type="button" role="tab" aria-controls="reviews-tab-pane" aria-selected="false" style="border-radius:6px;"><i class="fa-solid fa-quote-left"></i>      Review</button>
+    <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review-tab-pane" type="button" role="tab" aria-controls="review-tab-pane" aria-selected="false" style="border-radius:6px;"><i class="fa-solid fa-quote-left"></i>      Review</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -126,6 +126,9 @@
       </div>
     </div>
   </div>
+
+
+  <div class="tab-pane fade" id="review-tab-pane" role="tabpanel" aria-labelledby="review-tab" tabindex="0">
     <div class="d-flex align-items-start flex-wrap">
       <% @city.itineraries.each do |itinerary| %>
         <% if itinerary.review.present? %>
@@ -136,15 +139,7 @@
         <% end %>
       <% end %>
     </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7bd2018390a5ff1ff61cec013d22abc43719828c
-  <div class="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab" tabindex="0">
-    <p>hey</p>
   </div>
-
 
 </div>
 </div>
