@@ -2,11 +2,15 @@
   padding-top:20px;
   margin-bottom: 10px;
   width: 100%;
-  position: relative;
+  text-align: right;
+  margin: auto;
+  display: table;
+  display:block;
 
-i {
+  i {
   position:absolute;
-  top: 55%;
-  left: 4%;
-}
+  right: 12%;
+  top: 30px;
+  display:table-cell;
+  }
 }

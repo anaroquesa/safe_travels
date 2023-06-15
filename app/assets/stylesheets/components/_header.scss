@@ -3,10 +3,25 @@
   height:40px;
   width: 100%;
   color:white;
-  position: sticky-top;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .header h4 {
+  font-size: 18px;
   text-decoration: none;
   color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header h6 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header i{
+  margin: auto;
 }

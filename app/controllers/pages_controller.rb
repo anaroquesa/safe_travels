@@ -27,4 +27,7 @@ class PagesController < ApplicationController
   def profiles
     @users = User.where.not(email: current_user.email)
   end
+
+  def emergency
+  end
 end
