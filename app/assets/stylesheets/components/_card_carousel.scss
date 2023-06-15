@@ -74,5 +74,9 @@ img{
   position: absolute;
   top: 25%;
   right: 5%;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #0080FF;
 }

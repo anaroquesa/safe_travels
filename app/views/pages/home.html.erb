@@ -1,65 +1,210 @@
-<div data-controller="search-cities">
+
 <div class="home"  style="">
   <div class="search-home"><%= render "layouts/search_bar_home" %></div>
   <div class="centered">Fearless Explorers.</div>
   <div class="secondary">Women Embracing Secure Travel.</div>
 </div>
 
-<%# Move logout button in homepage. Copy and paste this link over to profile %>
-
-
-<%# <div class="container" style="width:90%;z-index:1;"></div> %>
-<div class="accordion" id="accordionExample" style="margin-top:30px;" data-search-cities-target="lists">
+<div class="accordion" id="accordionExample" data-search-cities-target="lists">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button one" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button one" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#B7D480;">
         Super Safe!
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <%= render "layouts/card_carousel", cities: @cities %>
+      <% @cities.each do |city| %>
+      <% if city.safety_rating == 1 %>
+      <div class="card-trip">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_two %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_three %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="card-trip-infos">
+      <div>
+        <h2><%= city.name %></h2>
+        <h4><%= city.country %></h4>
+          <% if city.safety_rating == 1 %>
+            <div class="safety-rating" style="background-color:#B7D480;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 2 %>
+            <div class="safety-rating" style="background-color:#FDD984;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 3 %>
+            <div class="safety-rating" style="background-color:#FFA676;">Safety Rating: <%= city.safety_rating %></div>
+          <% else%>
+            <div class="safety-rating" style="background-color:#F7574F;">Safety Rating: <%= city.safety_rating %></div>
+          <% end %>
       </div>
+      </div>
+      </div>
+      <% end %>
+    <% end %>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button two collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <button class="accordion-button two collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color:#FDD984;">
         Still Safe!
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <%= render "layouts/card_carousel", cities: @cities %>
+<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+  <div class="accordion-body">
+    <% @cities.each do |city| %>
+      <% if city.safety_rating == 2 %>
+      <div class="card-trip">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_two %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_three %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="card-trip-infos">
+      <div>
+        <h2><%= city.name %></h2>
+        <h4><%= city.country %></h4>
+          <% if city.safety_rating == 1 %>
+            <div class="safety-rating" style="background-color:#B7D480;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 2 %>
+            <div class="safety-rating" style="background-color:#FDD984;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 3 %>
+            <div class="safety-rating" style="background-color:#FFA676;">Safety Rating: <%= city.safety_rating %></div>
+          <% else%>
+            <div class="safety-rating" style="background-color:#F7574F;">Safety Rating: <%= city.safety_rating %></div>
+          <% end %>
       </div>
-    </div>
+      </div>
+      </div>
+      <% end %>
+    <% end %>
   </div>
+</div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button three collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <button class="accordion-button three collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color:#FFA676;">
       Be Cautious
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-          <%= render "layouts/card_carousel", cities: @cities %>
+          <% @cities.each do |city| %>
+      <% if city.safety_rating == 3 %>
+      <div class="card-trip">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_two %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_three %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="card-trip-infos">
+      <div>
+        <h2><%= city.name %></h2>
+        <h4><%= city.country %></h4>
+          <% if city.safety_rating == 1 %>
+            <div class="safety-rating" style="background-color:#B7D480;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 2 %>
+            <div class="safety-rating" style="background-color:#FDD984;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 3 %>
+            <div class="safety-rating" style="background-color:#FFA676;">Safety Rating: <%= city.safety_rating %></div>
+          <% else%>
+            <div class="safety-rating" style="background-color:#F7574F;">Safety Rating: <%= city.safety_rating %></div>
+          <% end %>
       </div>
+      </div>
+      </div>
+      <% end %>
+    <% end %>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button four collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <button class="accordion-button four collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color:#F7574F;">
       Maybe Reconsider
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-          <%= render "layouts/card_carousel", cities: @cities %>
+         <% @cities.each do |city| %>
+      <% if city.safety_rating == 4 %>
+      <div class="card-trip">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_one %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_two %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="<%= city_path(city.id) %>">
+                <img src="<%= city.image_url_three %>" class="d-block w-100" alt="...">
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="card-trip-infos">
+      <div>
+        <h2><%= city.name %></h2>
+        <h4><%= city.country %></h4>
+          <% if city.safety_rating == 1 %>
+            <div class="safety-rating" style="background-color:#B7D480;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 2 %>
+            <div class="safety-rating" style="background-color:#FDD984;">Safety Rating: <%= city.safety_rating %></div>
+          <% elsif city.safety_rating == 3 %>
+            <div class="safety-rating" style="background-color:#FFA676;">Safety Rating: <%= city.safety_rating %></div>
+          <% else%>
+            <div class="safety-rating" style="background-color:#F7574F;">Safety Rating: <%= city.safety_rating %></div>
+          <% end %>
       </div>
-
-    </div>
+      </div>
+      </div>
+      <% end %>
+    <% end %>
 
   </div>
 
-</div>
 </div>

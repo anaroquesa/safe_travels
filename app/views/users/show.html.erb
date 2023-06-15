@@ -1,56 +1,45 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <%= link_to home_path, class: 'add-button' do %>
-    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>Profile</h4>
+    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>          Profile</h4>
   <% end %>
 </div>
 
-<div class="user-top-container">
+<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+
   <div class="profile-card">
     <div class="card-content">
       <%= cl_image_tag @user.photo.key %>
     </div>
-    <div>
-      <h2 class="user-name"><%= @user.first_name %></h2>
+    <div class="d-flex flex-column align-items-center">
+      <h4 class="mt-2"><strong><%= @user.first_name %> <%= @user.last_name %></strong></h4>
       <% if user_signed_in? && current_user == @user %>
-       <%= link_to edit_user_url do %><i class="fas fa-edit"></i><% end %>
+        <div><%= link_to edit_user_url do %><i class="fas fa-edit"></i><% end %></div>
+        <% else %>
+        <div><%= link_to user_chatroom_path(@user) do %><i class="fa-solid fa-message"></i><% end %></div>
       <% end %>
     </div>
-    <% unless current_user == @user %>
-      <% if @chatroom.id %>
-        <%= link_to user_chatrooms_path(@user) do %><i class="fa-solid fa-message"></i><% end %>
-      <% end %>
-    <% end %>
   </div>
+
+<div class="bio-user">
+  <strong><p>Biography</p></strong>
+  <p><%= @user.summary %></p>
 </div>
 
+<strong><p>Trips</p></strong>
 
-<div class="user-container">
-  <div class="bio-user">
-    <h3>Biography</h3>
-    <p><%= @user.summary %></p>
-    <div>
-
-
-<h3>Trips</h3>
-<div class="scroll-container">
-    <% @user.itineraries.where(visibility: true).each do |itinerary| %>
-      <div class="activity-image-container">
-            <%= link_to itinerary_path(itinerary) do %>
-              <img src="<%= itinerary.city.image_url_one %>" alt="">
-            <% end %>
-            <div class="activity-info">
-              <strong><p><%= itinerary.title %></p></strong>
-              <p><%= itinerary.city.name %></p>
-              <p><%= itinerary.start_date.strftime('%d %B') %> - <%= itinerary.end_date.strftime('%d %B, %Y') %></p>
-            </div>
-          </div>
-        <% end %>
+<div class="scroll-container m-0">
+  <% @user.itineraries.where(visibility: true).each do |itinerary| %>
+    <div class="activity-image-container m-0" style="position: relative;">
+      <%= link_to itinerary_path(itinerary) do %>
+        <%= image_tag itinerary.city.image_url_one, style: "width:100%; height:100px; object-fit:contain; border-radius:10px;", alt: "" %>
+      <% end %>
+      <div class="image-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 16px; font-weight: bold;">
+        <%= itinerary.city.name %>
       </div>
     </div>
+  <% end %>
+</div>
 
-  <div class="log-out">
-      <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: { turbo: false } %>
-    </div>
-
-  </div>
+<div class="log-out">
+  <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: { turbo: false } %>
 </div>

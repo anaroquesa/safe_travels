@@ -1,47 +1,22 @@
-.profile-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
-  margin-left: 50px;
-  height: 100vh;
-  padding: 0 20px;
-  box-sizing: border-box;
-  @media (max-width: 428px) {
-    padding: 0 20px;
-  }
-}
-
 .profile-card {
-  width: 400px;
-  height: 400px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (max-width: 428px) {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-  }
 }
 
 .card-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  max-width: 327;
-
-  @media (max-width: 428px) {
-    padding: 20px;
-  }
+  width: 100%;
 }
 
 .card-content img{
@@ -67,18 +42,13 @@
 
 .bio-user{
   margin-top: 30px;
-  padding: 10px;
 }
+
 .profile-icon {
-  display: flex;
-  justify-content: center;
+  justify-text: center;
   align-items: center;
   margin-top: 10px;
   background-color: rgb(98, 70, 211);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  color: white;
   margin: 0 auto;
 }
 .header a {
@@ -87,26 +57,16 @@
 }
 
 .fas fa-edit{
-  width: 30px;
-  height: 30px;
-  color: white;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  border-radius: 50%;
+  background-color: rgb(98, 70, 211);
+  margin: auto;
 }
-
-
-
-
 
 
 //  #chatroom index code
 .profile-picture {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   margin-right: 10px;
   float: left;
@@ -116,6 +76,7 @@
   display: inline-block;
   margin-top: 10px;
 }
+
 .log-out{
   margin-top: 20px;
   margin: 0;
@@ -124,12 +85,12 @@
   padding: 5px;
   text-align: center;
   background-color: #F6C522;
-  line-height: 48px;
+  line-height: 40px;
   border-radius: 100px
 }
 
 .user-name h2 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   }
 

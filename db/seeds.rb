@@ -3,8 +3,12 @@
 require "open-uri"
 
 puts "Cleaning DB 🧹"
+ItActivity.destroy_all
+Itinerary.destroy_all
 Activity.destroy_all
 City.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 
 puts "Creating Users.."
@@ -16,7 +20,7 @@ puts "Creating Users.."
   email: "Esther@email.com",
   password: "123456",
   summary: "Hi, I'm from Nairobi, Kenya. I grew up in a city filled with diverse cultures and vibrant energy. I love to be inspired by my surroundings and the people I love. I have passion to make a difference in the lives of others.")
-  user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user1.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user1.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/ana_sfmt2l.jpg")
@@ -26,7 +30,7 @@ puts "Creating Users.."
   email: "Ana@email.com",
   password: "123456",
   summary: "Hi, I'm from a vibrant coastal city in Portugal. I have great passion for arts and music. I love to express creativity and will continue to pursue in arts.")
-  user2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user2.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user2.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/dabin_jf4zmg.jpg")
@@ -36,7 +40,7 @@ puts "Creating Users.."
   email: "dabin@email.com",
   password: "123456",
   summary: "Hi, I'm from Seoul, South Korea. I grew up in India and California. I have passion for design and food. I love exploring the world with people who spark joy and positive energy.")
-  user3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user3.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user3.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
@@ -46,21 +50,88 @@ puts "Creating Users.."
   email: "Emily@email.com",
   password: "123456",
   summary: "Hi, I'm from the bustling city of New York. Raised in a vibrant and diverse community. I am always keen to learn technology and computers. I love to geek out and learn to code, and explore the endless possibilities that the digital world has to offer.")
-  user4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user4.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user4.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
-  user5 = User.new(
-  first_name: "Agustina",
-  last_name: "Rivas",
-  email: "Agustin@email.com",
+#   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
+#   user5 = User.new(
+#   first_name: "Agustina",
+#   last_name: "Rivas",
+#   email: "Agustin@email.com",
+#   password: "123456",
+#   summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
+#   user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+#   user5.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/pamela_sxdi2j.jpg")
+  user6 = User.new(
+  first_name: "Pamela",
+  last_name: "Aguiar Hartwig",
+  email: "Pamela@email.com",
   password: "123456",
-  summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
-  user5.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-  user5.save
+  summary: "Hi, I'm from Brazil. Before I became a supermom, I used to work for a big fashion industry. When I have the time, I love to explore the world, different cultures, and to be inspired.")
+  user6.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user6.save
 
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/joanna_ussaqe.jpg")
+  user7 = User.new(
+  first_name: "Joanna",
+  last_name: "Wójtowicz",
+  email: "Joanna@email.com",
+  password: "123456",
+  summary: "Hi, I'm from Poland. I love pottery! It captivates my craftsmanship. I create unique pieces from clay. Pottery is my main creative outlet, it allows me to express beauty into the world through my creations.")
+  user7.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user7.save
 
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/marina_hf0hfk.jpg")
+  user8 = User.new(
+  first_name: "Marina",
+  last_name: "Stepanova",
+  email: "Marina@email.com",
+  password: "123456",
+  summary: "Hi, I love to collaborate with beautiful people. I thrive in team environments, value the power of collective creativity and shared goals. This is why I love to travel with people I meet all over the world. I love to bring people together, create a supportive atmosphere where everyone's ideas are valued.")
+  user8.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user8.save
 
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839431/SafeTravels%20app/Images/Profile%20images/estibaliz_frdvap.jpg")
+  user9 = User.new(
+  first_name: "Estibaliz",
+  last_name: "Lorenzo",
+  email: "Estibaliz@email.com",
+  password: "123456",
+  summary: "Hi, love to teach and bring creativity and innovation to the class. I incorporate interactive and hands-on activities to foster a dynamic learning environment, where students can actively participate and apply what they have learned. By creating stimulating lesson plans and utilizing modern educational tools, it sparks curiosity and enthusiasm among my students.")
+  user9.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user9.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/katharine_tyrhqo.jpg")
+  user10 = User.new(
+  first_name: "Katharine",
+  last_name: "Lin",
+  email: "Katharine@email.com",
+  password: "123456",
+  summary: "Hi, I have a deep bond with my furry companion, Henry. He is a lovable dog. Together, we embark on adventures, create memories, and bring joy to each other's lives. He is the best travel buddy.")
+  user10.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user10.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/charlotte_yzqavs.jpg")
+  user11 = User.new(
+  first_name: "Charlotte",
+  last_name: "de Janzé",
+  email: "Charlotte@email.com",
+  password: "123456",
+  summary: "Hi, I love to do self-discovery, and make a difference. I am compassionate and love nature. I hear a lot that my presence brings joy to people. I genuinely desire to make the world a better place.")
+  user11.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user11.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/emma_npmpwp.jpg")
+  user12 = User.new(
+  first_name: "Emma",
+  last_name: "Anna Agneta Rünzel",
+  email: "Emma@email.com",
+  password: "123456",
+  summary: "Hi, I love to teach at coding at Le Wagon bootcamp. With my expertise and passion for empowering others through technology, I play a vital role in shaping the future of aspiring developers. I love my students at batch #1217!")
+  user12.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user12.save
 
 # query = "https://www.travel-advisory.info/api"
 # http_response = Net::HTTP.get_response(URI(query))
@@ -70,8 +141,6 @@ puts "Creating Users.."
 # safety.each do |city|
 #   return city
 # end
-
-
 
 # const one = 1 safe
 # const two = 2
@@ -97,7 +166,7 @@ new_york = City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/City_NY_City_oyzts0.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/Activities_1_NY_City_abp0km.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/NY/Activities_2_NY_City_niaugo.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Time Square, NY",
+  latitude: 13.381777, longitude: 52.531677, address: "Times Square, NY",
   safety_rating: 2
 )
 
@@ -127,7 +196,7 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/City_Tokyo_Japan_c3dymt.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/Activities_1_Tokyo_Japan_k06tpo.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649608/SafeTravels%20app/Images/City%20images/Tokyo/Activities_3_Tokyo_Japan_du769b.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Tokyo",
+  latitude: 13.381777, longitude: 52.531677, address: "Tokyo, Japan",
   safety_rating: 1
 )
 
@@ -157,7 +226,7 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Florence/City_Florence_Italy_cj3iea.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Florence/Activities_2_Florence_Italy_ii4qir.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Florence/Activities_3_Florence_Italy_p485ew.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence",
+  latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence, Italy",
   safety_rating: 2
 )
 
