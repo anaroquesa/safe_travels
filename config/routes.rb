@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "/home", to: "pages#home", as: :home
   get "/profiles", to: "pages#profiles"
+  get "/emergency", to: "pages#emergency"
   get '/itineraries', to: 'itineraries#index', as: :itineraries
 
   post '/status_update', to: 'itineraries#status_update'
