@@ -59,9 +59,6 @@ puts "Creating Users.."
   user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user5.save
 
-
-
-
 # query = "https://www.travel-advisory.info/api"
 # http_response = Net::HTTP.get_response(URI(query))
 # response = JSON.parse(http_response.body)
