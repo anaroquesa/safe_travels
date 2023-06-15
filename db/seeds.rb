@@ -16,7 +16,7 @@ puts "Creating Users.."
   email: "Esther@email.com",
   password: "123456",
   summary: "Hi, I'm from Nairobi, Kenya. I grew up in a city filled with diverse cultures and vibrant energy. I love to be inspired by my surroundings and the people I love. I have passion to make a difference in the lives of others.")
-  user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user1.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user1.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/ana_sfmt2l.jpg")
@@ -26,7 +26,7 @@ puts "Creating Users.."
   email: "Ana@email.com",
   password: "123456",
   summary: "Hi, I'm from a vibrant coastal city in Portugal. I have great passion for arts and music. I love to express creativity and will continue to pursue in arts.")
-  user2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user2.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user2.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/dabin_jf4zmg.jpg")
@@ -36,7 +36,7 @@ puts "Creating Users.."
   email: "dabin@email.com",
   password: "123456",
   summary: "Hi, I'm from Seoul, South Korea. I grew up in India and California. I have passion for design and food. I love exploring the world with people who spark joy and positive energy.")
-  user3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user3.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user3.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
@@ -46,7 +46,7 @@ puts "Creating Users.."
   email: "Emily@email.com",
   password: "123456",
   summary: "Hi, I'm from the bustling city of New York. Raised in a vibrant and diverse community. I am always keen to learn technology and computers. I love to geek out and learn to code, and explore the endless possibilities that the digital world has to offer.")
-  user4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user4.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user4.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
@@ -56,7 +56,7 @@ puts "Creating Users.."
   email: "Agustin@email.com",
   password: "123456",
   summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
-  user5.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user5.save
 
   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
@@ -66,11 +66,8 @@ puts "Creating Users.."
   email: "Pamela@email.com",
   password: "123456",
   summary: "Hi, I'm from Brazil. Before I became a supermom, I used to work for a big fashion industry. When I have the time, I love to explore the world, different cultures, and to be inspired.")
-  user5.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user5.save
-
-
-
 
 # query = "https://www.travel-advisory.info/api"
 # http_response = Net::HTTP.get_response(URI(query))
