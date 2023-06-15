@@ -59,7 +59,7 @@ puts "Creating Users.."
 #   user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 #   user5.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/pamela_sxdi2j.jpg")
   user6 = User.new(
   first_name: "Pamela",
   last_name: "Aguiar Hartwig",
@@ -69,6 +69,65 @@ puts "Creating Users.."
   user6.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user6.save
 
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/joanna_ussaqe.jpg")
+  user7 = User.new(
+  first_name: "Joanna",
+  last_name: "Wójtowicz",
+  email: "Joanna@email.com",
+  password: "123456",
+  summary: "Hi, I'm from Poland. I love pottery! It captivates my craftsmanship. I create unique pieces from clay. Pottery is my main creative outlet, it allows me to express beauty into the world through my creations.")
+  user7.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user7.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/marina_hf0hfk.jpg")
+  user8 = User.new(
+  first_name: "Marina",
+  last_name: "Stepanova",
+  email: "Marina@email.com",
+  password: "123456",
+  summary: "Hi, I love to collaborate with beautiful people. I thrive in team environments, value the power of collective creativity and shared goals. This is why I love to travel with people I meet all over the world. I love to bring people together, create a supportive atmosphere where everyone's ideas are valued.")
+  user8.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user8.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839431/SafeTravels%20app/Images/Profile%20images/estibaliz_frdvap.jpg")
+  user9 = User.new(
+  first_name: "Estibaliz",
+  last_name: "Lorenzo",
+  email: "Estibaliz@email.com",
+  password: "123456",
+  summary: "Hi, love to teach and bring creativity and innovation to the class. I incorporate interactive and hands-on activities to foster a dynamic learning environment, where students can actively participate and apply what they have learned. By creating stimulating lesson plans and utilizing modern educational tools, it sparks curiosity and enthusiasm among my students.")
+  user9.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user9.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/katharine_tyrhqo.jpg")
+  user10 = User.new(
+  first_name: "Katharine",
+  last_name: "Lin",
+  email: "Katharine@email.com",
+  password: "123456",
+  summary: "Hi, I have a deep bond with my furry companion, Henry. He is a lovable dog. Together, we embark on adventures, create memories, and bring joy to each other's lives. He is the best travel buddy.")
+  user10.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user10.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/charlotte_yzqavs.jpg")
+  user11 = User.new(
+  first_name: "Charlotte",
+  last_name: "de Janzé",
+  email: "Charlotte@email.com",
+  password: "123456",
+  summary: "Hi, I love to do self-discovery, and make a difference. I am compassionate and love nature. I hear a lot that my presence brings joy to people. I genuinely desire to make the world a better place.")
+  user11.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user11.save
+
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/emma_npmpwp.jpg")
+  user12 = User.new(
+  first_name: "Emma",
+  last_name: "Anna Agneta Rünzel",
+  email: "Emma@email.com",
+  password: "123456",
+  summary: "Hi, I love to teach at coding at Le Wagon bootcamp. With my expertise and passion for empowering others through technology, I play a vital role in shaping the future of aspiring developers. I love my students at batch #1217!")
+  user12.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user12.save
 
 # query = "https://www.travel-advisory.info/api"
 # http_response = Net::HTTP.get_response(URI(query))
