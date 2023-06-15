@@ -1,5 +1,16 @@
 
-<div class="search-home"><%= render "layouts/search_bar_home" %></div>
-<p><strong>Top Recommendations</strong></p>
-<%= render "layouts/card_carousel" %>
+<div data-controller="search-cities">
+    <div class="search-home" >
+
+    <%= render "layouts/search_bar_home" %>
+
+    <p><strong>Top Recommendations</strong></p>
+
+      <div data-search-cities-target="lists">
+        <%= render "layouts/card_carousel", cities:@cities %>
+      </div>
+
+    </div>
+
+
 </div>

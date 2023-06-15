@@ -8,6 +8,10 @@ class CitiesController < ApplicationController
     else
       @cities = City.all
     end
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "layouts/card_carousel", locals: {cities: @cities}, formats: [:html] }
+    end
   end
 
   def show

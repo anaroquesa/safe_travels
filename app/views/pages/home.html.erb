@@ -1,4 +1,4 @@
-
+<div data-controller="search-cities">
 <div class="home"  style="">
   <div class="search-home"><%= render "layouts/search_bar_home" %></div>
   <div class="centered">Fearless Explorers.</div>
@@ -9,7 +9,7 @@
 
 
 <%# <div class="container" style="width:90%;z-index:1;"></div> %>
-<div class="accordion" id="accordionExample" style="margin-top:30px;">
+<div class="accordion" id="accordionExample" style="margin-top:30px;" data-search-cities-target="lists">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button one" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -18,7 +18,7 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <%= render "layouts/card_carousel" %>
+        <%= render "layouts/card_carousel", cities: @cities %>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <%= render "layouts/card_carousel" %>
+        <%= render "layouts/card_carousel", cities: @cities %>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-          <%= render "layouts/card_carousel" %>
+          <%= render "layouts/card_carousel", cities: @cities %>
       </div>
     </div>
   </div>
@@ -54,11 +54,12 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-          <%= render "layouts/card_carousel" %>
+          <%= render "layouts/card_carousel", cities: @cities %>
       </div>
 
     </div>
 
   </div>
 
+</div>
 </div>
