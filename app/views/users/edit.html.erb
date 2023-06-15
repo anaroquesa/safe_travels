@@ -1,32 +1,31 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <%= link_to user_path, class: 'add-button' do %>
-    <h4><i class="fa-solid fa-circle-arrow-left" style="color:white;"></i>  Profile</h4>
+    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>      Profile</h4>
   <% end %>
 </div>
 
-<div class="container" style="margin-bottom:120px;">
-  <div class="profile-card">
-    <div class="card-content">
-      <img src="<%= @user.photo %>"  class="profile-photo">
-    </div>
-    <p class="user-name"> <%= current_user.first_name %></p>
+
+<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+
+<div class="profile-card">
+  <div class="card-content">
+    <%= cl_image_tag @user.photo.key %>
+  </div>
+  <div class="d-flex flex-column align-items-center">
+    <h4 class="mt-2"><strong><%= @user.first_name %> <%= @user.last_name %></strong></h4>
+  </div>
 </div>
 
-
-<div class="container">
-        <div class="Bio-user">
-          <p > <%= current_user.summary%></p>
-        </div>
-</div>
-
-<div class="row col-12 justify-content-center newpage">
+<div class="pt-3">
   <%= simple_form_for @user, html: { multipart: true }, method: :patch do |f| %>
     <div><%= f.input :first_name %></div>
     <div><%= f.input :photo, as: :file %></div> <!-- Add this line for the file input -->
     <div><%= f.input :summary, label: "Biography" %></div>
     <div><%= f.input :emergency_contact_name %></div>
     <div><%= f.input :emergency_contact_number %></div>
-    <div><%= f.submit "Update Profile" %></div>
+    <div class="form-actions">
+      <%= f.button :submit, "Update" %>
+    </div>
   <% end %>
 </div>
 </div>
