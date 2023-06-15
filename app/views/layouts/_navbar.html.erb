@@ -4,7 +4,8 @@
   <div class="icon-text-container <%= 'active' if request.path == root_path %>">
     <a href="/home">
       <div class="icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <%# <i class="fa-solid fa-magnifying-glass"></i> %>
+        <i class="fa-solid fa-magnifying-glass-location"></i>
       </div>
         <div class="text">
           Explore
@@ -15,6 +16,7 @@
    <div class="icon-text-container <%= 'active' if request.path == itineraries_path %>">
       <a href="/itineraries">
         <div class="icon">
+          <%# <i class="fa-regular fa-suitcase"></i> %>
           <i class="fa-solid fa-suitcase-rolling"></i>
         </div>
         <div class="text">
@@ -26,7 +28,8 @@
   <div class="icon-text-container <%= 'active' if request.path == emergency_path %>">
       <a href="/emergency">
         <div class="icon">
-          <i class="fa-regular fa-bell"></i>
+          <%# <i class="fa-regular fa-bell"></i> %>
+          <i class="fa-solid fa-bell"></i>
         </div>
         <div class="text">
           Emergency
@@ -36,7 +39,7 @@
   <div class="icon-text-container <%= 'active' if request.path == chatrooms_path %>">
         <a href="<%= chatrooms_path %>">
           <div class="icon">
-            <i class="fa-regular fa-message"></i>
+            <i class="fa-solid fa-message"></i>
           </div>
           <div class="text">
             Chat
@@ -47,7 +50,8 @@
   <% if user_signed_in? %>
     <%= link_to user_path(current_user) do  %>
       <div class="icon">
-        <i class="fa-regular fa-user"></i>
+        <%# <i class="fa-regular fa-user"></i> %>
+        <i class="fa-solid fa-user"></i>
       </div>
       <div class="text">
         Profile
@@ -56,7 +60,8 @@
   <% else %>
     <%= link_to new_user_session_path do  %>
       <div class="icon">
-        <i class="fa-regular fa-user"></i>
+        <%# <i class="fa-regular fa-user"></i> %>
+        <i class="fa-solid fa-user"></i>
       </div>
       <div class="text">
         Profile

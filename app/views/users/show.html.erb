@@ -1,56 +1,56 @@
 <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
   <%= link_to home_path, class: 'add-button' do %>
-
-    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>    Profile</h4>
-  <% end %>
-  <% if user_signed_in? && current_user == @user %>
-    <h6><%= link_to "Edit", edit_user_url, class: "underline-link" %></h6>
+    <h4><i class="fa-solid fa-chevron-left" style="color:white;"></i>Profile</h4>
   <% end %>
 </div>
 
 <div class="user-top-container">
   <div class="profile-card">
-  <div class="card-content">
-
-   <%= cl_image_tag @user.photo.key %>
-  </div>
-  <div>
-  <h2 class="user-name"><%= @user.first_name %></h2>
-
-  </div>
-  <% unless current_user == @user %>
-    <% if @chatroom.id %>
-      <%= link_to icon("profile-icon", "fa-solid fa-message"), chatroom_path(@chatroom) %>
-    <% else %>
-      <%= button_to "chat", user_chatrooms_path(@user) %>
+    <div class="card-content">
+      <%= cl_image_tag @user.photo.key %>
+    </div>
+    <div>
+      <h2 class="user-name"><%= @user.first_name %></h2>
+      <% if user_signed_in? && current_user == @user %>
+       <%= link_to edit_user_url do %><i class="fas fa-edit"></i><% end %>
+      <% end %>
+    </div>
+    <% unless current_user == @user %>
+      <% if @chatroom.id %>
+        <%= link_to user_chatrooms_path(@user) do %><i class="fa-solid fa-message"></i><% end %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 
-  <div class="user-container" >
-    <div class="bio-user">
-    <h3>Biograph</h3>
-      <p > <%= @user.summary %></p>
+<div class="user-container">
+  <div class="bio-user">
+    <h3>Biography</h3>
+    <p><%= @user.summary %></p>
+    <div>
 
-<div>
-  <h3>Trips</h3>
-  <div class="scroll-container">
+
+<h3>Trips</h3>
+<div class="scroll-container">
     <% @user.itineraries.where(visibility: true).each do |itinerary| %>
       <div class="activity-image-container">
-        <%= link_to itinerary_path(itinerary) do %>
-
-          <img src="<%= itinerary.city.image_url_one %>" alt="">
+            <%= link_to itinerary_path(itinerary) do %>
+              <img src="<%= itinerary.city.image_url_one %>" alt="">
+            <% end %>
+            <div class="activity-info">
+              <strong><p><%= itinerary.title %></p></strong>
+              <p><%= itinerary.city.name %></p>
+              <p><%= itinerary.start_date.strftime('%d %B') %> - <%= itinerary.end_date.strftime('%d %B, %Y') %></p>
+            </div>
+          </div>
         <% end %>
-        <div class="activity-info">
-          <strong><p><%= itinerary.title %><p></strong>
-          <p><%= itinerary.city.name %></p>
-          <p><%= itinerary.start_date.strftime('%d %B') %> - <%= itinerary.end_date.strftime('%d %B, %Y') %></p>
-        </div>
       </div>
-    <% end %>
+    </div>
+
+  <div class="log-out">
+      <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: { turbo: false } %>
+    </div>
+
   </div>
-</div>
-<div class="log-out">
-<%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: {turbo: false} %>
 </div>

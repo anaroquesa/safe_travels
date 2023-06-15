@@ -7,7 +7,7 @@
 .centered{
   font-weight: bold;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 18px;
   color: white;
   position: absolute;
   top: 13%;
@@ -18,4 +18,20 @@
   position: absolute;
   top: 17%;
   left: 7%;
+}
+.one{
+  border-radius: 5px;
+  background-color:#B7D480;
+}
+.two{
+  border-radius: 5px;
+  background-color:#FDD984;
+}
+.three{
+  border-radius: 5px;
+  background-color:#FFA676;
+}
+.four{
+  border-radius: 5px;
+  background-color:#F7574F;
 }

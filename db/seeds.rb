@@ -15,7 +15,7 @@ puts "Creating Users.."
   last_name: "Mueni",
   email: "Esther@email.com",
   password: "123456",
-  summary: "Esther Mueni was born on June 4, 1992, in Nairobi, Kenya. Growing up in a bustling city filled with diverse cultures and vibrant energy, Esther was inspired by the rich tapestry of her surroundings. From a young age, she demonstrated a strong sense of determination and a passion for making a difference in the lives of others.")
+  summary: "Hi, I'm from Nairobi, Kenya. I grew up in a city filled with diverse cultures and vibrant energy. I love to be inspired by my surroundings and the people I love. I have passion to make a difference in the lives of others.")
   user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user1.save
 
@@ -25,7 +25,7 @@ puts "Creating Users.."
   last_name: "Sa",
   email: "Ana@email.com",
   password: "123456",
-  summary: "Ana Sa was born on September 27, 1990, in a vibrant coastal city in Portugal. From a young age, Ana displayed a natural talent and passion for the arts. Growing up in a culturally rich environment, she was exposed to various forms of artistic expression, which fueled her creativity and ignited her desire to pursue a career in the arts.")
+  summary: "Hi, I'm from a vibrant coastal city in Portugal. I have great passion for arts and music. I love to express creativity and will continue to pursue in arts.")
   user2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user2.save
 
@@ -35,7 +35,7 @@ puts "Creating Users.."
   last_name: "Im",
   email: "dabin@email.com",
   password: "123456",
-  summary: "Dabin Im, known by her stage name Dabin, was born on March 12, 1992, in Seoul, South Korea. From a young age, Dabin displayed a remarkable talent and passion for music. Growing up in a musically inclined family, she was exposed to various genres and instruments, which sparked her love for creating and performing music.")
+  summary: "Hi, I'm from Seoul, South Korea. I grew up in India and California. I have passion for design and food. I love exploring the world with people who spark joy and positive energy.")
   user3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user3.save
 
@@ -45,7 +45,7 @@ puts "Creating Users.."
   last_name: "Yetsko",
   email: "Emily@email.com",
   password: "123456",
-  summary: "Emily Yetsko was born on May 7, 1990, in the bustling city of New York. Raised in a vibrant and diverse community, From a young age, Emily exhibited a keen interest in technology and computers. She spent countless hours tinkering with gadgets, learning to code, and exploring the endless possibilities that the digital world had to offer.")
+  summary: "Hi, I'm from the bustling city of New York. Raised in a vibrant and diverse community. I am always keen to learn technology and computers. I love to geek out and learn to code, and explore the endless possibilities that the digital world has to offer.")
   user4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user4.save
 
@@ -55,7 +55,7 @@ puts "Creating Users.."
   last_name: "Rivas",
   email: "Agustin@email.com",
   password: "123456",
-  summary: "Austin Rivas, hailing from the beautiful country of Argentina, was born on June 25, 1992, in the vibrant city of Buenos Aires. Growing up in a culturally rich environment, Austin developed a deep appreciation for music, art, and the diverse traditions of his homeland.")
+  summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
   user5.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
   user5.save
 
@@ -177,8 +177,19 @@ portugal = City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Amarante/City_Amarante_Portugal_anzxgd.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_1_Amarante_Portugal_p2vsub.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_3_Amarante_Portugal_pdwtgu.png",
-  address: "Largo de São Gonçalo 3, 4600-038 Amarante",
+  # address: "Largo de São Gonçalo 3, 4600-038 Amarante",
+  address: "Amarante, Portugal",
   safety_rating: 1
+)
+
+russia = City.create!(
+  name: "Moscow",
+  country: "Russia",
+  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/City_Moscow_Russia_hjfhvh.png",
+  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824758/SafeTravels%20app/Images/City%20images/Moscow/Activities_Moscow_1_kgvvd3.png",
+  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/Activities_Moscow_2_xtxkg7.png",
+  address: "Moscow, Russia",
+  safety_rating: 4
 )
 
 puts "Creating Activities.."
@@ -472,4 +483,101 @@ Activity.create!(
   category: "Food",
   address: "Av. Gen. Silveira 193, 4600-017 Amarante, Portugal",
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666995/SafeTravels%20app/Images/Category/Food/Amarante_food/Amarante_food_3_yntnbg.png"
+)
+
+# MOSCOW, RUSSIA
+Activity.create!(
+  city: russia,
+  title: "Kolomenskoye",
+  category: "Culture",
+  address: "Andropova Ave, 39, Moscow, Russia, 115487",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_1_bm1zlt.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Bolshoi Theatre",
+  category: "Culture",
+  address: "Theatre Square, 1, Moscow, Russia, 125009",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_2_oeeljf.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Armoury Chamber",
+  category: "Culture",
+  address: "Moscow, Russia, 103132",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_3_jnkzcl.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Red Pond",
+  category: "Nature",
+  address: "Glavnaya Alleya, Moscow, Russia, 111123",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824822/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_1_wxka2i.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: 'Nature Reserve "Valley Setun River"',
+  category: "Nature",
+  address: "Glavnaya Alleya, Moscow, Russia, 111123",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824822/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_2_uiznua.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Kosinski Nature and History Park",
+  category: "Nature",
+  address: "ул. Медведева, Moscow, Russia, 111675",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824823/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_3_qeupjk.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Center for the Arts. Moscow.",
+  category: "Art",
+  address: "Ulitsa Volkhonka, 15, Moscow, Russia, 119019",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_1_rfkyh9.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Zverevsky Center for Contemporary Art",
+  category: "Art",
+  address: "строение 4, Novoryazanskaya Ulitsa, 29 строение 4, Moscow, Russia, 105066",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_2_jbxztg.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Russian Art Museum",
+  category: "Art",
+  address: "Tokmakov Pereulok, 21/2с1, Moscow, Russia, 105066",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_3_xpzdhr.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Taras Bulba",
+  category: "Food",
+  address: "Mokhovaya St, 8с1, Moscow, Russia, 119019",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824813/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1_ntiur6.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Cheburechnaya USSR",
+  category: "Food",
+  address: "Bol'shaya Bronnaya Ulitsa, 27/4с1, Moscow, Russia, 123104",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824814/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1-1_fx8kar.png"
+)
+
+Activity.create!(
+  city: russia,
+  title: "Expedition. Northern Cuisine",
+  category: "Food",
+  address: "Pevcheskiy Pereulok, 6, Moscow, Russia, 109028",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824814/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1-2_had1n2.png"
 )

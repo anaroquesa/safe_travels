@@ -1,16 +1,18 @@
 .search-index{
-  padding-top:20px;
-  margin-bottom: 10px;
-  width: 100%;
+  position:absolute;
+  top: 12px;
+  left: 9%;
+  right: 9%;
   text-align: right;
   margin: auto;
   display: table;
   display:block;
 
   i {
+  color: black;
   position:absolute;
-  right: 12%;
-  top: 30px;
+  right: 5%;
+  top: 12px;
   display:table-cell;
   }
 }
