@@ -59,6 +59,16 @@ puts "Creating Users.."
   user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user5.save
 
+  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
+  user5 = User.new(
+  first_name: "Pamela",
+  last_name: "Aguiar Hartwig",
+  email: "Pamela@email.com",
+  password: "123456",
+  summary: "Hi, I'm from Brazil. Before I became a supermom, I used to work for a big fashion industry. When I have the time, I love to explore the world, different cultures, and to be inspired.")
+  user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  user5.save
+
 # query = "https://www.travel-advisory.info/api"
 # http_response = Net::HTTP.get_response(URI(query))
 # response = JSON.parse(http_response.body)
@@ -67,8 +77,6 @@ puts "Creating Users.."
 # safety.each do |city|
 #   return city
 # end
-
-
 
 # const one = 1 safe
 # const two = 2
@@ -94,7 +102,7 @@ new_york = City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/City_NY_City_oyzts0.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/Activities_1_NY_City_abp0km.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/NY/Activities_2_NY_City_niaugo.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Time Square, NY",
+  latitude: 13.381777, longitude: 52.531677, address: "Times Square, NY",
   safety_rating: 2
 )
 
@@ -124,7 +132,7 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/City_Tokyo_Japan_c3dymt.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/Activities_1_Tokyo_Japan_k06tpo.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649608/SafeTravels%20app/Images/City%20images/Tokyo/Activities_3_Tokyo_Japan_du769b.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Tokyo",
+  latitude: 13.381777, longitude: 52.531677, address: "Tokyo, Japan",
   safety_rating: 1
 )
 
@@ -154,7 +162,7 @@ City.create!(
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Florence/City_Florence_Italy_cj3iea.png",
   image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Florence/Activities_2_Florence_Italy_ii4qir.png",
   image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Florence/Activities_3_Florence_Italy_p485ew.png",
-  latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence",
+  latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence, Italy",
   safety_rating: 2
 )
 
