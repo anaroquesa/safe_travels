@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ["logo", "body"]
 
   connect() {
-    console.log("Hello from red", this.logoTarget, this.bodyTarget)
+    // console.log("Hello from red", this.logoTarget, this.bodyTarget)
     this.displayLogo()
   }
 

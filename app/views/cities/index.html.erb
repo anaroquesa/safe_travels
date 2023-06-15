@@ -1,7 +1,13 @@
-<div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
-  <div class="search-index"><%= render "layouts/search_bar_home" %></div>
-</div>
-<div class="container itin-index" style="width:90%; margin-bottom:100px;">
-<p><strong>Top Recommendations</strong></p>
-  <%= render "layouts/card_carousel" %>
+<div data-controller="search-cities">
+  <div class="header d-flex justify-content-between p-3 mb-3" style="height:60px;">
+    <div class="search-index">
+      <%= render "layouts/search_bar_home" %>
+    </div>
+  </div>
+  <div class="container itin-index" style="width:90%; margin-bottom:100px;">
+  <p><strong>Top Recommendations</strong></p>
+    <div data-search-cities-target="lists">
+      <%= render "layouts/card_carousel", cities:@cities %>
+    </div>
+  </div>
 </div>

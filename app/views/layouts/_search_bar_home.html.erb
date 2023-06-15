@@ -1,11 +1,27 @@
 <div class="search">
 <i class="fa-solid fa-magnifying-glass"></i>
-  <%= form_with url: cities_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control ps-4",
-      style: "border-radius: 20px; width: 1250px;",
-      placeholder: "   Browse cities..."
-    %>
+  <%= form_with url: cities_path, method: :get, html: {class:
+    "d-flex", data: {search_cities_target: "form"}} do |f| %>
+    <%= f.text_field :query,
+                     class: "form-control ps-4",
+                     placeholder: "   Browse cities...",
+                     style: "border-radius: 20px; width: 1250px;",
+                     value: params[:query],
+                     data: {search_cities_target: "input",
+                     action: "keyup->search-cities#update",
+                     } %>
   <% end %>
 </div>
+
+
+<%# <div class="search"> %>
+<%# <i class="fa-solid fa-magnifying-glass"></i> %>
+  <%# <%= form_with url: cities_path, method: :get, class: "d-flex" do %>
+    <%# <%= text_field_tag :query, %>
+      <%# params[:query], %>
+      <%# class: "form-control ps-4", %>
+      <%# style: "border-radius: 20px; width: 1250px;", %>
+      <%# placeholder: "   Browse cities..." %>
+    <%# %>
+  <%# <% end %>
+<%# </div> %>
