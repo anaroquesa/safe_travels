@@ -126,21 +126,20 @@
       </div>
     </div>
   </div>
+</div>
 
 
+</div>
   <div class="tab-pane fade" id="review-tab-pane" role="tabpanel" aria-labelledby="review-tab" tabindex="0">
     <div class="d-flex align-items-start flex-wrap">
       <% @city.itineraries.each do |itinerary| %>
         <% if itinerary.review.present? %>
           <div class="col-12 p-4 mb-2 mt-2 border" style="border-radius:5px;  box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-            <h4><%= itinerary.user.first_name %> <%= itinerary.user.last_name %></h4>
+            <h4 style="color: #524FF7;;"><%= itinerary.user.first_name %> <%= itinerary.user.last_name %></h4>
             <%= itinerary.review %>
           </div>
         <% end %>
       <% end %>
     </div>
-  </div>
-
-</div>
 </div>
 </div>

@@ -12,9 +12,10 @@
     <% end %>
   </h5>
 
-<div>
+  <div>
     <h4><%= link_to city_path(@itinerary.city) do %><i class="fas fa-search"></i><% end %></h4>
   </div>
+
 </div>
 
 <div class="container itin-index" style="width:90%; margin-bottom:100px;">
@@ -24,7 +25,7 @@
     <%= @itinerary.title %>
     <% if !@itinerary.end_date.past? %>
     <span data-controller="email" data-email-id-value="<%= @itinerary.id%>" style="font-size:20px;">
-     <a href="#"data-action="click->email#show"><i class="fa fa-paper-plane"></i></a>
+      <a href="#"data-action="click->email#show"><i class="fa fa-paper-plane"></i></a>
     </span>
     <% end %>
   </h4>
@@ -33,7 +34,7 @@
 
 <%= render "layouts/map" %>
 
-<div style="margin-top:20px; margin-bottom:20px;"><h6> <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %>Add an Activity<i class="fas fa-plus-circle"></i><% end %><% end %></h6></div>
+<div style="margin-top:20px; margin-bottom:20px;"><h6 style="text-decoration:none;"><% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %>Add an Activity     <i class="fas fa-plus-circle"></i><% end %><% end %></h6></div>
 
 <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
 <% sorted_it_activities.keys.each do |date| %>
@@ -122,6 +123,7 @@
         <%= @itinerary.review %>
       <% end %>
     <% end %>
+<%= link_to icon('fa-regular', 'circle-xmark'), itinerary_path(@itinerary), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this itinerary?" } %>
 </div>
 
 </div>
