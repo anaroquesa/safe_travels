@@ -4,8 +4,12 @@
   <% end %>
 
   <h5>
-    <%= @city.name %>
-    <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(@itinerary) %>
+  <% if !@itinerary.end_date.past? %>
+      <%= @city.name %>
+      <%= link_to icon('fa-regular', 'edit icon-hover-edit'), edit_itinerary_path(@itinerary) %>
+    <% else %>
+      <%= @city.name %>
+    <% end %>
   </h5>
 
 <div>
@@ -18,16 +22,18 @@
 <div style="text-align:center; margin-top:20px; margin-bottom:20px;">
   <h4>
     <%= @itinerary.title %>
+    <% if !@itinerary.end_date.past? %>
     <span data-controller="email" data-email-id-value="<%= @itinerary.id%>" style="font-size:20px;">
      <a href="#"data-action="click->email#show"><i class="fa fa-paper-plane"></i></a>
     </span>
+    <% end %>
   </h4>
   <p><%= @itinerary.start_date.strftime('%B %d ') %> - <%= @itinerary.end_date.strftime('%B %d ') %> </p>
 </div>
 
 <%= render "layouts/map" %>
 
-<div style="margin-top:20px; margin-bottom:20px;"><h6>Add an Activity <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %><i class="fas fa-plus-circle"></i><% end %><% end %></h6></div>
+<div style="margin-top:20px; margin-bottom:20px;"><h6> <% if !@itinerary.end_date.past? %><%= link_to new_city_activity_path(@itinerary.city_id, itinerary_id: @itinerary.id, custom: true ) do %>Add an Activity<i class="fas fa-plus-circle"></i><% end %><% end %></h6></div>
 
 <% sorted_it_activities = @itinerary.it_activities.includes(:activity).order(:date).group_by(&:date) %>
 <% sorted_it_activities.keys.each do |date| %>
