@@ -170,7 +170,7 @@ new_york = City.create!(
   safety_rating: 2
 )
 
-City.create!(
+mexico_city = City.create!(
   name: "Mexico City",
   country: "Mexico",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/Mexico%20City/City_Mexico_City_r6rlzy.png",
@@ -240,7 +240,7 @@ City.create!(
   safety_rating: 2
 )
 
-portugal = City.create!(
+amarante = City.create!(
   name: "Amarante",
   country: "Portugal",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Amarante/City_Amarante_Portugal_anzxgd.png",
@@ -251,7 +251,7 @@ portugal = City.create!(
   safety_rating: 1
 )
 
-russia = City.create!(
+moscow = City.create!(
   name: "Moscow",
   country: "Russia",
   image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/City_Moscow_Russia_hjfhvh.png",
