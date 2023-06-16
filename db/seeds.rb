@@ -19,7 +19,7 @@ puts "Creating Users.."
   last_name: "Mueni",
   email: "Esther@email.com",
   password: "123456",
-  summary: "Hi, I'm from Nairobi, Kenya. I grew up in a city filled with diverse cultures and vibrant energy. I love to be inspired by my surroundings and the people I love. I have passion to make a difference in the lives of others.")
+  summary: "Hi, I'm from Nairobi, Kenya. I grew up in a city filled with diverse cultures and vibrant energy. I am currently studying at Le Wagon bootcamp to become a developer. I love to be inspired by my surroundings and the people I love. I have passion to make a difference in the lives of others.")
   user1.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user1.save
 
