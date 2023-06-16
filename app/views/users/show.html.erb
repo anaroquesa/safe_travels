@@ -33,8 +33,9 @@
   <p><%= @user.summary %></p>
 </div>
 
+<% if @user.itineraries.where(visibility: true).present? %>
 <strong><p>Trips</p></strong>
-
+<% end %>
 <div class="scroll-container m-0">
   <% @user.itineraries.where(visibility: true).each do |itinerary| %>
     <div class="activity-image-container m-0" style="position: relative;">
@@ -50,4 +51,5 @@
 
 <div class="log-out">
   <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, data: { turbo: false } %>
+</div>
 </div>

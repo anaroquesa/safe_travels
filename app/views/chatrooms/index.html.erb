@@ -4,7 +4,7 @@
 
 <div class="container itin-index" style="width:90%; margin-bottom:100px;">
 
-<div class="nearby">Travelers nearby</div>
+<strong><p>Travelers nearby</p></strong>
   <% @users.reject { |user| user == current_user }.each do |user| %>
     <div class="chatroom">
       <div class="user">
@@ -18,9 +18,9 @@
         <% end %>
 
         <% if chatroom.present? %>
-          <%= link_to user.first_name, chatroom_path(chatroom) %>
+          <p><%= link_to user.first_name, chatroom_path(chatroom) %></p>
         <% else %>
-          <%= link_to user.first_name, user_chatrooms_path(current_user.id), data: {turbo_method: :post} %>
+          <p><%= link_to user.first_name, user_chatrooms_path(current_user.id), data: {turbo_method: :post} %></p>
         <% end %>
 
       </div>
