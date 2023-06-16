@@ -1,10 +1,12 @@
-<div class="container chatroom" id="show">
-  <h1>
-    Chat with
-    <%= @chatroom.user1.first_name %>
-  </h1>
+<div class="header d-flex justify-content-between p-3" style="height:60px;">
+  <h4>
+    <%= link_to "< Chats", chatrooms_path %>
+  </h4>
+</div><div class="container chatroom" id="show">
 
-  <div class="messages">
+
+
+  <div class="messages" style="margin-left:10px;">
     <% @messages.each do |message| %>
       <div id="message-<%= message.id %>" class="message">
         <div class="message-sender">
@@ -17,9 +19,10 @@
       </div>
     <% end %>
   </div>
-
-  <%= simple_form_for [@chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
-    <%= f.input :content, label: false, placeholder: "Type message", wrapper_html: { class: "flex-grow-1" } %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-  <% end %>
 </div>
+<div style="position:fixed; bottom:60px; z-index:100; width:100%;">
+  <%= simple_form_for [@chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "" } do |f| %>
+      <%= f.input :content, label: false, placeholder: "Type message", wrapper_html: { class: "" } %>
+      <%= f.submit "", class: "d-none" %>
+  <% end %>
+  </div>
