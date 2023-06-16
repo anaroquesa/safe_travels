@@ -69,9 +69,6 @@
               <div class="delete">
                   <%= link_to icon('fa-regular', 'circle-xmark'), itinerary_it_activity_path(@itinerary, it_activity), data: { turbo_method: :delete } %>
               </div>
-              <div class="delete-bottom">
-                <i class="fa-regular fa-calendar" data-action="click->calendar#toggle"></i>
-              </div>
               <div data-calendar-target="togglableElement" class="d-none">
                 <%= form_with(model: it_activity, url: itinerary_it_activity_path(@itinerary, it_activity), class: 'hidden-form', local: true) do |form| %>
                   <%= form.date_field :date %>
