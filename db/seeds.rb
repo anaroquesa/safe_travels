@@ -457,17 +457,106 @@ Activity.create!(
   image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686664510/SafeTravels%20app/Images/Category/Food/NY_food/NY_Food_3_befag5.png"
 )
 
-# PORTUGAL
+# MEXICO CITY
 Activity.create!(
-  city: portugal,
-  title: "Amarante camping",
-  category: "Nature",
-  address: "Rua Pedro Alvellos, sn, Largo Santa M.nha 56, 4600-099 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686667120/SafeTravels%20app/Images/Category/Nature/Amarante_nature/Amarante_nature_1_gpitqi.png"
+  city: mexico_city,
+  title: "We Fly Teotihuacan",
+  category: "Culture",
+  address: "Carretera Federal México-Tulancingo Km 28.0, 55850 San Martín Centro, Méx., Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862392/SafeTravels%20app/Images/Category/Culture/Mexico%20City_culture/Mexico_activities_1_u99aah.png"
 )
 
 Activity.create!(
-  city: portugal,
+  city: mexico_city,
+  title: "Teotihuacan (Pyramid of the Sun)",
+  category: "Culture",
+  address: "55800 San Juan Teotihuacán, State of Mexico, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862401/SafeTravels%20app/Images/Category/Culture/Mexico%20City_culture/Mexico_activities_2_wbj3d4.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Frida Kahlo Museum",
+  category: "Culture",
+  address: "Londres 247, Del Carmen, Coyoacán, 04100 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862390/SafeTravels%20app/Images/Category/Culture/Mexico%20City_culture/Mexico_activities_3_drcnf1.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Parque Nacional Iztaccíhuatl - Popocatépetl",
+  category: "Nature",
+  address: "Pl. de la Constitucion 9, Centro, 56900 Amecameca de Juárez, Méx., Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862431/SafeTravels%20app/Images/Category/Nature/Mexico%20City_nature/Mexico_nature_1_wpoiar.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Parque Nacional Cañón del Sumidero",
+  category: "Nature",
+  address: "Chiapas, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862428/SafeTravels%20app/Images/Category/Nature/Mexico%20City_nature/Mexico_nature_2_tezrrf.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Parque Nacional Lagunas de Montebello",
+  category: "Nature",
+  address: "30167 Laguna de Montebello, Chiapas, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862446/SafeTravels%20app/Images/Category/Nature/Mexico%20City_nature/Mexico_nature_3_q1mxd9.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Museo Soumaya",
+  category: "Art",
+  address: "Blvd. Miguel de Cervantes Saavedra, Granada, Miguel Hidalgo, 11529 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862373/SafeTravels%20app/Images/Category/Art/Mexico%20City_art/Mexico_art_1_q0pn8r.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Museo Nacional de Antropología",
+  category: "Art",
+  address: "Av. P.º de la Reforma s/n, Polanco, Bosque de Chapultepec I Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862386/SafeTravels%20app/Images/Category/Art/Mexico%20City_art/Mexico_art_2_bdk959.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Palacio de Bellas Artes",
+  category: "Art",
+  address: "Av. Juárez S/N, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862373/SafeTravels%20app/Images/Category/Art/Mexico%20City_art/Mexico_art_3_creiwf.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Páramo",
+  category: "Food",
+  address: "Av. Yucatan 84, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862412/SafeTravels%20app/Images/Category/Food/Mexico%20City_food/Mexico_food_1_cihbiq.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "El Cardenal",
+  category: "Food",
+  address: "C. de la Palma 23, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06000 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862422/SafeTravels%20app/Images/Category/Food/Mexico%20City_food/Mexico_food_2_wrxkol.png"
+)
+
+Activity.create!(
+  city: mexico_city,
+  title: "Tacos El Huequito",
+  category: "Food",
+  address: "Ayuntamiento 21, Colonia Centro, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX, Mexico",
+  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862405/SafeTravels%20app/Images/Category/Food/Mexico%20City_food/Mexico_food_3_yewdrg.png"
+)
+
+# PORTUGAL
+Activity.create!(
+  city: amarante,
   title: "Amarante Garden",
   category: "Nature",
   address: "4600-758 Amarante, Portugal",
@@ -475,7 +564,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Naturpassion",
   category: "Nature",
   address: "rua de campesinhos n27 Lomba, 4600-663 Amarante, Portugal",
@@ -483,7 +572,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Igreja do Carmo",
   category: "Culture",
   address: "R. do Carmo, 4050-164 Porto, Portugal",
@@ -491,7 +580,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Trilho das Azenhas",
   category: "Culture",
   address: "4600-758 Amarante, Portugal",
@@ -499,7 +588,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Amarantrilhos Bikeshop",
   category: "Culture",
   address: "R. de Freitas Bloco C fração AB, 4600-081 Amarante, Portugal",
@@ -507,7 +596,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Museu Paroquial de Arte Sacra de Amarante",
   category: "Art",
   address: "4600-758 Amarante, Portugal",
@@ -515,7 +604,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Ponte do Arquinho",
   category: "Art",
   address: "Largo do Arquinho, 4600-758 Amarante, Portugal",
@@ -523,7 +612,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Municipal Museum Amadeo de Souza Cardoso",
   category: "Art",
   address: "4600-758 Amarante, Portugal",
@@ -531,7 +620,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "O Prato",
   category: "Food",
   address: "Edf.Cimo de Vila,LJ CB, 4600-088 Amarante, Portugal",
@@ -539,7 +628,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Restaurante Residencial ESTORIL",
   category: "Food",
   address: "R. 31 de Janeiro 150, 4600-043 Amarante, Portugal",
@@ -547,7 +636,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: portugal,
+  city: amarante,
   title: "Bar do Girassol",
   category: "Food",
   address: "Av. Gen. Silveira 193, 4600-017 Amarante, Portugal",
@@ -556,7 +645,7 @@ Activity.create!(
 
 # MOSCOW, RUSSIA
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Kolomenskoye",
   category: "Culture",
   address: "Andropova Ave, 39, Moscow, Russia, 115487",
@@ -564,7 +653,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Bolshoi Theatre",
   category: "Culture",
   address: "Theatre Square, 1, Moscow, Russia, 125009",
@@ -572,7 +661,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Armoury Chamber",
   category: "Culture",
   address: "Moscow, Russia, 103132",
@@ -580,7 +669,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Red Pond",
   category: "Nature",
   address: "Glavnaya Alleya, Moscow, Russia, 111123",
@@ -588,7 +677,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: 'Nature Reserve "Valley Setun River"',
   category: "Nature",
   address: "Glavnaya Alleya, Moscow, Russia, 111123",
@@ -596,7 +685,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Kosinski Nature and History Park",
   category: "Nature",
   address: "ул. Медведева, Moscow, Russia, 111675",
@@ -604,7 +693,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Center for the Arts. Moscow.",
   category: "Art",
   address: "Ulitsa Volkhonka, 15, Moscow, Russia, 119019",
@@ -612,7 +701,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Zverevsky Center for Contemporary Art",
   category: "Art",
   address: "строение 4, Novoryazanskaya Ulitsa, 29 строение 4, Moscow, Russia, 105066",
@@ -620,7 +709,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Russian Art Museum",
   category: "Art",
   address: "Tokmakov Pereulok, 21/2с1, Moscow, Russia, 105066",
@@ -628,7 +717,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Taras Bulba",
   category: "Food",
   address: "Mokhovaya St, 8с1, Moscow, Russia, 119019",
@@ -636,7 +725,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Cheburechnaya USSR",
   category: "Food",
   address: "Bol'shaya Bronnaya Ulitsa, 27/4с1, Moscow, Russia, 123104",
@@ -644,7 +733,7 @@ Activity.create!(
 )
 
 Activity.create!(
-  city: russia,
+  city: moscow,
   title: "Expedition. Northern Cuisine",
   category: "Food",
   address: "Pevcheskiy Pereulok, 6, Moscow, Russia, 109028",
