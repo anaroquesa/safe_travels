@@ -13,7 +13,7 @@ User.destroy_all
 
 puts "Creating Users.."
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/esther_iyo78l.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/esther_hhplt1.jpg")
   user1 = User.new(
   first_name: "Esther",
   last_name: "Mueni",
@@ -33,7 +33,7 @@ puts "Creating Users.."
   user2.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user2.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/dabin_jf4zmg.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/dabin_otlecv.jpg")
   user3 = User.new(
   first_name: "Dabin",
   last_name: "Im",
@@ -43,7 +43,7 @@ puts "Creating Users.."
   user3.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user3.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/emily_wtqcsh.jpg")
   user4 = User.new(
   first_name: "Emily",
   last_name: "Yetsko",
@@ -53,17 +53,7 @@ puts "Creating Users.."
   user4.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user4.save
 
-#   file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/emily_b8u492.jpg?cache_busting_parameter")
-#   user5 = User.new(
-#   first_name: "Agustina",
-#   last_name: "Rivas",
-#   email: "Agustin@email.com",
-#   password: "123456",
-#   summary: "Hi, I'm from a beautiful country of Argentina. I have developed a deep appreciation for music, art, and the diverse traditions of my homeland.")
-#   user5.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
-#   user5.save
-
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/pamela_sxdi2j.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511370/pamela_b41pqz.jpg")
   user6 = User.new(
   first_name: "Pamela",
   last_name: "Aguiar Hartwig",
@@ -73,7 +63,7 @@ puts "Creating Users.."
   user6.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user6.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/joanna_ussaqe.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/joanna_vzt3dy.jpg")
   user7 = User.new(
   first_name: "Joanna",
   last_name: "Wójtowicz",
@@ -83,7 +73,7 @@ puts "Creating Users.."
   user7.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user7.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/marina_hf0hfk.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511370/marina_xqvup2.jpg")
   user8 = User.new(
   first_name: "Marina",
   last_name: "Stepanova",
@@ -93,7 +83,7 @@ puts "Creating Users.."
   user8.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user8.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839431/SafeTravels%20app/Images/Profile%20images/estibaliz_frdvap.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/estibaliz_x6ufpf.jpg")
   user9 = User.new(
   first_name: "Estibaliz",
   last_name: "Lorenzo",
@@ -103,7 +93,7 @@ puts "Creating Users.."
   user9.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user9.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/katharine_tyrhqo.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/katharine_sa69ed.jpg")
   user10 = User.new(
   first_name: "Katharine",
   last_name: "Lin",
@@ -113,7 +103,7 @@ puts "Creating Users.."
   user10.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user10.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/charlotte_yzqavs.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511367/charlotte_x2kqc6.jpg")
   user11 = User.new(
   first_name: "Charlotte",
   last_name: "de Janzé",
@@ -123,7 +113,7 @@ puts "Creating Users.."
   user11.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user11.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686839432/SafeTravels%20app/Images/Profile%20images/emma_npmpwp.jpg")
+  file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/emma_bzcbnb.jpg")
   user12 = User.new(
   first_name: "Emma",
   last_name: "Anna Agneta Rünzel",
@@ -151,9 +141,9 @@ puts "Creating Cities.."
 berlin = City.create!(
   name: "Berlin",
   country: "Germany",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Berlin/City_Berlin_Germany_dxdavb.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686653013/SafeTravels%20app/Images/City%20images/Berlin/Activities_2_Berlin_Germany_yaxnwx.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Berlin/Activities_3_Berlin_Germany_oaonrz.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511374/Activities_1_Berlin_Germany_jjjalb.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511374/Activities_2_Berlin_Germany_o1fgbj.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511374/image_4_nkm5cm.jpg",
   latitude: 13.381777,
   longitude: 52.531677,
   address: "Mohrenstrasse 37, 10117 Berlin",
@@ -163,9 +153,9 @@ berlin = City.create!(
 new_york = City.create!(
   name: "New York City",
   country: "US",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/City_NY_City_oyzts0.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/NY/Activities_1_NY_City_abp0km.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/NY/Activities_2_NY_City_niaugo.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/Activities_1_NY_City_clm2v4.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/Activities_3_NY_City_y8u3qj.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/Activities_2_NY_City_vzejr1.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "Times Square, NY",
   safety_rating: 2
 )
@@ -173,9 +163,9 @@ new_york = City.create!(
 mexico_city = City.create!(
   name: "Mexico City",
   country: "Mexico",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/Mexico%20City/City_Mexico_City_r6rlzy.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/Mexico%20City/Activities_1_Mexico_City_oficzv.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Mexico%20City/Activities_2_Mexico_City_cindms.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511373/City_Mexico_City_vinjhi.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_activities_1_ai0rqy.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_activities_3_gv38ga.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "Mexico City, Mexico",
   safety_rating: 3
 )
@@ -183,9 +173,9 @@ mexico_city = City.create!(
 City.create!(
   name: "Toronto",
   country: "Canada",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586895/SafeTravels%20app/Images/City%20images/Toronto/City_Toronto_Canada_yhnilk.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Toronto/Activities_1_Toronto_Canada_efgrnq.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586895/SafeTravels%20app/Images/City%20images/Toronto/Activities_2_Toronto_Canada_llqzkd.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511410/Activities_1_Toronto_Canada_ynuos9.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511410/Activities_2_Toronto_Canada_u8cswu.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511410/Activities_3_Toronto_Canada_hpw3uu.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "Avenue Road, 1008. Toronto ON",
   safety_rating: 1
 )
@@ -193,9 +183,9 @@ City.create!(
 City.create!(
   name: "Tokyo",
   country: "Japan",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/City_Tokyo_Japan_c3dymt.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649606/SafeTravels%20app/Images/City%20images/Tokyo/Activities_1_Tokyo_Japan_k06tpo.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686649608/SafeTravels%20app/Images/City%20images/Tokyo/Activities_3_Tokyo_Japan_du769b.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/Activities_1_Tokyo_Japan_ajt7t7.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/Activities_2_Tokyo_Japan_nmylzc.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/Activities_3_Tokyo_Japan_tcq1jq.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "Tokyo, Japan",
   safety_rating: 1
 )
@@ -203,9 +193,9 @@ City.create!(
 City.create!(
   name: "London",
   country: "UK",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686648659/SafeTravels%20app/Images/City%20images/London/City_London_UK_flhzo1.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586889/SafeTravels%20app/Images/City%20images/London/Activities_2_London_UK_psqfry.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586894/SafeTravels%20app/Images/City%20images/London/Activities_3_London_UK_spa1w9.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511376/Activities_2_London_UK_u7vklj.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511376/Activities_3_London_UK_cteru5.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511376/Activities_1_London_UK_o4nzfk.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "London SW1A 1AA, United Kingdom",
   safety_rating: 2
 )
@@ -213,9 +203,9 @@ City.create!(
 City.create!(
   name: "Paris",
   country: "France",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586889/SafeTravels%20app/Images/City%20images/Paris/City_Paris_France_d7toqq.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586890/SafeTravels%20app/Images/City%20images/Paris/Activities_1_Paris_France_agiab8.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586895/SafeTravels%20app/Images/City%20images/Paris/Activities_2_Paris_France_cxzt6x.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/Activities_1_Paris_France_nperzo.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/Activities_2_Paris_France_vs3m3r.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/Activities_3_Paris_France_yien2g.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "Champ de Mars, 5 Av. Anatole France, 75007 Paris",
   safety_rating: 2
 )
@@ -223,9 +213,9 @@ City.create!(
 City.create!(
   name: "Florence",
   country: "Italy",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Florence/City_Florence_Italy_cj3iea.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Florence/Activities_2_Florence_Italy_ii4qir.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Florence/Activities_3_Florence_Italy_p485ew.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511375/Activities_1_Florence_Italy_r9qbs9.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511376/Activities_3_Florence_Italy_ernvxt.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511376/Activities_2_Florence_Italy_kplww8.jpg",
   latitude: 13.381777, longitude: 52.531677, address: "Via de Tornabuoni, Florence, Italy",
   safety_rating: 2
 )
@@ -233,9 +223,9 @@ City.create!(
 City.create!(
   name: "Nakuru",
   country: "Kenya",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586893/SafeTravels%20app/Images/City%20images/Nukuru/City_Nakuru_Kenya_zsslsi.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Nukuru/Activities_1_Nakuru_Kenya_x257wq.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586888/SafeTravels%20app/Images/City%20images/Nukuru/Activities_2_Nakuru_Kenya_p11umr.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511373/City_Nakuru_Kenya_ebo2zi.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511381/Activities_2_Nakuru_Kenya_gwxosb.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511381/Activities_2_Nakuru_Kenya-1_axsw1w.jpg",
   address: "Nakuru, Kenya",
   safety_rating: 2
 )
@@ -243,9 +233,9 @@ City.create!(
 amarante = City.create!(
   name: "Amarante",
   country: "Portugal",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586892/SafeTravels%20app/Images/City%20images/Amarante/City_Amarante_Portugal_anzxgd.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_1_Amarante_Portugal_p2vsub.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686586891/SafeTravels%20app/Images/City%20images/Amarante/Activities_3_Amarante_Portugal_pdwtgu.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511372/City_Amarante_Portugal_y3bi9t.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/Activities_3_Amarante_Portugal_aclnpr.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511369/Activities_2_Amarante_Portugal_v1d2ub.jpg",
   # address: "Largo de São Gonçalo 3, 4600-038 Amarante",
   address: "Amarante, Portugal",
   safety_rating: 1
@@ -254,9 +244,9 @@ amarante = City.create!(
 moscow = City.create!(
   name: "Moscow",
   country: "Russia",
-  image_url_one: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/City_Moscow_Russia_hjfhvh.png",
-  image_url_two: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824758/SafeTravels%20app/Images/City%20images/Moscow/Activities_Moscow_1_kgvvd3.png",
-  image_url_three: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824757/SafeTravels%20app/Images/City%20images/Moscow/Activities_Moscow_2_xtxkg7.png",
+  image_url_one: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511373/City_Moscow_Russia_uloepp.jpg",
+  image_url_two: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Moscow_culture_2_h9lbr2.jpg",
+  image_url_three: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Moscow_culture_3_yxixu8.jpg",
   address: "Moscow, Russia",
   safety_rating: 4
 )
@@ -270,7 +260,7 @@ Activity.create!(
   title: "Tiefwerder Wiesen",
   category: "Nature",
   address: "13597 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686659428/SafeTravels%20app/Images/Category/Nature/Berlin_nature/Berlin_Nature_1_otlahs.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511375/Berlin_Nature_1_q9jxx1.jpg"
 )
 
 Activity.create!(
@@ -278,7 +268,7 @@ Activity.create!(
   title: "Nature Park Schöneberger Südgelände",
   category: "Nature",
   address: "Prellerweg 47-49, 12157 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686659427/SafeTravels%20app/Images/Category/Nature/Berlin_nature/Berlin_Nature_3_qlqfen.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511375/Berlin_Nature_3_xvpq6m.jpg"
 )
 
 Activity.create!(
@@ -286,7 +276,7 @@ Activity.create!(
   title: "Landschaftspark Wuhletal",
   category: "Nature",
   address: "Alt-Biesdorf 46, 12683 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686659427/SafeTravels%20app/Images/Category/Nature/Berlin_nature/Berlin_Nature_2_an7hp6.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511375/Berlin_Nature_2_b50lng.jpg"
 )
 
 Activity.create!(
@@ -294,7 +284,7 @@ Activity.create!(
   title: "Brandenburg Gate",
   category: "Culture",
   address: "Brandenburger Tor, 10117 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650766/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_1_f17jrf.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511372/Berlin_activities_1_tj9syb.jpg"
 )
 
 Activity.create!(
@@ -302,14 +292,14 @@ Activity.create!(
   title: "Reichstag Building",
   category: "Culture",
   address: "Reichstag Building, Platz der Republik 1, 11011 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_2_icwzsk.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511373/image_5_gjgk4l.jpg"
 )
 Activity.create!(
   city: berlin,
   title: "Berlin Cathedral",
   category: "Culture",
   address: "Am Lustgarten, 10178 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650766/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_4_srjzrh.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511372/image_5-1_lbfrql.jpg"
 )
 
 Activity.create!(
@@ -317,7 +307,7 @@ Activity.create!(
   title: "East Side Gallery",
   category: "Art",
   address: "East Side Gallery, Mühlenstraße 3-100, 10243 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686650767/SafeTravels%20app/Images/City%20images/Berlin%20Activities/Berlin_activities_3_twzcd2.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511372/Berlin_activities_3_zodsrp.jpg"
 )
 
 Activity.create!(
@@ -325,7 +315,7 @@ Activity.create!(
   title: "Pergamonmuseum",
   category: "Art",
   address: "Bodestraße 1-3, 10178 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686660806/SafeTravels%20app/Images/Category/Art/Berlin_art/Berlin_Art_1_iyclyc.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511373/Berlin_Art_1_k88oqx.jpg"
 )
 
 Activity.create!(
@@ -333,7 +323,7 @@ Activity.create!(
   title: "Dark Matter",
   category: "Art",
   address: "Köpenicker Ch 46, 10317 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686660806/SafeTravels%20app/Images/Category/Art/Berlin_art/Berlin_Art_3_tf78dy.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511373/Berlin_Art_3_lwp0rw.jpg"
 )
 
 Activity.create!(
@@ -341,7 +331,7 @@ Activity.create!(
   title: "Curry 36",
   category: "Food",
   address: "Mehringdamm 36, 10961 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686661875/SafeTravels%20app/Images/Category/Food/Berlin_food/Berlin_Food_1_lkga1g.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511375/Berlin_Food_1_tyioi3.jpg"
 )
 
 Activity.create!(
@@ -349,7 +339,7 @@ Activity.create!(
   title: "Berliner Fernsehturm",
   category: "Food",
   address: "Panoramastraße 1A, 10178 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686661875/SafeTravels%20app/Images/Category/Food/Berlin_food/Berlin_Food_2_r29f7c.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511372/City_Berlin_Germany_idkf8v.jpg"
 )
 
 Activity.create!(
@@ -357,7 +347,7 @@ Activity.create!(
   title: "BRLO Brwhouse",
   category: "Food",
   address: "Schöneberger Str. 16, 10963 Berlin",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686661875/SafeTravels%20app/Images/Category/Food/Berlin_food/Berlin_Food_3_c7arp1.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511375/Berlin_Food_3_mryiyt.jpg"
 )
 
 # NEW YORK
@@ -366,7 +356,7 @@ Activity.create!(
   title: "Central Park",
   category: "Nature",
   address: "Central Park West, New York, NY, USA",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686651185/SafeTravels%20app/Images/City%20images/NY%20activities/NY_activities_3_mmn9nf.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/NY_Nature_3_guytnr.jpg"
 )
 
 Activity.create!(
@@ -374,7 +364,7 @@ Activity.create!(
   title: "Hallett Nature Sanctuary",
   category: "Nature",
   address: "6th Avenue &, Central Park S, New York, NY 10019, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686662451/SafeTravels%20app/Images/Category/Nature/NY_nature/NY_Nature_1_wwxfi5.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/NY_Nature_1_kwrjbo.jpg"
 )
 
 Activity.create!(
@@ -382,7 +372,7 @@ Activity.create!(
   title: "Mill Rock Park",
   category: "Nature",
   address: "East River, New York, NY 10128, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686662704/SafeTravels%20app/Images/Category/Nature/NY_nature/NY_Nature_2_jxajgl.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511409/NY_Nature_2_gqurxk.jpg"
 )
 
 Activity.create!(
@@ -390,7 +380,7 @@ Activity.create!(
   title: "Empire State Building",
   category: "Culture",
   address: "Empire State Building, 20 W 34th St., New York, NY 10001, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686651185/SafeTravels%20app/Images/City%20images/NY%20activities/NY_activities_1_seyg3m.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511382/NY_activities_1_apulrf.jpg"
 )
 
 Activity.create!(
@@ -398,7 +388,7 @@ Activity.create!(
   title: "American Museum of Natural History",
   category: "Culture",
   address: "American Museum of Natural History, 200 Central Park West, New York, NY 10024, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686651185/SafeTravels%20app/Images/City%20images/NY%20activities/NY_activities_2_gjrcf4.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511382/NY_activities_2_m9ov4f.jpg"
 )
 
 Activity.create!(
@@ -406,7 +396,7 @@ Activity.create!(
   title: "Central Park",
   category: "Culture",
   address: "New York, NY, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686662936/SafeTravels%20app/Images/Category/Culture/NY_culture/NY_Culture_4_y9kk8t.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511407/NY_Culture_4_fmwh3j.jpg"
 )
 
 Activity.create!(
@@ -414,7 +404,7 @@ Activity.create!(
   title: "Museum of Ice Cream",
   category: "Art",
   address: "558 Broadway, New York, NY 10012, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686663557/SafeTravels%20app/Images/Category/Art/NY_art/NY_Art_1_oyosma.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511407/NY_Art_1_lps66e.jpg"
 )
 
 Activity.create!(
@@ -422,7 +412,7 @@ Activity.create!(
   title: "The Metropolitan Museum of Art",
   category: "Art",
   address: "1000 5th Ave, New York, NY 10028, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686663557/SafeTravels%20app/Images/Category/Art/NY_art/NY_Art_2_ouenin.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511407/NY_Art_2_wt7epw.jpg"
 )
 
 Activity.create!(
@@ -430,7 +420,7 @@ Activity.create!(
   title: "MoMa Museum",
   category: "Art",
   address: "11w W 53rd St, New York, NY 10019, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686663557/SafeTravels%20app/Images/Category/Art/NY_art/NY_Art_3_dwivho.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511407/NY_Art_3_zhrm87.jpg"
 )
 
 Activity.create!(
@@ -438,7 +428,7 @@ Activity.create!(
   title: "Black Iron Burger",
   category: "Food",
   address: "245 W 38th St, New York, NY 10018, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686664510/SafeTravels%20app/Images/Category/Food/NY_food/NY_Food_1_n50whu.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/NY_Food_1_nhtyqv.jpg"
 )
 
 Activity.create!(
@@ -446,7 +436,7 @@ Activity.create!(
   title: "Olive Garden",
   category: "Food",
   address: "2 Times Sq, New York, NY 10036, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686664510/SafeTravels%20app/Images/Category/Food/NY_food/NY_Food_2_fhqikl.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/NY_Food_2_racsh6.jpg"
 )
 
 Activity.create!(
@@ -454,16 +444,16 @@ Activity.create!(
   title: "Sweet Rehab",
   category: "Food",
   address: "135 Sullivan St, New York, NY 10012, United States",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686664510/SafeTravels%20app/Images/Category/Food/NY_food/NY_Food_3_befag5.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/NY_Food_3_yqx2cm.jpg"
 )
 
-# MEXICO CITY
+MEXICO CITY
 Activity.create!(
   city: mexico_city,
   title: "We Fly Teotihuacan",
   category: "Culture",
   address: "Carretera Federal México-Tulancingo Km 28.0, 55850 San Martín Centro, Méx., Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862392/SafeTravels%20app/Images/Category/Culture/Mexico%20City_culture/Mexico_activities_1_u99aah.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_activities_1_ai0rqy.jpg"
 )
 
 Activity.create!(
@@ -471,7 +461,7 @@ Activity.create!(
   title: "Teotihuacan (Pyramid of the Sun)",
   category: "Culture",
   address: "55800 San Juan Teotihuacán, State of Mexico, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862401/SafeTravels%20app/Images/Category/Culture/Mexico%20City_culture/Mexico_activities_2_wbj3d4.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_activities_2_pqrtf0.jpg"
 )
 
 Activity.create!(
@@ -479,7 +469,7 @@ Activity.create!(
   title: "Frida Kahlo Museum",
   category: "Culture",
   address: "Londres 247, Del Carmen, Coyoacán, 04100 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862390/SafeTravels%20app/Images/Category/Culture/Mexico%20City_culture/Mexico_activities_3_drcnf1.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_activities_3-1_i1yfsq.jpg"
 )
 
 Activity.create!(
@@ -487,7 +477,7 @@ Activity.create!(
   title: "Parque Nacional Iztaccíhuatl - Popocatépetl",
   category: "Nature",
   address: "Pl. de la Constitucion 9, Centro, 56900 Amecameca de Juárez, Méx., Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862431/SafeTravels%20app/Images/Category/Nature/Mexico%20City_nature/Mexico_nature_1_wpoiar.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Mexico_nature_1_xpncnb.jpg"
 )
 
 Activity.create!(
@@ -495,7 +485,7 @@ Activity.create!(
   title: "Parque Nacional Cañón del Sumidero",
   category: "Nature",
   address: "Chiapas, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862428/SafeTravels%20app/Images/Category/Nature/Mexico%20City_nature/Mexico_nature_2_tezrrf.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Mexico_nature_2_l5sk1e.jpg"
 )
 
 Activity.create!(
@@ -503,7 +493,7 @@ Activity.create!(
   title: "Parque Nacional Lagunas de Montebello",
   category: "Nature",
   address: "30167 Laguna de Montebello, Chiapas, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862446/SafeTravels%20app/Images/Category/Nature/Mexico%20City_nature/Mexico_nature_3_q1mxd9.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Mexico_nature_3_qxplx8.jpg"
 )
 
 Activity.create!(
@@ -511,7 +501,7 @@ Activity.create!(
   title: "Museo Soumaya",
   category: "Art",
   address: "Blvd. Miguel de Cervantes Saavedra, Granada, Miguel Hidalgo, 11529 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862373/SafeTravels%20app/Images/Category/Art/Mexico%20City_art/Mexico_art_1_q0pn8r.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_art_1_kd3qca.jpg"
 )
 
 Activity.create!(
@@ -519,7 +509,7 @@ Activity.create!(
   title: "Museo Nacional de Antropología",
   category: "Art",
   address: "Av. P.º de la Reforma s/n, Polanco, Bosque de Chapultepec I Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862386/SafeTravels%20app/Images/Category/Art/Mexico%20City_art/Mexico_art_2_bdk959.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_art_2_ogrxbo.jpg"
 )
 
 Activity.create!(
@@ -527,7 +517,7 @@ Activity.create!(
   title: "Palacio de Bellas Artes",
   category: "Art",
   address: "Av. Juárez S/N, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862373/SafeTravels%20app/Images/Category/Art/Mexico%20City_art/Mexico_art_3_creiwf.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511377/Mexico_art_3_elap8r.jpg"
 )
 
 Activity.create!(
@@ -535,7 +525,7 @@ Activity.create!(
   title: "Páramo",
   category: "Food",
   address: "Av. Yucatan 84, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862412/SafeTravels%20app/Images/Category/Food/Mexico%20City_food/Mexico_food_1_cihbiq.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511378/Mexico_food_1_itttws.jpg"
 )
 
 Activity.create!(
@@ -543,7 +533,7 @@ Activity.create!(
   title: "El Cardenal",
   category: "Food",
   address: "C. de la Palma 23, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06000 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862422/SafeTravels%20app/Images/Category/Food/Mexico%20City_food/Mexico_food_2_wrxkol.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511378/Mexico_food_2_v39fcd.jpg"
 )
 
 Activity.create!(
@@ -551,7 +541,7 @@ Activity.create!(
   title: "Tacos El Huequito",
   category: "Food",
   address: "Ayuntamiento 21, Colonia Centro, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX, Mexico",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686862405/SafeTravels%20app/Images/Category/Food/Mexico%20City_food/Mexico_food_3_yewdrg.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511378/Mexico_food_3_lvrflz.jpg"
 )
 
 # PORTUGAL
@@ -560,7 +550,7 @@ Activity.create!(
   title: "Amarante Garden",
   category: "Nature",
   address: "4600-758 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686667217/SafeTravels%20app/Images/Category/Nature/Amarante_nature/Amarante_nature_2_xrfb9g.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511371/Amarante_nature_2_jsx1kr.jpg"
 )
 
 Activity.create!(
@@ -568,7 +558,7 @@ Activity.create!(
   title: "Naturpassion",
   category: "Nature",
   address: "rua de campesinhos n27 Lomba, 4600-663 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686667120/SafeTravels%20app/Images/Category/Nature/Amarante_nature/Amarante_nature_3_re5lie.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511371/Amarante_nature_3_h8kdo6.jpg"
 )
 
 Activity.create!(
@@ -576,7 +566,7 @@ Activity.create!(
   title: "Igreja do Carmo",
   category: "Culture",
   address: "R. do Carmo, 4050-164 Porto, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686665600/SafeTravels%20app/Images/Category/Culture/Amarante_culture/Amarante_culture_1_wa6u5u.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/Amarante_culture_1_s7fyvu.jpg"
 )
 
 Activity.create!(
@@ -584,7 +574,7 @@ Activity.create!(
   title: "Trilho das Azenhas",
   category: "Culture",
   address: "4600-758 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686665601/SafeTravels%20app/Images/Category/Culture/Amarante_culture/Amarante_culture_2_l66gzp.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/Amarante_culture_2_ore3pr.jpg"
 )
 
 Activity.create!(
@@ -592,7 +582,7 @@ Activity.create!(
   title: "Amarantrilhos Bikeshop",
   category: "Culture",
   address: "R. de Freitas Bloco C fração AB, 4600-081 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686665602/SafeTravels%20app/Images/Category/Culture/Amarante_culture/Amarante_culture_3_sxidc2.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/Amarante_culture_3_m5w2l7.jpg"
 )
 
 Activity.create!(
@@ -600,7 +590,7 @@ Activity.create!(
   title: "Museu Paroquial de Arte Sacra de Amarante",
   category: "Art",
   address: "4600-758 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666543/SafeTravels%20app/Images/Category/Art/Amarante_art/Amarante_art_1_oybib1.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/Amarante_art_1_vezex6.jpg"
 )
 
 Activity.create!(
@@ -608,7 +598,7 @@ Activity.create!(
   title: "Ponte do Arquinho",
   category: "Art",
   address: "Largo do Arquinho, 4600-758 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666543/SafeTravels%20app/Images/Category/Art/Amarante_art/Amarante_art_2_gngdbg.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/Amarante_art_2_jtsw3y.jpg"
 )
 
 Activity.create!(
@@ -616,7 +606,7 @@ Activity.create!(
   title: "Municipal Museum Amadeo de Souza Cardoso",
   category: "Art",
   address: "4600-758 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666542/SafeTravels%20app/Images/Category/Art/Amarante_art/Amarante_art_3_pvvnno.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/Amarante_art_3_ptajyj.jpg"
 )
 
 Activity.create!(
@@ -624,7 +614,7 @@ Activity.create!(
   title: "O Prato",
   category: "Food",
   address: "Edf.Cimo de Vila,LJ CB, 4600-088 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666995/SafeTravels%20app/Images/Category/Food/Amarante_food/Amarante_food_1_mrgfyv.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511370/Amarante_food_1_tsx7ag.jpg"
 )
 
 Activity.create!(
@@ -632,7 +622,7 @@ Activity.create!(
   title: "Restaurante Residencial ESTORIL",
   category: "Food",
   address: "R. 31 de Janeiro 150, 4600-043 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666995/SafeTravels%20app/Images/Category/Food/Amarante_food/Amarante_food_2_gp18tl.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511370/Amarante_food_2_ctscom.jpg"
 )
 
 Activity.create!(
@@ -640,7 +630,7 @@ Activity.create!(
   title: "Bar do Girassol",
   category: "Food",
   address: "Av. Gen. Silveira 193, 4600-017 Amarante, Portugal",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686666995/SafeTravels%20app/Images/Category/Food/Amarante_food/Amarante_food_3_yntnbg.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511371/Amarante_food_3_azmbfp.jpg"
 )
 
 # MOSCOW, RUSSIA
@@ -649,7 +639,7 @@ Activity.create!(
   title: "Kolomenskoye",
   category: "Culture",
   address: "Andropova Ave, 39, Moscow, Russia, 115487",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_1_bm1zlt.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Moscow_culture_1_zdptxr.jpg"
 )
 
 Activity.create!(
@@ -657,7 +647,7 @@ Activity.create!(
   title: "Bolshoi Theatre",
   category: "Culture",
   address: "Theatre Square, 1, Moscow, Russia, 125009",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_2_oeeljf.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Moscow_culture_2_h9lbr2.jpg"
 )
 
 Activity.create!(
@@ -665,7 +655,7 @@ Activity.create!(
   title: "Armoury Chamber",
   category: "Culture",
   address: "Moscow, Russia, 103132",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824806/SafeTravels%20app/Images/Category/Culture/Moscow_culture/Moscow_culture_3_jnkzcl.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511380/Activities_Moscow_3_lcmigs.jpg"
 )
 
 Activity.create!(
@@ -673,7 +663,7 @@ Activity.create!(
   title: "Red Pond",
   category: "Nature",
   address: "Glavnaya Alleya, Moscow, Russia, 111123",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824822/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_1_wxka2i.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511381/image_3_jm9sh2.jpg"
 )
 
 Activity.create!(
@@ -681,7 +671,7 @@ Activity.create!(
   title: 'Nature Reserve "Valley Setun River"',
   category: "Nature",
   address: "Glavnaya Alleya, Moscow, Russia, 111123",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824822/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_2_uiznua.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511381/Moscow_nature_2_i9lxgd.jpg"
 )
 
 Activity.create!(
@@ -689,7 +679,7 @@ Activity.create!(
   title: "Kosinski Nature and History Park",
   category: "Nature",
   address: "ул. Медведева, Moscow, Russia, 111675",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824823/SafeTravels%20app/Images/Category/Nature/Moscow_nature/Moscow_nature_3_qeupjk.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511381/Moscow_nature_3_mfjmpn.jpg"
 )
 
 Activity.create!(
@@ -697,7 +687,7 @@ Activity.create!(
   title: "Center for the Arts. Moscow.",
   category: "Art",
   address: "Ulitsa Volkhonka, 15, Moscow, Russia, 119019",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_1_rfkyh9.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Moscow_art_1_eencep.jpg"
 )
 
 Activity.create!(
@@ -705,7 +695,7 @@ Activity.create!(
   title: "Zverevsky Center for Contemporary Art",
   category: "Art",
   address: "строение 4, Novoryazanskaya Ulitsa, 29 строение 4, Moscow, Russia, 105066",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_2_jbxztg.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511379/Moscow_art_2_bmudkz.jpg"
 )
 
 Activity.create!(
@@ -713,7 +703,7 @@ Activity.create!(
   title: "Russian Art Museum",
   category: "Art",
   address: "Tokmakov Pereulok, 21/2с1, Moscow, Russia, 105066",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824798/SafeTravels%20app/Images/Category/Art/Moscow_art/Moscow_art_3_xpzdhr.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511380/Moscow_art_3_rtgkrs.jpg"
 )
 
 Activity.create!(
@@ -721,7 +711,7 @@ Activity.create!(
   title: "Taras Bulba",
   category: "Food",
   address: "Mokhovaya St, 8с1, Moscow, Russia, 119019",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824813/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1_ntiur6.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511381/Moscow_food_1_pja4ku.jpg"
 )
 
 Activity.create!(
@@ -729,7 +719,7 @@ Activity.create!(
   title: "Cheburechnaya USSR",
   category: "Food",
   address: "Bol'shaya Bronnaya Ulitsa, 27/4с1, Moscow, Russia, 123104",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824814/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1-1_fx8kar.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511380/Moscow_food_1-1_xzdslm.jpg"
 )
 
 Activity.create!(
@@ -737,5 +727,5 @@ Activity.create!(
   title: "Expedition. Northern Cuisine",
   category: "Food",
   address: "Pevcheskiy Pereulok, 6, Moscow, Russia, 109028",
-  image_url: "https://res.cloudinary.com/doxaalafc/image/upload/v1686824814/SafeTravels%20app/Images/Category/Food/Moscow_food/Moscow_food_1-2_had1n2.png"
+  image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511380/image_3_qhw2ml.jpg"
 )
