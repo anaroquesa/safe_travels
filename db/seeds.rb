@@ -447,7 +447,6 @@ Activity.create!(
   image_url: "https://res.cloudinary.com/dwpf3efis/image/upload/v1687511408/NY_Food_3_yqx2cm.jpg"
 )
 
-MEXICO CITY
 Activity.create!(
   city: mexico_city,
   title: "We Fly Teotihuacan",
