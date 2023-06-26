@@ -23,15 +23,15 @@ puts "Creating Users.."
   user1.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
   user1.save
 
-  file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/ana_sfmt2l.jpg")
-  user2 = User.new(
-  first_name: "Ana",
-  last_name: "Sa",
-  email: "Ana@email.com",
-  password: "123456",
-  summary: "Hi, I'm from a vibrant coastal city in Portugal. I have great passion for arts and music. I love to express creativity and will continue to pursue in arts.")
-  user2.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
-  user2.save
+  # file = URI.open("https://res.cloudinary.com/doxaalafc/image/upload/v1686661594/SafeTravels%20app/Images/Profile%20images/ana_sfmt2l.jpg")
+  # user2 = User.new(
+  # first_name: "Ana",
+  # last_name: "Sa",
+  # email: "Ana@email.com",
+  # password: "123456",
+  # summary: "Hi, I'm from a vibrant coastal city in Portugal. I have great passion for arts and music. I love to express creativity and will continue to pursue in arts.")
+  # user2.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+  # user2.save
 
   file = URI.open("https://res.cloudinary.com/dwpf3efis/image/upload/v1687511368/dabin_otlecv.jpg")
   user3 = User.new(
