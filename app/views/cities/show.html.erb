@@ -2,7 +2,7 @@
   <div class="search-index"><%= render "layouts/search_bar_home" %></div>
 </div>
 
-<div class="container itin-index" style="width:90%; margin-bottom:100px;">
+<div class="container itin-index" style="width:60%; margin-bottom:100px;">
 
   <% if @city.safety_rating == 1 %>
       <div class="card-trip" style="background-color:#B7D480;">
@@ -28,7 +28,7 @@
   </div>
   <div class="card-trip-infos">
     <div>
-      <h2><%= @city.name %>, <%= @city.country %></h2>
+      <h2><%= @city.name%>, <%= @city.country %></h2>
       <span>Safety Rating: <%= @city.safety_rating %></span>
     </div>
   </div>
