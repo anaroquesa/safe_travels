@@ -21,8 +21,7 @@
   </div>
   <div class="card-trip-infos">
     <div>
-      <h2><%= city.name %></h2>
-      <h4><%= city.country %></h4>
+      <h2><%= city.name %>, <%= city.country %></h2>
         <% if city.safety_rating == 1 %>
           <div class="safety-rating" style="background-color:#B7D480;">Safety Rating: <%= city.safety_rating %></div>
         <% elsif city.safety_rating == 2 %>
