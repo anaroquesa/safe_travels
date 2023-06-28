@@ -1,8 +1,9 @@
 {
   "dependencies": {
-    "cloudinary": "^1.37.0"
+    "cloudinary": "^1.37.0",
+    "react-map-gl": "^7.0.25"
   },
   "imports": {
     "stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
-}
+  }
 }
