@@ -1,9 +1,13 @@
-<h2>Sign up</h2>
+<div class="header d-flex justify-content-between p-3 mb-3 logo-header" style="height:60px;">
+<img src="https://res.cloudinary.com/dwpf3efis/image/upload/v1687511412/Frame_197_h7wvex_h36jl6.png" alt="logo" style="margin:0 auto;">
+</div>
+
+<div class="container" style="width:60%; margin:0 auto; margin-bottom:20px;">
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs" style="border-radius:5px;">
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,
@@ -31,3 +35,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
